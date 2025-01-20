@@ -24,7 +24,7 @@ jobs:
       # Replace "pyrogram" with "hasnainkk"
       - name: Replace Text in Repository
         run: |
-          find . -type f -name "*.py" -exec sed -i 's/pyrogram/hasnainkk/g' {} \;
+          find . -type f -name "*.py" -exec sed -i 's/Pyrogram/hasnainkk/g' {} \;
 
       # Commit and push changes
       - name: Commit and Push Changes

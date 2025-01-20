@@ -21,10 +21,17 @@ jobs:
         with:
           python-version: 3.x
 
-      # Replace "pyrogram" with "hasnainkk"
+      # Replace "pyrogram" with "hasnainkk" in files
       - name: Replace Text in Repository
         run: |
-          find . -type f -name "*.py" -exec sed -i 's/Pyrogram/hasnainkk/g' {} \;
+          find . -type f -name "*.py" -exec sed -i 's/pyrogram/hasnainkk/g' {} \;
+
+      # Rename directories from "pyrogram" to "hasnainkk"
+      - name: Rename Directories
+        run: |
+          find . -type d -name "pyrogram" | while read dir; do
+            mv "$dir" "${dir%/*}/hasnainkk"
+          done
 
       # Commit and push changes
       - name: Commit and Push Changes

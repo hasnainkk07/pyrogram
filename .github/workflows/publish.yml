@@ -1,0 +1,35 @@
+name: Publish to PyPI
+
+on:
+  push:
+    branches:
+      - master  # Adjust this to your default branch
+  workflow_dispatch:
+
+jobs:
+  publish:
+    name: Publish Package
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'  # Ensure compatibility with your package, or adjust based on pyproject.toml
+
+      - name: Install Hatch
+        run: pip install hatch
+
+      - name: Build Package
+        run: hatch build
+
+      - name: Publish to PyPI
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
+        run: |
+          pip install twine
+          twine upload dist/*

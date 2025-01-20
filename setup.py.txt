@@ -44,9 +44,9 @@ setup(
     long_description=readme,
     long_description_content_type="text/markdown",
     url="https://github.com/hasnainkk",
-    download_url="https://github.com/hasnainkk/hasnainkk/releases/latest",
-    author="Dan",
-    author_email="dan@hasnainkk.org",
+    download_url="https://github.com/hasnainkk07/pyrogram/releases/latest",
+    author="hasnainkk07",
+    author_email="hasnaindilshad13@gmail.com",
     license="LGPLv3",
     classifiers=[
         "Development Status :: 5 - Production/Stable",
@@ -73,10 +73,10 @@ setup(
     ],
     keywords="telegram chat messenger mtproto api client library python",
     project_urls={
-        "Tracker": "https://github.com/hasnainkk/hasnainkk/issues",
-        "Community": "https://t.me/hasnainkk",
-        "Source": "https://github.com/hasnainkk/hasnainkk",
-        "Documentation": "https://docs.hasnainkk.org",
+        "Tracker": "https://github.com/hasnainkk07/pyrogram/issues",
+        "Community": "https://t.me/Anonymous_Empire",
+        "Source": "https://github.com/hasnainkk07/pyrogram",
+        "Documentation": "https://docs.pyrogram.org",
     },
     python_requires="~=3.7",
     package_data={

@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  hasnainkk - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of hasnainkk.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  hasnainkk is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  hasnainkk is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with hasnainkk.  If not, see <http://www.gnu.org/licenses/>.
 
 import asyncio
 import functools
@@ -62,7 +62,7 @@ log = logging.getLogger(__name__)
 
 
 class Client(Methods):
-    """Pyrogram Client, the main means for interacting with Telegram.
+    """hasnainkk Client, the main means for interacting with Telegram.
 
     Parameters:
         name (``str``):
@@ -78,7 +78,7 @@ class Client(Methods):
 
         app_version (``str``, *optional*):
             Application version.
-            Defaults to "Pyrogram x.y.z".
+            Defaults to "hasnainkk x.y.z".
 
         device_model (``str``, *optional*):
             Device model.
@@ -139,7 +139,7 @@ class Client(Methods):
 
         workdir (``str``, *optional*):
             Define a custom working directory.
-            The working directory is the location in the filesystem where Pyrogram will store the session files.
+            The working directory is the location in the filesystem where hasnainkk will store the session files.
             Defaults to the parent directory of the main script.
 
         plugins (``dict``, *optional*):
@@ -179,7 +179,7 @@ class Client(Methods):
             Defaults to 1.
     """
 
-    APP_VERSION = f"Pyrogram {__version__}"
+    APP_VERSION = f"hasnainkk {__version__}"
     DEVICE_MODEL = f"{platform.python_implementation()} {platform.python_version()}"
     SYSTEM_VERSION = f"{platform.system()} {platform.release()}"
 
@@ -332,8 +332,8 @@ class Client(Methods):
         if self.bot_token:
             return await self.sign_in_bot(self.bot_token)
 
-        print(f"Welcome to Pyrogram (version {__version__})")
-        print(f"Pyrogram is free software and comes with ABSOLUTELY NO WARRANTY. Licensed\n"
+        print(f"Welcome to hasnainkk (version {__version__})")
+        print(f"hasnainkk is free software and comes with ABSOLUTELY NO WARRANTY. Licensed\n"
               f"under the terms of the {__license__}.\n")
 
         while True:

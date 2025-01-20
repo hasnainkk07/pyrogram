@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  hasnainkk - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of hasnainkk.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  hasnainkk is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  hasnainkk is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with hasnainkk.  If not, see <http://www.gnu.org/licenses/>.
 
 import logging
 from typing import Union
@@ -35,7 +35,7 @@ class GetChatHistoryCount:
         .. note::
 
             Due to Telegram latest internal changes, the server can't reliably find anymore the total count of messages
-            a **private** or a **basic group** chat has with a single method call. To overcome this limitation, Pyrogram
+            a **private** or a **basic group** chat has with a single method call. To overcome this limitation, hasnainkk
             has to iterate over all the messages. Channels and supergroups are not affected by this limitation.
 
         .. include:: /_includes/usable-by/users.rst

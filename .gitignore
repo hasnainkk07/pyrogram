@@ -11,7 +11,7 @@ hasnainkk/errors/exceptions/
 hasnainkk/raw/functions/
 hasnainkk/raw/types/
 hasnainkk/raw/base/
-pyrogram/raw/all.py
+hasnainkk/raw/all.py
 docs/source/telegram
 docs/source/api/methods/
 docs/source/api/bound-methods/

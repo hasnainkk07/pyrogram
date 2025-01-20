@@ -19,6 +19,7 @@
 from importlib import import_module
 
 from . import types, functions, base, core
+from .update_group_invite_privacy_forbidden import UpdateGroupInvitePrivacyForbidden
 from .all import objects
 
 for k, v in objects.items():

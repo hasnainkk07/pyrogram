@@ -18,16 +18,16 @@
 
 import logging
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 
 log = logging.getLogger(__name__)
 
 
 class SignUp:
     async def sign_up(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         phone_number: str,
         phone_code_hash: str,
         first_name: str,
@@ -42,7 +42,7 @@ class SignUp:
                 Phone number in international format (includes the country prefix).
 
             phone_code_hash (``str``):
-                Code identifier taken from the result of :meth:`~pyrogram.Client.send_code`.
+                Code identifier taken from the result of :meth:`~hasnainkk.Client.send_code`.
 
             first_name (``str``):
                 New user first name.
@@ -51,7 +51,7 @@ class SignUp:
                 New user last name. Defaults to "" (empty string, no last name).
 
         Returns:
-            :obj:`~pyrogram.types.User`: On success, the new registered user is returned.
+            :obj:`~hasnainkk.types.User`: On success, the new registered user is returned.
 
         Raises:
             BadRequest: In case the arguments are invalid.

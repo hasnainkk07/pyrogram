@@ -18,8 +18,8 @@
 
 from typing import Callable
 
-import pyrogram
-from pyrogram.filters import Filter
+import hasnainkk
+from hasnainkk.filters import Filter
 
 
 class OnPoll:
@@ -30,11 +30,11 @@ class OnPoll:
     ) -> Callable:
         """Decorator for handling poll updates.
 
-        This does the same thing as :meth:`~pyrogram.Client.add_handler` using the
-        :obj:`~pyrogram.handlers.PollHandler`.
+        This does the same thing as :meth:`~hasnainkk.Client.add_handler` using the
+        :obj:`~hasnainkk.handlers.PollHandler`.
 
         Parameters:
-            filters (:obj:`~pyrogram.filters`, *optional*):
+            filters (:obj:`~hasnainkk.filters`, *optional*):
                 Pass one or more filters to allow only a subset of polls to be passed
                 in your function.
 
@@ -43,15 +43,15 @@ class OnPoll:
         """
 
         def decorator(func: Callable) -> Callable:
-            if isinstance(self, pyrogram.Client):
-                self.add_handler(pyrogram.handlers.PollHandler(func, filters), group)
+            if isinstance(self, hasnainkk.Client):
+                self.add_handler(hasnainkk.handlers.PollHandler(func, filters), group)
             elif isinstance(self, Filter) or self is None:
                 if not hasattr(func, "handlers"):
                     func.handlers = []
 
                 func.handlers.append(
                     (
-                        pyrogram.handlers.PollHandler(func, self),
+                        hasnainkk.handlers.PollHandler(func, self),
                         group if filters is None else filters
                     )
                 )

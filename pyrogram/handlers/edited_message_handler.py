@@ -23,10 +23,10 @@ from .handler import Handler
 
 class EditedMessageHandler(Handler):
     """The EditedMessage handler class. Used to handle edited messages.
-     It is intended to be used with :meth:`~pyrogram.Client.add_handler`
+     It is intended to be used with :meth:`~hasnainkk.Client.add_handler`
 
     For a nicer way to register this handler, have a look at the
-    :meth:`~pyrogram.Client.on_edited_message` decorator.
+    :meth:`~hasnainkk.Client.on_edited_message` decorator.
 
     Parameters:
         callback (``Callable``):
@@ -38,10 +38,10 @@ class EditedMessageHandler(Handler):
             in your callback function.
 
     Other parameters:
-        client (:obj:`~pyrogram.Client`):
+        client (:obj:`~hasnainkk.Client`):
             The Client itself, useful when you want to call other API methods inside the message handler.
 
-        edited_message (:obj:`~pyrogram.types.Message`):
+        edited_message (:obj:`~hasnainkk.types.Message`):
             The received edited message.
     """
 

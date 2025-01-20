@@ -23,10 +23,10 @@ from .handler import Handler
 
 class InlineQueryHandler(Handler):
     """The InlineQuery handler class. Used to handle inline queries.
-    It is intended to be used with :meth:`~pyrogram.Client.add_handler`
+    It is intended to be used with :meth:`~hasnainkk.Client.add_handler`
 
     For a nicer way to register this handler, have a look at the
-    :meth:`~pyrogram.Client.on_inline_query` decorator.
+    :meth:`~hasnainkk.Client.on_inline_query` decorator.
 
     Parameters:
         callback (``Callable``):
@@ -38,10 +38,10 @@ class InlineQueryHandler(Handler):
             in your callback function.
 
     Other parameters:
-        client (:obj:`~pyrogram.Client`):
+        client (:obj:`~hasnainkk.Client`):
             The Client itself, useful when you want to call other API methods inside the inline query handler.
 
-        inline_query (:obj:`~pyrogram.types.InlineQuery`):
+        inline_query (:obj:`~hasnainkk.types.InlineQuery`):
             The received inline query.
     """
 

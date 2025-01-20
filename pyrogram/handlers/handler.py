@@ -19,9 +19,9 @@
 import inspect
 from typing import Callable
 
-import pyrogram
-from pyrogram.filters import Filter
-from pyrogram.types import Update
+import hasnainkk
+from hasnainkk.filters import Filter
+from hasnainkk.types import Update
 
 
 class Handler:
@@ -29,7 +29,7 @@ class Handler:
         self.callback = callback
         self.filters = filters
 
-    async def check(self, client: "pyrogram.Client", update: Update):
+    async def check(self, client: "hasnainkk.Client", update: Update):
         if callable(self.filters):
             if inspect.iscoroutinefunction(self.filters.__call__):
                 return await self.filters(client, update)

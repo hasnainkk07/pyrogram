@@ -22,7 +22,7 @@ from .auto_name import AutoName
 
 
 class ChatEventAction(AutoName):
-    """Chat event action enumeration used in :meth:`~pyrogram.Client.get_chat_event_log`."""
+    """Chat event action enumeration used in :meth:`~hasnainkk.Client.get_chat_event_log`."""
 
     DESCRIPTION_CHANGED = auto()
     "The chat description has been changed (see ``old_description`` and ``new_description``)"

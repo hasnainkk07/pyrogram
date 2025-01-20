@@ -18,13 +18,13 @@
 
 from typing import Union, List, Optional
 
-import pyrogram
-from pyrogram import types, enums
+import hasnainkk
+from hasnainkk import types, enums
 
 
 class EditMessageCaption:
     async def edit_message_caption(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         message_id: int,
         caption: str,
@@ -48,18 +48,18 @@ class EditMessageCaption:
             caption (``str``):
                 New caption of the media message.
 
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            parse_mode (:obj:`~hasnainkk.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
-            caption_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            caption_entities (List of :obj:`~hasnainkk.types.MessageEntity`):
                 List of special entities that appear in the caption, which can be specified instead of *parse_mode*.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup`, *optional*):
+            reply_markup (:obj:`~hasnainkk.types.InlineKeyboardMarkup`, *optional*):
                 An InlineKeyboardMarkup object.
 
         Returns:
-            :obj:`~pyrogram.types.Message`: On success, the edited message is returned.
+            :obj:`~hasnainkk.types.Message`: On success, the edited message is returned.
 
         Example:
             .. code-block:: python

@@ -16,8 +16,8 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-import pyrogram
-from pyrogram import raw
+import hasnainkk
+from hasnainkk import raw
 from ..object import Object
 
 
@@ -26,11 +26,11 @@ class MenuButton(Object):
 
     It should be one of:
 
-    - :obj:`~pyrogram.types.MenuButtonCommands`
-    - :obj:`~pyrogram.types.MenuButtonWebApp`
-    - :obj:`~pyrogram.types.MenuButtonDefault`
+    - :obj:`~hasnainkk.types.MenuButtonCommands`
+    - :obj:`~hasnainkk.types.MenuButtonWebApp`
+    - :obj:`~hasnainkk.types.MenuButtonDefault`
 
-    If a menu button other than :obj:`~pyrogram.types.MenuButtonDefault` is set for a private chat, then it is applied
+    If a menu button other than :obj:`~hasnainkk.types.MenuButtonDefault` is set for a private chat, then it is applied
     in the chat. Otherwise the default menu button is applied. By default, the menu button opens the list of bot
     commands.
     """
@@ -40,5 +40,5 @@ class MenuButton(Object):
 
         self.type = type
 
-    async def write(self, client: "pyrogram.Client") -> "raw.base.BotMenuButton":
+    async def write(self, client: "hasnainkk.Client") -> "raw.base.BotMenuButton":
         raise NotImplementedError

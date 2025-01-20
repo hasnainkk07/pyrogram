@@ -18,13 +18,13 @@
 
 from typing import Union
 
-import pyrogram
-from pyrogram import raw, enums
+import hasnainkk
+from hasnainkk import raw, enums
 
 
 class SearchMessagesCount:
     async def search_messages_count(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         query: str = "",
         filter: "enums.MessagesFilter" = enums.MessagesFilter.EMPTY,
@@ -32,7 +32,7 @@ class SearchMessagesCount:
     ) -> int:
         """Get the count of messages resulting from a search inside a chat.
 
-        If you want to get the actual messages, see :meth:`~pyrogram.Client.search_messages`.
+        If you want to get the actual messages, see :meth:`~hasnainkk.Client.search_messages`.
 
         .. include:: /_includes/usable-by/users.rst
 
@@ -48,7 +48,7 @@ class SearchMessagesCount:
                 When passed while searching for media messages, the query will be applied to captions.
                 Defaults to "" (empty string).
 
-            filter (:obj:`~pyrogram.enums.MessagesFilter`, *optional*):
+            filter (:obj:`~hasnainkk.enums.MessagesFilter`, *optional*):
                 Pass a filter in order to search for specific kind of messages only:
 
             from_user (``int`` | ``str``, *optional*):

@@ -19,14 +19,14 @@
 from datetime import datetime
 from typing import Union
 
-import pyrogram
-from pyrogram import raw, utils
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw, utils
+from hasnainkk import types
 
 
 class CreateChatInviteLink:
     async def create_chat_invite_link(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         name: str = None,
         expire_date: datetime = None,
@@ -37,7 +37,7 @@ class CreateChatInviteLink:
 
         You must be an administrator in the chat for this to work and must have the appropriate admin rights.
 
-        The link can be revoked using the method :meth:`~pyrogram.Client.revoke_chat_invite_link`.
+        The link can be revoked using the method :meth:`~hasnainkk.Client.revoke_chat_invite_link`.
 
         .. include:: /_includes/usable-by/users-bots.rst
 
@@ -63,7 +63,7 @@ class CreateChatInviteLink:
                 If True, member_limit can't be specified.
 
         Returns:
-            :obj:`~pyrogram.types.ChatInviteLink`: On success, the new invite link is returned.
+            :obj:`~hasnainkk.types.ChatInviteLink`: On success, the new invite link is returned.
 
         Example:
             .. code-block:: python

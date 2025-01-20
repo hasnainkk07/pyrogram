@@ -16,12 +16,12 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-from pyrogram import raw
+from hasnainkk import raw
 from .auto_name import AutoName
 
 
 class MessageEntityType(AutoName):
-    """Message entity type enumeration used in :obj:`~pyrogram.types.MessageEntity`."""
+    """Message entity type enumeration used in :obj:`~hasnainkk.types.MessageEntity`."""
 
     MENTION = raw.types.MessageEntityMention
     "``@username``"
@@ -33,13 +33,13 @@ class MessageEntityType(AutoName):
     "``$USD``"
 
     BOT_COMMAND = raw.types.MessageEntityBotCommand
-    "``/start@pyrogrambot``"
+    "``/start@hasnainkkbot``"
 
     URL = raw.types.MessageEntityUrl
-    "``https://pyrogram.org`` (see ``url``)"
+    "``https://hasnainkk.org`` (see ``url``)"
 
     EMAIL = raw.types.MessageEntityEmail
-    "``do-not-reply@pyrogram.org``"
+    "``do-not-reply@hasnainkk.org``"
 
     PHONE_NUMBER = raw.types.MessageEntityPhone
     "``+1-123-456-7890``"

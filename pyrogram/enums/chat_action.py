@@ -16,12 +16,12 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-from pyrogram import raw
+from hasnainkk import raw
 from .auto_name import AutoName
 
 
 class ChatAction(AutoName):
-    """Chat action enumeration used in :obj:`~pyrogram.types.ChatEvent`."""
+    """Chat action enumeration used in :obj:`~hasnainkk.types.ChatEvent`."""
 
     TYPING = raw.types.SendMessageTypingAction
     "Typing text message"

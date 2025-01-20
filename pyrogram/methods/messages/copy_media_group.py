@@ -19,13 +19,13 @@
 from datetime import datetime
 from typing import Union, List
 
-import pyrogram
-from pyrogram import types, utils, raw
+import hasnainkk
+from hasnainkk import types, utils, raw
 
 
 class CopyMediaGroup:
     async def copy_media_group(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         from_chat_id: Union[int, str],
         message_id: int,
@@ -72,7 +72,7 @@ class CopyMediaGroup:
                 Date when the message will be automatically sent.
 
         Returns:
-            List of :obj:`~pyrogram.types.Message`: On success, a list of copied messages is returned.
+            List of :obj:`~hasnainkk.types.Message`: On success, a list of copied messages is returned.
 
         Example:
             .. code-block:: python

@@ -20,8 +20,8 @@ from hashlib import sha256
 from io import BytesIO
 from os import urandom
 
-from pyrogram.errors import SecurityCheckMismatch
-from pyrogram.raw.core import Message, Long
+from hasnainkk.errors import SecurityCheckMismatch
+from hasnainkk.raw.core import Message, Long
 from . import aes
 
 

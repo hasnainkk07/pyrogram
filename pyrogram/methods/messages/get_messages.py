@@ -19,10 +19,10 @@
 import logging
 from typing import Union, List, Iterable
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
-from pyrogram import utils
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
+from hasnainkk import utils
 
 log = logging.getLogger(__name__)
 
@@ -32,7 +32,7 @@ log = logging.getLogger(__name__)
 
 class GetMessages:
     async def get_messages(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         message_ids: Union[int, Iterable[int]] = None,
         reply_to_message_ids: Union[int, Iterable[int]] = None,
@@ -65,7 +65,7 @@ class GetMessages:
                 Defaults to 1.
 
         Returns:
-            :obj:`~pyrogram.types.Message` | List of :obj:`~pyrogram.types.Message`: In case *message_ids* was not
+            :obj:`~hasnainkk.types.Message` | List of :obj:`~hasnainkk.types.Message`: In case *message_ids* was not
             a list, a single message is returned, otherwise a list of messages is returned.
 
         Example:

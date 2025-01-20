@@ -40,13 +40,13 @@ async def idle():
     updates through handlers, rather than executing a set of methods sequentially.
 
     Once a signal is received (e.g.: from CTRL+C) the function will terminate and your main script will continue.
-    Don't forget to call :meth:`~pyrogram.Client.stop` for each running client before the script ends.
+    Don't forget to call :meth:`~hasnainkk.Client.stop` for each running client before the script ends.
 
     Example:
         .. code-block:: python
 
             import asyncio
-            from pyrogram import Client, idle
+            from hasnainkk import Client, idle
 
 
             async def main():

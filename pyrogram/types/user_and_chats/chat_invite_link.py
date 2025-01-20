@@ -20,9 +20,9 @@ from datetime import datetime
 from typing import Dict
 from typing import Optional
 
-import pyrogram
-from pyrogram import raw, utils
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw, utils
+from hasnainkk import types
 from ..object import Object
 
 
@@ -43,7 +43,7 @@ class ChatInviteLink(Object):
         is_revoked (``bool``):
             True, if the link is revoked.
 
-        creator (:obj:`~pyrogram.types.User`, *optional*):
+        creator (:obj:`~hasnainkk.types.User`, *optional*):
             Creator of the link.
 
         name (``str``, *optional*):
@@ -101,7 +101,7 @@ class ChatInviteLink(Object):
 
     @staticmethod
     def _parse(
-        client: "pyrogram.Client",
+        client: "hasnainkk.Client",
         invite: "raw.base.ExportedChatInvite",
         users: Dict[int, "raw.types.User"] = None
     ) -> Optional["ChatInviteLink"]:

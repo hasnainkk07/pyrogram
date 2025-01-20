@@ -20,15 +20,15 @@ import logging
 from datetime import datetime
 from typing import Union, List, Optional
 
-import pyrogram
-from pyrogram import types, enums
+import hasnainkk
+from hasnainkk import types, enums
 
 log = logging.getLogger(__name__)
 
 
 class CopyMessage:
     async def copy_message(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         from_chat_id: Union[int, str],
         message_id: int,
@@ -72,11 +72,11 @@ class CopyMessage:
                 If not specified, the original caption is kept.
                 Pass "" (empty string) to remove the caption.
 
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            parse_mode (:obj:`~hasnainkk.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
-            caption_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            caption_entities (List of :obj:`~hasnainkk.types.MessageEntity`):
                 List of special entities that appear in the new caption, which can be specified instead of *parse_mode*.
 
             disable_notification (``bool``, *optional*):
@@ -92,12 +92,12 @@ class CopyMessage:
             protect_content (``bool``, *optional*):
                 Protects the contents of the sent message from forwarding and saving.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardRemove` | :obj:`~pyrogram.types.ForceReply`, *optional*):
+            reply_markup (:obj:`~hasnainkk.types.InlineKeyboardMarkup` | :obj:`~hasnainkk.types.ReplyKeyboardMarkup` | :obj:`~hasnainkk.types.ReplyKeyboardRemove` | :obj:`~hasnainkk.types.ForceReply`, *optional*):
                 Additional interface options. An object for an inline keyboard, custom reply keyboard,
                 instructions to remove reply keyboard or to force a reply from the user.
 
         Returns:
-            :obj:`~pyrogram.types.Message`: On success, the copied message is returned.
+            :obj:`~hasnainkk.types.Message`: On success, the copied message is returned.
 
         Example:
             .. code-block:: python

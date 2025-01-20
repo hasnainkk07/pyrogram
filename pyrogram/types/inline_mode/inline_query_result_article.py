@@ -16,9 +16,9 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 
 from .inline_query_result import InlineQueryResult
 
@@ -30,7 +30,7 @@ class InlineQueryResultArticle(InlineQueryResult):
         title (``str``):
             Title for the result.
 
-        input_message_content (:obj:`~pyrogram.types.InputMessageContent`):
+        input_message_content (:obj:`~hasnainkk.types.InputMessageContent`):
             Content of the message to be sent.
 
         id (``str``, *optional*):
@@ -43,7 +43,7 @@ class InlineQueryResultArticle(InlineQueryResult):
         description (``str``, *optional*):
             Short description of the result.
 
-        reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup`, *optional*):
+        reply_markup (:obj:`~hasnainkk.types.InlineKeyboardMarkup`, *optional*):
             Inline keyboard attached to the message.
 
         thumb_url (``str``, *optional*):
@@ -77,7 +77,7 @@ class InlineQueryResultArticle(InlineQueryResult):
         self.thumb_width = thumb_width
         self.thumb_height = thumb_height
 
-    async def write(self, client: "pyrogram.Client"):
+    async def write(self, client: "hasnainkk.Client"):
         return raw.types.InputBotInlineResult(
             id=self.id,
             type=self.type,

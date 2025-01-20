@@ -16,14 +16,14 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-import pyrogram
-from pyrogram import raw
-from pyrogram.errors import AuthBytesInvalid
-from pyrogram.session import Session
-from pyrogram.session.auth import Auth
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk.errors import AuthBytesInvalid
+from hasnainkk.session import Session
+from hasnainkk.session.auth import Auth
 
 
-async def get_session(client: "pyrogram.Client", dc_id: int):
+async def get_session(client: "hasnainkk.Client", dc_id: int):
     if dc_id == await client.storage.dc_id():
         return client
 

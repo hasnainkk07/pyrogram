@@ -18,13 +18,13 @@
 
 from typing import Union
 
-import pyrogram
-from pyrogram import raw, types, errors
+import hasnainkk
+from hasnainkk import raw, types, errors
 
 
 class PromoteChatMember:
     async def promote_chat_member(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         user_id: Union[int, str],
         privileges: "types.ChatPrivileges" = None,
@@ -44,7 +44,7 @@ class PromoteChatMember:
                 Unique identifier (int) or username (str) of the target user.
                 For a contact that exists in your Telegram address book you can use his phone number (str).
 
-            privileges (:obj:`~pyrogram.types.ChatPrivileges`, *optional*):
+            privileges (:obj:`~hasnainkk.types.ChatPrivileges`, *optional*):
                 New user privileges.
 
         Returns:

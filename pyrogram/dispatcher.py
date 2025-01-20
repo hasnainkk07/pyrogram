@@ -21,14 +21,14 @@ import inspect
 import logging
 from collections import OrderedDict
 
-import pyrogram
-from pyrogram import utils
-from pyrogram.handlers import (
+import hasnainkk
+from hasnainkk import utils
+from hasnainkk.handlers import (
     CallbackQueryHandler, MessageHandler, EditedMessageHandler, DeletedMessagesHandler,
     UserStatusHandler, RawUpdateHandler, InlineQueryHandler, PollHandler,
     ChosenInlineResultHandler, ChatMemberUpdatedHandler, ChatJoinRequestHandler
 )
-from pyrogram.raw.types import (
+from hasnainkk.raw.types import (
     UpdateNewMessage, UpdateNewChannelMessage, UpdateNewScheduledMessage,
     UpdateEditMessage, UpdateEditChannelMessage,
     UpdateDeleteMessages, UpdateDeleteChannelMessages,
@@ -53,7 +53,7 @@ class Dispatcher:
     CHOSEN_INLINE_RESULT_UPDATES = (UpdateBotInlineSend,)
     CHAT_JOIN_REQUEST_UPDATES = (UpdateBotChatInviteRequester,)
 
-    def __init__(self, client: "pyrogram.Client"):
+    def __init__(self, client: "hasnainkk.Client"):
         self.client = client
         self.loop = asyncio.get_event_loop()
 
@@ -65,7 +65,7 @@ class Dispatcher:
 
         async def message_parser(update, users, chats):
             return (
-                await pyrogram.types.Message._parse(self.client, update.message, users, chats,
+                await hasnainkk.types.Message._parse(self.client, update.message, users, chats,
                                                     isinstance(update, UpdateNewScheduledMessage)),
                 MessageHandler
             )
@@ -87,43 +87,43 @@ class Dispatcher:
 
         async def callback_query_parser(update, users, chats):
             return (
-                await pyrogram.types.CallbackQuery._parse(self.client, update, users),
+                await hasnainkk.types.CallbackQuery._parse(self.client, update, users),
                 CallbackQueryHandler
             )
 
         async def user_status_parser(update, users, chats):
             return (
-                pyrogram.types.User._parse_user_status(self.client, update),
+                hasnainkk.types.User._parse_user_status(self.client, update),
                 UserStatusHandler
             )
 
         async def inline_query_parser(update, users, chats):
             return (
-                pyrogram.types.InlineQuery._parse(self.client, update, users),
+                hasnainkk.types.InlineQuery._parse(self.client, update, users),
                 InlineQueryHandler
             )
 
         async def poll_parser(update, users, chats):
             return (
-                pyrogram.types.Poll._parse_update(self.client, update),
+                hasnainkk.types.Poll._parse_update(self.client, update),
                 PollHandler
             )
 
         async def chosen_inline_result_parser(update, users, chats):
             return (
-                pyrogram.types.ChosenInlineResult._parse(self.client, update, users),
+                hasnainkk.types.ChosenInlineResult._parse(self.client, update, users),
                 ChosenInlineResultHandler
             )
 
         async def chat_member_updated_parser(update, users, chats):
             return (
-                pyrogram.types.ChatMemberUpdated._parse(self.client, update, users, chats),
+                hasnainkk.types.ChatMemberUpdated._parse(self.client, update, users, chats),
                 ChatMemberUpdatedHandler
             )
 
         async def chat_join_request_parser(update, users, chats):
             return (
-                pyrogram.types.ChatJoinRequest._parse(self.client, update, users, chats),
+                hasnainkk.types.ChatJoinRequest._parse(self.client, update, users, chats),
                 ChatJoinRequestHandler
             )
 
@@ -245,15 +245,15 @@ class Dispatcher:
                                         self.client,
                                         *args
                                     )
-                            except pyrogram.StopPropagation:
+                            except hasnainkk.StopPropagation:
                                 raise
-                            except pyrogram.ContinuePropagation:
+                            except hasnainkk.ContinuePropagation:
                                 continue
                             except Exception as e:
                                 log.exception(e)
 
                             break
-            except pyrogram.StopPropagation:
+            except hasnainkk.StopPropagation:
                 pass
             except Exception as e:
                 log.exception(e)

@@ -19,9 +19,9 @@
 from base64 import b64encode
 from struct import pack
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 from ..object import Object
 from ..update import Update
 
@@ -38,13 +38,13 @@ class ChosenInlineResult(Object, Update):
         result_id (``str``):
             The unique identifier for the result that was chosen.
 
-        from_user (:obj:`~pyrogram.types.User`):
+        from_user (:obj:`~hasnainkk.types.User`):
             The user that chose the result.
 
         query (``str``):
             The query that was used to obtain the result.
 
-        location (:obj:`~pyrogram.types.Location`, *optional*):
+        location (:obj:`~hasnainkk.types.Location`, *optional*):
             Sender location, only for bots that require user location.
 
         inline_message_id (``str``, *optional*):
@@ -56,7 +56,7 @@ class ChosenInlineResult(Object, Update):
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: "hasnainkk.Client" = None,
         result_id: str,
         from_user: "types.User",
         query: str,

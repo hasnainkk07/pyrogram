@@ -18,9 +18,9 @@
 
 from typing import List, Union
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 from ..object import Object
 
 
@@ -28,7 +28,7 @@ class ReplyKeyboardMarkup(Object):
     """A custom keyboard with reply options.
 
     Parameters:
-        keyboard (List of List of :obj:`~pyrogram.types.KeyboardButton`):
+        keyboard (List of List of :obj:`~hasnainkk.types.KeyboardButton`):
             List of button rows, each represented by a List of KeyboardButton objects.
 
         is_persistent (``bool``, *optional*):
@@ -95,7 +95,7 @@ class ReplyKeyboardMarkup(Object):
             placeholder=kb.placeholder
         )
 
-    async def write(self, _: "pyrogram.Client"):
+    async def write(self, _: "hasnainkk.Client"):
         return raw.types.ReplyKeyboardMarkup(
             rows=[raw.types.KeyboardButtonRow(
                 buttons=[

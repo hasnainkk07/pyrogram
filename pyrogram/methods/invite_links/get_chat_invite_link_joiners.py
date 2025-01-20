@@ -18,14 +18,14 @@
 
 from typing import Union, Optional, AsyncGenerator
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 
 
 class GetChatInviteLinkJoiners:
     async def get_chat_invite_link_joiners(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         invite_link: str,
         limit: int = 0
@@ -47,10 +47,10 @@ class GetChatInviteLinkJoiners:
                 By default, no limit is applied and all invite links are returned.
 
         Returns:
-            ``Generator``: A generator yielding :obj:`~pyrogram.types.ChatJoiner` objects.
+            ``Generator``: A generator yielding :obj:`~hasnainkk.types.ChatJoiner` objects.
 
         Yields:
-            :obj:`~pyrogram.types.ChatJoiner` objects.
+            :obj:`~hasnainkk.types.ChatJoiner` objects.
         """
         current = 0
         total = abs(limit) or (1 << 31) - 1

@@ -18,9 +18,9 @@
 
 from datetime import datetime
 
-import pyrogram
-from pyrogram import raw, utils
-from pyrogram.file_id import FileId, FileType, FileUniqueId, FileUniqueType
+import hasnainkk
+from hasnainkk import raw, utils
+from hasnainkk.file_id import FileId, FileType, FileUniqueId, FileUniqueType
 from ..object import Object
 
 
@@ -54,7 +54,7 @@ class Voice(Object):
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: "hasnainkk.Client" = None,
         file_id: str,
         file_unique_id: str,
         duration: int,

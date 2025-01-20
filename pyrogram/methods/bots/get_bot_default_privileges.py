@@ -18,14 +18,14 @@
 
 from typing import Optional
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 
 
 class GetBotDefaultPrivileges:
     async def get_bot_default_privileges(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         for_channels: bool = None
     ) -> Optional["types.ChatPrivileges"]:
         """Get the current default privileges of the bot.

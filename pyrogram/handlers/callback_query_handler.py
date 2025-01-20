@@ -23,10 +23,10 @@ from .handler import Handler
 
 class CallbackQueryHandler(Handler):
     """The CallbackQuery handler class. Used to handle callback queries coming from inline buttons.
-    It is intended to be used with :meth:`~pyrogram.Client.add_handler`
+    It is intended to be used with :meth:`~hasnainkk.Client.add_handler`
 
     For a nicer way to register this handler, have a look at the
-    :meth:`~pyrogram.Client.on_callback_query` decorator.
+    :meth:`~hasnainkk.Client.on_callback_query` decorator.
 
     Parameters:
         callback (``Callable``):
@@ -38,10 +38,10 @@ class CallbackQueryHandler(Handler):
             in your callback function.
 
     Other parameters:
-        client (:obj:`~pyrogram.Client`):
+        client (:obj:`~hasnainkk.Client`):
             The Client itself, useful when you want to call other API methods inside the message handler.
 
-        callback_query (:obj:`~pyrogram.types.CallbackQuery`):
+        callback_query (:obj:`~hasnainkk.types.CallbackQuery`):
             The received callback query.
     """
 

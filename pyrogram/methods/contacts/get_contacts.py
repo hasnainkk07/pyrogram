@@ -19,23 +19,23 @@
 import logging
 from typing import List
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 
 log = logging.getLogger(__name__)
 
 
 class GetContacts:
     async def get_contacts(
-        self: "pyrogram.Client"
+        self: "hasnainkk.Client"
     ) -> List["types.User"]:
         """Get contacts from your Telegram address book.
 
         .. include:: /_includes/usable-by/users.rst
 
         Returns:
-            List of :obj:`~pyrogram.types.User`: On success, a list of users is returned.
+            List of :obj:`~hasnainkk.types.User`: On success, a list of users is returned.
 
         Example:
             .. code-block:: python

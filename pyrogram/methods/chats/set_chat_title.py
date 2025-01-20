@@ -18,13 +18,13 @@
 
 from typing import Union
 
-import pyrogram
-from pyrogram import raw
+import hasnainkk
+from hasnainkk import raw
 
 
 class SetChatTitle:
     async def set_chat_title(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         title: str
     ) -> bool:

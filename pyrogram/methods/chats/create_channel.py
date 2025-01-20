@@ -15,14 +15,14 @@
 #
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 
 
 class CreateChannel:
     async def create_channel(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         title: str,
         description: str = ""
     ) -> "types.Chat":
@@ -38,7 +38,7 @@ class CreateChannel:
                 The channel description.
 
         Returns:
-            :obj:`~pyrogram.types.Chat`: On success, a chat object is returned.
+            :obj:`~hasnainkk.types.Chat`: On success, a chat object is returned.
 
         Example:
             .. code-block:: python

@@ -18,13 +18,13 @@
 
 from typing import Union, List
 
-import pyrogram
-from pyrogram import raw
+import hasnainkk
+from hasnainkk import raw
 
 
 class ArchiveChats:
     async def archive_chats(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_ids: Union[int, str, List[Union[int, str]]],
     ) -> bool:
         """Archive one or more chats.

@@ -20,10 +20,10 @@ import html
 from datetime import datetime
 from typing import List, Optional
 
-import pyrogram
-from pyrogram import enums, utils
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import enums, utils
+from hasnainkk import raw
+from hasnainkk import types
 from ..object import Object
 from ..update import Update
 
@@ -106,14 +106,14 @@ class User(Object, Update):
         last_name (``str``, *optional*):
             User's or bot's last name.
 
-        status (:obj:`~pyrogram.enums.UserStatus`, *optional*):
+        status (:obj:`~hasnainkk.enums.UserStatus`, *optional*):
             User's last seen & online status. ``None``, for bots.
 
         last_online_date (:py:obj:`~datetime.datetime`, *optional*):
-            Last online date of a user. Only available in case status is :obj:`~pyrogram.enums.UserStatus.OFFLINE`.
+            Last online date of a user. Only available in case status is :obj:`~hasnainkk.enums.UserStatus.OFFLINE`.
 
         next_offline_date (:py:obj:`~datetime.datetime`, *optional*):
-            Date when a user will automatically go offline. Only available in case status is :obj:`~pyrogram.enums.UserStatus.ONLINE`.
+            Date when a user will automatically go offline. Only available in case status is :obj:`~hasnainkk.enums.UserStatus.ONLINE`.
 
         username (``str``, *optional*):
             User's or bot's username.
@@ -121,7 +121,7 @@ class User(Object, Update):
         language_code (``str``, *optional*):
             IETF language tag of the user's language.
 
-        emoji_status (:obj:`~pyrogram.types.EmojiStatus`, *optional*):
+        emoji_status (:obj:`~hasnainkk.types.EmojiStatus`, *optional*):
             Emoji status.
 
         dc_id (``int``, *optional*):
@@ -133,10 +133,10 @@ class User(Object, Update):
         phone_number (``str``, *optional*):
             User's phone number.
 
-        photo (:obj:`~pyrogram.types.ChatPhoto`, *optional*):
+        photo (:obj:`~hasnainkk.types.ChatPhoto`, *optional*):
             User's or bot's current profile photo. Suitable for downloads only.
 
-        restrictions (List of :obj:`~pyrogram.types.Restriction`, *optional*):
+        restrictions (List of :obj:`~hasnainkk.types.Restriction`, *optional*):
             The list of reasons why this bot might be unavailable to some users.
             This field is available only in case *is_restricted* is True.
 
@@ -150,7 +150,7 @@ class User(Object, Update):
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: "hasnainkk.Client" = None,
         id: int,
         is_self: bool = None,
         is_contact: bool = None,
@@ -284,7 +284,7 @@ class User(Object, Update):
         )
 
     async def archive(self):
-        """Bound method *archive* of :obj:`~pyrogram.types.User`.
+        """Bound method *archive* of :obj:`~hasnainkk.types.User`.
 
         Use as a shortcut for:
 
@@ -307,7 +307,7 @@ class User(Object, Update):
         return await self._client.archive_chats(self.id)
 
     async def unarchive(self):
-        """Bound method *unarchive* of :obj:`~pyrogram.types.User`.
+        """Bound method *unarchive* of :obj:`~hasnainkk.types.User`.
 
         Use as a shortcut for:
 
@@ -330,7 +330,7 @@ class User(Object, Update):
         return await self._client.unarchive_chats(self.id)
 
     def block(self):
-        """Bound method *block* of :obj:`~pyrogram.types.User`.
+        """Bound method *block* of :obj:`~hasnainkk.types.User`.
 
         Use as a shortcut for:
 
@@ -353,7 +353,7 @@ class User(Object, Update):
         return self._client.block_user(self.id)
 
     def unblock(self):
-        """Bound method *unblock* of :obj:`~pyrogram.types.User`.
+        """Bound method *unblock* of :obj:`~hasnainkk.types.User`.
 
         Use as a shortcut for:
 
@@ -376,7 +376,7 @@ class User(Object, Update):
         return self._client.unblock_user(self.id)
 
     def get_common_chats(self):
-        """Bound method *get_common_chats* of :obj:`~pyrogram.types.User`.
+        """Bound method *get_common_chats* of :obj:`~hasnainkk.types.User`.
 
         Use as a shortcut for:
 

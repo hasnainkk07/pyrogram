@@ -19,26 +19,26 @@
 import asyncio
 import inspect
 
-import pyrogram
-from pyrogram.methods.utilities.idle import idle
+import hasnainkk
+from hasnainkk.methods.utilities.idle import idle
 
 
 class Run:
     def run(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         coroutine=None
     ):
         """Start the client, idle the main script and finally stop the client.
 
         When calling this method without any argument it acts as a convenience method that calls
-        :meth:`~pyrogram.Client.start`, :meth:`~pyrogram.idle` and :meth:`~pyrogram.Client.stop` in sequence.
+        :meth:`~hasnainkk.Client.start`, :meth:`~hasnainkk.idle` and :meth:`~hasnainkk.Client.stop` in sequence.
         It makes running a single client less verbose.
 
         In case a coroutine is passed as argument, runs the coroutine until it's completed and doesn't do any client
         operation. This is almost the same as :py:obj:`asyncio.run` except for the fact that Pyrogram's ``run`` uses the
         current event loop instead of a new one.
 
-        If you want to run multiple clients at once, see :meth:`pyrogram.compose`.
+        If you want to run multiple clients at once, see :meth:`hasnainkk.compose`.
 
         Parameters:
             coroutine (``Coroutine``, *optional*):
@@ -50,7 +50,7 @@ class Run:
         Example:
             .. code-block:: python
 
-                from pyrogram import Client
+                from hasnainkk import Client
 
                 app = Client("my_account")
                 ...  # Set handlers up
@@ -58,7 +58,7 @@ class Run:
 
             .. code-block:: python
 
-                from pyrogram import Client
+                from hasnainkk import Client
 
                 app = Client("my_account")
 

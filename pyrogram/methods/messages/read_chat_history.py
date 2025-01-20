@@ -18,13 +18,13 @@
 
 from typing import Union
 
-import pyrogram
-from pyrogram import raw
+import hasnainkk
+from hasnainkk import raw
 
 
 class ReadChatHistory:
     async def read_chat_history(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         max_id: int = 0
     ) -> bool:

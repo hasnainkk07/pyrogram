@@ -23,7 +23,7 @@ from enum import IntEnum
 from io import BytesIO
 from typing import List
 
-from pyrogram.raw.core import Bytes, String
+from hasnainkk.raw.core import Bytes, String
 
 log = logging.getLogger(__name__)
 

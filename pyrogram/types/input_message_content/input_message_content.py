@@ -16,13 +16,13 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-import pyrogram
+import hasnainkk
 
 from ..object import Object
 
-"""- :obj:`~pyrogram.types.InputLocationMessageContent`
-    - :obj:`~pyrogram.types.InputVenueMessageContent`
-    - :obj:`~pyrogram.types.InputContactMessageContent`"""
+"""- :obj:`~hasnainkk.types.InputLocationMessageContent`
+    - :obj:`~hasnainkk.types.InputVenueMessageContent`
+    - :obj:`~hasnainkk.types.InputContactMessageContent`"""
 
 
 class InputMessageContent(Object):
@@ -30,11 +30,11 @@ class InputMessageContent(Object):
 
     Pyrogram currently supports the following types:
 
-    - :obj:`~pyrogram.types.InputTextMessageContent`
+    - :obj:`~hasnainkk.types.InputTextMessageContent`
     """
 
     def __init__(self):
         super().__init__()
 
-    async def write(self, client: "pyrogram.Client", reply_markup):
+    async def write(self, client: "hasnainkk.Client", reply_markup):
         raise NotImplementedError

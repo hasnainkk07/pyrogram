@@ -19,8 +19,8 @@
 from datetime import datetime
 from typing import Union, Dict
 
-import pyrogram
-from pyrogram import raw, types, utils, enums
+import hasnainkk
+from hasnainkk import raw, types, utils, enums
 from ..object import Object
 
 
@@ -28,13 +28,13 @@ class ChatMember(Object):
     """Contains information about one member of a chat.
 
     Parameters:
-        status (:obj:`~pyrogram.enums.ChatMemberStatus`):
+        status (:obj:`~hasnainkk.enums.ChatMemberStatus`):
             The member's status in the chat.
 
-        user (:obj:`~pyrogram.types.User`, *optional*):
+        user (:obj:`~hasnainkk.types.User`, *optional*):
             Information about the user.
 
-        chat (:obj:`~pyrogram.types.Chat`, *optional*):
+        chat (:obj:`~hasnainkk.types.Chat`, *optional*):
             Information about the chat (useful in case of banned channel senders).
 
         joined_date (:py:obj:`~datetime.datetime`, *optional*):
@@ -49,14 +49,14 @@ class ChatMember(Object):
             Restricted and banned only.
             Date when restrictions will be lifted for this user.
 
-        invited_by (:obj:`~pyrogram.types.User`, *optional*):
+        invited_by (:obj:`~hasnainkk.types.User`, *optional*):
             Administrators and self member only. Information about the user who invited this member.
             In case the user joined by himself this will be the same as "user".
 
-        promoted_by (:obj:`~pyrogram.types.User`, *optional*):
+        promoted_by (:obj:`~hasnainkk.types.User`, *optional*):
             Administrators only. Information about the user who promoted this member as administrator.
 
-        restricted_by (:obj:`~pyrogram.types.User`, *optional*):
+        restricted_by (:obj:`~hasnainkk.types.User`, *optional*):
             Restricted and banned only. Information about the user who restricted or banned this member.
 
         is_member (``bool``, *optional*):
@@ -65,17 +65,17 @@ class ChatMember(Object):
         can_be_edited (``bool``, *optional*):
             True, if the you are allowed to edit administrator privileges of the user.
 
-        permissions (:obj:`~pyrogram.types.ChatPermissions`, *optional*):
+        permissions (:obj:`~hasnainkk.types.ChatPermissions`, *optional*):
             Restricted only. Restricted actions that a non-administrator user is allowed to take.
 
-        privileges (:obj:`~pyrogram.types.ChatPrivileges`, *optional*):
+        privileges (:obj:`~hasnainkk.types.ChatPrivileges`, *optional*):
             Administrators only. Privileged actions that an administrator is able to take.
     """
 
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: "hasnainkk.Client" = None,
         status: "enums.ChatMemberStatus",
         user: "types.User" = None,
         chat: "types.Chat" = None,
@@ -108,7 +108,7 @@ class ChatMember(Object):
 
     @staticmethod
     def _parse(
-        client: "pyrogram.Client",
+        client: "hasnainkk.Client",
         member: Union["raw.base.ChatParticipant", "raw.base.ChannelParticipant"],
         users: Dict[int, "raw.base.User"],
         chats: Dict[int, "raw.base.Chat"]

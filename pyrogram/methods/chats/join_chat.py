@@ -18,14 +18,14 @@
 
 from typing import Union
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 
 
 class JoinChat:
     async def join_chat(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str]
     ) -> "types.Chat":
         """Join a group chat or channel.
@@ -38,7 +38,7 @@ class JoinChat:
                 channel/supergroup (in the format @username) or a chat id of a linked chat (channel or supergroup).
 
         Returns:
-            :obj:`~pyrogram.types.Chat`: On success, a chat object is returned.
+            :obj:`~hasnainkk.types.Chat`: On success, a chat object is returned.
 
         Example:
             .. code-block:: python
@@ -47,10 +47,10 @@ class JoinChat:
                 await app.join_chat("https://t.me/+AbCdEf0123456789")
 
                 # Join chat via username
-                await app.join_chat("pyrogram")
+                await app.join_chat("hasnainkk")
 
                 # Join a linked chat
-                await app.join_chat(app.get_chat("pyrogram").linked_chat.id)
+                await app.join_chat(app.get_chat("hasnainkk").linked_chat.id)
         """
         match = self.INVITE_LINK_RE.match(str(chat_id))
 

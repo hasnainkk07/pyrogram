@@ -25,7 +25,7 @@ from ... import enums
 
 class InputMediaPhoto(InputMedia):
     """A photo to be sent inside an album.
-    It is intended to be used with :obj:`~pyrogram.Client.send_media_group`.
+    It is intended to be used with :obj:`~hasnainkk.Client.send_media_group`.
 
     Parameters:
         media (``str`` | ``BinaryIO``):
@@ -39,11 +39,11 @@ class InputMediaPhoto(InputMedia):
             Caption of the photo to be sent, 0-1024 characters.
             If not specified, the original caption is kept. Pass "" (empty string) to remove the caption.
 
-        parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+        parse_mode (:obj:`~hasnainkk.enums.ParseMode`, *optional*):
             By default, texts are parsed using both Markdown and HTML styles.
             You can combine both syntaxes together.
 
-        caption_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+        caption_entities (List of :obj:`~hasnainkk.types.MessageEntity`):
             List of special entities that appear in the caption, which can be specified instead of *parse_mode*.
 
         has_spoiler (``bool``, *optional*):

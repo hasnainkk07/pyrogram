@@ -19,15 +19,15 @@
 import os
 from typing import Union, BinaryIO
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import utils
-from pyrogram.file_id import FileType
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import utils
+from hasnainkk.file_id import FileType
 
 
 class SetChatPhoto:
     async def set_chat_photo(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         *,
         photo: Union[str, BinaryIO] = None,
@@ -48,12 +48,12 @@ class SetChatPhoto:
                 Unique identifier (int) or username (str) of the target chat.
 
             photo (``str`` | ``BinaryIO``, *optional*):
-                New chat photo. You can pass a :obj:`~pyrogram.types.Photo` file_id, a file path to upload a new photo
+                New chat photo. You can pass a :obj:`~hasnainkk.types.Photo` file_id, a file path to upload a new photo
                 from your local machine or a binary file-like object with its attribute
                 ".name" set for in-memory uploads.
 
             video (``str`` | ``BinaryIO``, *optional*):
-                New chat video. You can pass a :obj:`~pyrogram.types.Video` file_id, a file path to upload a new video
+                New chat video. You can pass a :obj:`~hasnainkk.types.Video` file_id, a file path to upload a new video
                 from your local machine or a binary file-like object with its attribute
                 ".name" set for in-memory uploads.
 

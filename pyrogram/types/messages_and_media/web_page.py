@@ -16,9 +16,9 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 from ..object import Object
 
 
@@ -50,19 +50,19 @@ class WebPage(Object):
         description (``str``, *optional*):
             Description of this webpage.
 
-        audio (:obj:`~pyrogram.types.Audio`, *optional*):
+        audio (:obj:`~hasnainkk.types.Audio`, *optional*):
             Webpage preview is an audio file, information about the file.
 
-        document (:obj:`~pyrogram.types.Document`, *optional*):
+        document (:obj:`~hasnainkk.types.Document`, *optional*):
             Webpage preview is a general file, information about the file.
 
-        photo (:obj:`~pyrogram.types.Photo`, *optional*):
+        photo (:obj:`~hasnainkk.types.Photo`, *optional*):
             Webpage preview is a photo, information about the photo.
 
-        animation (:obj:`~pyrogram.types.Animation`, *optional*):
+        animation (:obj:`~hasnainkk.types.Animation`, *optional*):
             Webpage preview is an animation, information about the animation.
 
-        video (:obj:`~pyrogram.types.Video`, *optional*):
+        video (:obj:`~hasnainkk.types.Video`, *optional*):
             Webpage preview is a video, information about the video.
 
         embed_url (``str``, *optional*):
@@ -87,7 +87,7 @@ class WebPage(Object):
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: "hasnainkk.Client" = None,
         id: str,
         url: str,
         display_url: str,

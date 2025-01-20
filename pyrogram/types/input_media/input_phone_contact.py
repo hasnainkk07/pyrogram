@@ -16,14 +16,14 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-from pyrogram import raw
-from pyrogram.session.internals import MsgId
+from hasnainkk import raw
+from hasnainkk.session.internals import MsgId
 from ..object import Object
 
 
 class InputPhoneContact(Object):
     """A Phone Contact to be added in your Telegram address book.
-    It is intended to be used with :meth:`~pyrogram.Client.add_contacts()`
+    It is intended to be used with :meth:`~hasnainkk.Client.add_contacts()`
 
     Parameters:
         phone (``str``):

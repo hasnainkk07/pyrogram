@@ -18,8 +18,8 @@
 
 from typing import Optional, List
 
-import pyrogram
-from pyrogram import raw, types, utils, enums
+import hasnainkk
+from hasnainkk import raw, types, utils, enums
 from .inline_query_result import InlineQueryResult
 from ...file_id import FileId
 
@@ -47,17 +47,17 @@ class InlineQueryResultCachedDocument(InlineQueryResult):
         caption (``str``, *optional*):
             Caption of the photo to be sent, 0-1024 characters.
 
-        parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+        parse_mode (:obj:`~hasnainkk.enums.ParseMode`, *optional*):
             By default, texts are parsed using both Markdown and HTML styles.
             You can combine both syntaxes together.
 
-        caption_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+        caption_entities (List of :obj:`~hasnainkk.types.MessageEntity`):
             List of special entities that appear in the caption, which can be specified instead of *parse_mode*.
 
-        reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup`, *optional*):
+        reply_markup (:obj:`~hasnainkk.types.InlineKeyboardMarkup`, *optional*):
             An InlineKeyboardMarkup object.
 
-        input_message_content (:obj:`~pyrogram.types.InputMessageContent`):
+        input_message_content (:obj:`~hasnainkk.types.InputMessageContent`):
             Content of the message to be sent instead of the photo.
     """
 
@@ -84,7 +84,7 @@ class InlineQueryResultCachedDocument(InlineQueryResult):
         self.reply_markup = reply_markup
         self.input_message_content = input_message_content
 
-    async def write(self, client: "pyrogram.Client"):
+    async def write(self, client: "hasnainkk.Client"):
         message, entities = (await utils.parse_text_entities(
             client, self.caption, self.parse_mode, self.caption_entities
         )).values()

@@ -16,8 +16,8 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-import pyrogram
-from pyrogram import raw
+import hasnainkk
+from hasnainkk import raw
 from ..object import Object
 
 
@@ -32,7 +32,7 @@ class StrippedThumbnail(Object):
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: "hasnainkk.Client" = None,
         data: bytes
     ):
         super().__init__(client)

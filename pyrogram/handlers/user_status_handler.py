@@ -23,9 +23,9 @@ from .handler import Handler
 
 class UserStatusHandler(Handler):
     """The UserStatus handler class. Used to handle user status updates (user going online or offline).
-    It is intended to be used with :meth:`~pyrogram.Client.add_handler`.
+    It is intended to be used with :meth:`~hasnainkk.Client.add_handler`.
 
-    For a nicer way to register this handler, have a look at the :meth:`~pyrogram.Client.on_user_status` decorator.
+    For a nicer way to register this handler, have a look at the :meth:`~hasnainkk.Client.on_user_status` decorator.
 
     Parameters:
         callback (``Callable``):
@@ -36,10 +36,10 @@ class UserStatusHandler(Handler):
             Pass one or more filters to allow only a subset of users to be passed in your callback function.
 
     Other parameters:
-        client (:obj:`~pyrogram.Client`):
+        client (:obj:`~hasnainkk.Client`):
             The Client itself, useful when you want to call other API methods inside the user status handler.
 
-        user (:obj:`~pyrogram.types.User`):
+        user (:obj:`~hasnainkk.types.User`):
             The user containing the updated status.
     """
 

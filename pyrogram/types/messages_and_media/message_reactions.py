@@ -18,8 +18,8 @@
 
 from typing import Optional, List
 
-import pyrogram
-from pyrogram import raw, types
+import hasnainkk
+from hasnainkk import raw, types
 from ..object import Object
 
 
@@ -27,14 +27,14 @@ class MessageReactions(Object):
     """Contains information about a message reactions.
 
     Parameters:
-        reactions (List of :obj:`~pyrogram.types.Reaction`):
+        reactions (List of :obj:`~hasnainkk.types.Reaction`):
             Reactions list.
     """
 
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: "hasnainkk.Client" = None,
         reactions: Optional[List["types.Reaction"]] = None,
     ):
         super().__init__(client)
@@ -43,7 +43,7 @@ class MessageReactions(Object):
 
     @staticmethod
     def _parse(
-        client: "pyrogram.Client",
+        client: "hasnainkk.Client",
         message_reactions: Optional["raw.base.MessageReactions"] = None
     ) -> Optional["MessageReactions"]:
         if not message_reactions:

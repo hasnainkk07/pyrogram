@@ -22,11 +22,11 @@ import re
 from datetime import datetime
 from typing import Union, List
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
-from pyrogram import utils
-from pyrogram.file_id import FileType
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
+from hasnainkk import utils
+from hasnainkk.file_id import FileType
 
 log = logging.getLogger(__name__)
 
@@ -34,7 +34,7 @@ log = logging.getLogger(__name__)
 class SendMediaGroup:
     # TODO: Add progress parameter
     async def send_media_group(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         media: List[Union[
             "types.InputMediaPhoto",
@@ -57,7 +57,7 @@ class SendMediaGroup:
                 For your personal cloud (Saved Messages) you can simply use "me" or "self".
                 For a contact that exists in your Telegram address book you can use his phone number (str).
 
-            media (List of :obj:`~pyrogram.types.InputMediaPhoto`, :obj:`~pyrogram.types.InputMediaVideo`, :obj:`~pyrogram.types.InputMediaAudio` and :obj:`~pyrogram.types.InputMediaDocument`):
+            media (List of :obj:`~hasnainkk.types.InputMediaPhoto`, :obj:`~hasnainkk.types.InputMediaVideo`, :obj:`~hasnainkk.types.InputMediaAudio` and :obj:`~hasnainkk.types.InputMediaDocument`):
                 A list describing photos and videos to be sent, must include 2–10 items.
 
             disable_notification (``bool``, *optional*):
@@ -74,12 +74,12 @@ class SendMediaGroup:
                 Protects the contents of the sent message from forwarding and saving.
 
         Returns:
-            List of :obj:`~pyrogram.types.Message`: On success, a list of the sent messages is returned.
+            List of :obj:`~hasnainkk.types.Message`: On success, a list of the sent messages is returned.
 
         Example:
             .. code-block:: python
 
-                from pyrogram.types import InputMediaPhoto, InputMediaVideo
+                from hasnainkk.types import InputMediaPhoto, InputMediaVideo
 
                 await app.send_media_group(
                     "me",

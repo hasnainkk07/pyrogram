@@ -19,16 +19,16 @@
 import logging
 from typing import Union
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 
 log = logging.getLogger(__name__)
 
 
 class SignIn:
     async def sign_in(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         phone_number: str,
         phone_code_hash: str,
         phone_code: str
@@ -42,15 +42,15 @@ class SignIn:
                 Phone number in international format (includes the country prefix).
 
             phone_code_hash (``str``):
-                Code identifier taken from the result of :meth:`~pyrogram.Client.send_code`.
+                Code identifier taken from the result of :meth:`~hasnainkk.Client.send_code`.
 
             phone_code (``str``):
                 The valid confirmation code you received (either as Telegram message or as SMS in your phone number).
 
         Returns:
-            :obj:`~pyrogram.types.User` | :obj:`~pyrogram.types.TermsOfService` | bool: On success, in case the
+            :obj:`~hasnainkk.types.User` | :obj:`~hasnainkk.types.TermsOfService` | bool: On success, in case the
             authorization completed, the user is returned. In case the phone number needs to be registered first AND the
-            terms of services accepted (with :meth:`~pyrogram.Client.accept_terms_of_service`), an object containing
+            terms of services accepted (with :meth:`~hasnainkk.Client.accept_terms_of_service`), an object containing
             them is returned. In case the phone number needs to be registered, but the terms of services don't need to
             be accepted, False is returned instead.
 

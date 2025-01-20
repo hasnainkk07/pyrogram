@@ -18,8 +18,8 @@
 
 from typing import Optional, List
 
-import pyrogram
-from pyrogram import raw, types, utils, enums
+import hasnainkk
+from hasnainkk import raw, types, utils, enums
 from .inline_query_result import InlineQueryResult
 
 
@@ -47,20 +47,20 @@ class InlineQueryResultDocument(InlineQueryResult):
         caption (``str``, *optional*):
             Caption of the video to be sent, 0-1024 characters.
 
-        parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+        parse_mode (:obj:`~hasnainkk.enums.ParseMode`, *optional*):
             By default, texts are parsed using both Markdown and HTML styles.
             You can combine both syntaxes together.
 
-        caption_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+        caption_entities (List of :obj:`~hasnainkk.types.MessageEntity`):
             List of special entities that appear in the caption, which can be specified instead of *parse_mode*.
 
         description (``str``, *optional*):
             Short description of the result.
 
-        reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup`, *optional*):
+        reply_markup (:obj:`~hasnainkk.types.InlineKeyboardMarkup`, *optional*):
             Inline keyboard attached to the message.
 
-        input_message_content (:obj:`~pyrogram.types.InputMessageContent`):
+        input_message_content (:obj:`~hasnainkk.types.InputMessageContent`):
             Content of the message to be sent instead of the file.
 
         thumb_url (``str``, *optional*):
@@ -102,7 +102,7 @@ class InlineQueryResultDocument(InlineQueryResult):
         self.thumb_width = thumb_width
         self.thumb_height = thumb_height
 
-    async def write(self, client: "pyrogram.Client"):
+    async def write(self, client: "hasnainkk.Client"):
         document = raw.types.InputWebDocument(
             url=self.document_url,
             size=0,

@@ -16,13 +16,13 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-import pyrogram
-from pyrogram import raw
+import hasnainkk
+from hasnainkk import raw
 
 
 class UpdateProfile:
     async def update_profile(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         first_name: str = None,
         last_name: str = None,
         bio: str = None
@@ -55,7 +55,7 @@ class UpdateProfile:
                 await app.update_profile(first_name="Pyrogram")
 
                 # Update first name and bio
-                await app.update_profile(first_name="Pyrogram", bio="https://docs.pyrogram.org/")
+                await app.update_profile(first_name="Pyrogram", bio="https://docs.hasnainkk.org/")
 
                 # Remove the last name
                 await app.update_profile(last_name="")

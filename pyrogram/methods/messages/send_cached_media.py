@@ -19,15 +19,15 @@
 from datetime import datetime
 from typing import Union, List, Optional
 
-import pyrogram
-from pyrogram import raw, enums
-from pyrogram import types
-from pyrogram import utils
+import hasnainkk
+from hasnainkk import raw, enums
+from hasnainkk import types
+from hasnainkk import utils
 
 
 class SendCachedMedia:
     async def send_cached_media(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         file_id: str,
         caption: str = "",
@@ -65,11 +65,11 @@ class SendCachedMedia:
             caption (``str``, *optional*):
                 Media caption, 0-1024 characters.
 
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            parse_mode (:obj:`~hasnainkk.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
-            caption_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            caption_entities (List of :obj:`~hasnainkk.types.MessageEntity`):
                 List of special entities that appear in the caption, which can be specified instead of *parse_mode*.
 
             disable_notification (``bool``, *optional*):
@@ -85,12 +85,12 @@ class SendCachedMedia:
             protect_content (``bool``, *optional*):
                 Protects the contents of the sent message from forwarding and saving.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardRemove` | :obj:`~pyrogram.types.ForceReply`, *optional*):
+            reply_markup (:obj:`~hasnainkk.types.InlineKeyboardMarkup` | :obj:`~hasnainkk.types.ReplyKeyboardMarkup` | :obj:`~hasnainkk.types.ReplyKeyboardRemove` | :obj:`~hasnainkk.types.ForceReply`, *optional*):
                 Additional interface options. An object for an inline keyboard, custom reply keyboard,
                 instructions to remove reply keyboard or to force a reply from the user.
 
         Returns:
-            :obj:`~pyrogram.types.Message`: On success, the sent media message is returned.
+            :obj:`~hasnainkk.types.Message`: On success, the sent media message is returned.
 
         Example:
             .. code-block:: python

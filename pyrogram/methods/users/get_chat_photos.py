@@ -18,13 +18,13 @@
 
 from typing import Union, AsyncGenerator, Optional
 
-import pyrogram
-from pyrogram import types, raw, utils
+import hasnainkk
+from hasnainkk import types, raw, utils
 
 
 class GetChatPhotos:
     async def get_chat_photos(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         limit: int = 0,
     ) -> Optional[AsyncGenerator["types.Photo", None]]:
@@ -43,7 +43,7 @@ class GetChatPhotos:
                 By default, no limit is applied and all profile photos are returned.
 
         Returns:
-            ``Generator``: A generator yielding :obj:`~pyrogram.types.Photo` objects.
+            ``Generator``: A generator yielding :obj:`~hasnainkk.types.Photo` objects.
 
         Example:
             .. code-block:: python

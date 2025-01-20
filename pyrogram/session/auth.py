@@ -23,12 +23,12 @@ from hashlib import sha1
 from io import BytesIO
 from os import urandom
 
-import pyrogram
-from pyrogram import raw
-from pyrogram.connection import Connection
-from pyrogram.crypto import aes, rsa, prime
-from pyrogram.errors import SecurityCheckMismatch
-from pyrogram.raw.core import TLObject, Long, Int
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk.connection import Connection
+from hasnainkk.crypto import aes, rsa, prime
+from hasnainkk.errors import SecurityCheckMismatch
+from hasnainkk.raw.core import TLObject, Long, Int
 from .internals import MsgId
 
 log = logging.getLogger(__name__)
@@ -37,7 +37,7 @@ log = logging.getLogger(__name__)
 class Auth:
     MAX_RETRIES = 5
 
-    def __init__(self, client: "pyrogram.Client", dc_id: int, test_mode: bool):
+    def __init__(self, client: "hasnainkk.Client", dc_id: int, test_mode: bool):
         self.dc_id = dc_id
         self.test_mode = test_mode
         self.ipv6 = client.ipv6

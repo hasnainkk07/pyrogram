@@ -19,9 +19,9 @@
 from datetime import datetime
 from typing import Dict
 
-import pyrogram
-from pyrogram import raw, utils
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw, utils
+from hasnainkk import types
 from ..object import Object
 from ..update import Update
 
@@ -30,10 +30,10 @@ class ChatJoinRequest(Object, Update):
     """Represents a join request sent to a chat.
 
     Parameters:
-        chat (:obj:`~pyrogram.types.Chat`):
+        chat (:obj:`~hasnainkk.types.Chat`):
             Chat to which the request was sent.
 
-        from_user (:obj:`~pyrogram.types.User`):
+        from_user (:obj:`~hasnainkk.types.User`):
             User that sent the join request.
 
         date (:py:obj:`~datetime.datetime`):
@@ -42,14 +42,14 @@ class ChatJoinRequest(Object, Update):
         bio (``str``, *optional*):
             Bio of the user.
 
-        invite_link (:obj:`~pyrogram.types.ChatInviteLink`, *optional*):
+        invite_link (:obj:`~hasnainkk.types.ChatInviteLink`, *optional*):
             Chat invite link that was used by the user to send the join request.
     """
 
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: "hasnainkk.Client" = None,
         chat: "types.Chat",
         from_user: "types.User",
         date: datetime,
@@ -66,7 +66,7 @@ class ChatJoinRequest(Object, Update):
 
     @staticmethod
     def _parse(
-        client: "pyrogram.Client",
+        client: "hasnainkk.Client",
         update: "raw.types.UpdateBotChatInviteRequester",
         users: Dict[int, "raw.types.User"],
         chats: Dict[int, "raw.types.Chat"]
@@ -83,7 +83,7 @@ class ChatJoinRequest(Object, Update):
         )
 
     async def approve(self) -> bool:
-        """Bound method *approve* of :obj:`~pyrogram.types.ChatJoinRequest`.
+        """Bound method *approve* of :obj:`~hasnainkk.types.ChatJoinRequest`.
         
         Use as a shortcut for:
         
@@ -111,7 +111,7 @@ class ChatJoinRequest(Object, Update):
         )
 
     async def decline(self) -> bool:
-        """Bound method *decline* of :obj:`~pyrogram.types.ChatJoinRequest`.
+        """Bound method *decline* of :obj:`~hasnainkk.types.ChatJoinRequest`.
         
         Use as a shortcut for:
         

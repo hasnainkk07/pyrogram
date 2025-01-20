@@ -20,18 +20,18 @@ import os
 from datetime import datetime
 from typing import Union, BinaryIO, Optional, Callable
 
-import pyrogram
-from pyrogram import StopTransmission
-from pyrogram import raw
-from pyrogram import types
-from pyrogram import utils
-from pyrogram.errors import FilePartMissing
-from pyrogram.file_id import FileType
+import hasnainkk
+from hasnainkk import StopTransmission
+from hasnainkk import raw
+from hasnainkk import types
+from hasnainkk import utils
+from hasnainkk.errors import FilePartMissing
+from hasnainkk.file_id import FileType
 
 
 class SendVideoNote:
     async def send_video_note(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         video_note: Union[str, BinaryIO],
         duration: int = 0,
@@ -92,7 +92,7 @@ class SendVideoNote:
             protect_content (``bool``, *optional*):
                 Protects the contents of the sent message from forwarding and saving.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardRemove` | :obj:`~pyrogram.types.ForceReply`, *optional*):
+            reply_markup (:obj:`~hasnainkk.types.InlineKeyboardMarkup` | :obj:`~hasnainkk.types.ReplyKeyboardMarkup` | :obj:`~hasnainkk.types.ReplyKeyboardRemove` | :obj:`~hasnainkk.types.ForceReply`, *optional*):
                 Additional interface options. An object for an inline keyboard, custom reply keyboard,
                 instructions to remove reply keyboard or to force a reply from the user.
 
@@ -119,8 +119,8 @@ class SendVideoNote:
                 You can either keep ``*args`` or add every single extra argument in your function signature.
 
         Returns:
-            :obj:`~pyrogram.types.Message` | ``None``: On success, the sent video note message is returned, otherwise,
-            in case the upload is deliberately stopped with :meth:`~pyrogram.Client.stop_transmission`, None is
+            :obj:`~hasnainkk.types.Message` | ``None``: On success, the sent video note message is returned, otherwise,
+            in case the upload is deliberately stopped with :meth:`~hasnainkk.Client.stop_transmission`, None is
             returned.
 
         Example:

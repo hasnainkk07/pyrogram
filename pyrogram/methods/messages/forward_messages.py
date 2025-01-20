@@ -19,14 +19,14 @@
 from datetime import datetime
 from typing import Union, List, Iterable
 
-import pyrogram
-from pyrogram import raw, utils
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw, utils
+from hasnainkk import types
 
 
 class ForwardMessages:
     async def forward_messages(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         from_chat_id: Union[int, str],
         message_ids: Union[int, Iterable[int]],
@@ -63,7 +63,7 @@ class ForwardMessages:
                 Protects the contents of the sent message from forwarding and saving.
 
         Returns:
-            :obj:`~pyrogram.types.Message` | List of :obj:`~pyrogram.types.Message`: In case *message_ids* was not
+            :obj:`~hasnainkk.types.Message` | List of :obj:`~hasnainkk.types.Message`: In case *message_ids* was not
             a list, a single message is returned, otherwise a list of messages is returned.
 
         Example:

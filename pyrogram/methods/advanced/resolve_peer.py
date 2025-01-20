@@ -20,17 +20,17 @@ import logging
 import re
 from typing import Union
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import utils
-from pyrogram.errors import PeerIdInvalid
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import utils
+from hasnainkk.errors import PeerIdInvalid
 
 log = logging.getLogger(__name__)
 
 
 class ResolvePeer:
     async def resolve_peer(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         peer_id: Union[int, str]
     ) -> Union[raw.base.InputPeer, raw.base.InputUser, raw.base.InputChannel]:
         """Get the InputPeer of a known peer id.
@@ -39,7 +39,7 @@ class ResolvePeer:
         .. note::
 
             This is a utility method intended to be used **only** when working with raw
-            :obj:`functions <pyrogram.api.functions>` (i.e: a Telegram API method you wish to use which is not
+            :obj:`functions <hasnainkk.api.functions>` (i.e: a Telegram API method you wish to use which is not
             available yet in the Client class as an easy-to-use method).
 
         .. include:: /_includes/usable-by/users-bots.rst

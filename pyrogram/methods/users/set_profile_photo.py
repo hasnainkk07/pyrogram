@@ -18,13 +18,13 @@
 
 from typing import Union, BinaryIO
 
-import pyrogram
-from pyrogram import raw
+import hasnainkk
+from hasnainkk import raw
 
 
 class SetProfilePhoto:
     async def set_profile_photo(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         *,
         photo: Union[str, BinaryIO] = None,
         video: Union[str, BinaryIO] = None

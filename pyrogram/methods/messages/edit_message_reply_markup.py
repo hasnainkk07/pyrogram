@@ -18,14 +18,14 @@
 
 from typing import Union
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 
 
 class EditMessageReplyMarkup:
     async def edit_message_reply_markup(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         message_id: int,
         reply_markup: "types.InlineKeyboardMarkup" = None,
@@ -43,16 +43,16 @@ class EditMessageReplyMarkup:
             message_id (``int``):
                 Message identifier in the chat specified in chat_id.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup`, *optional*):
+            reply_markup (:obj:`~hasnainkk.types.InlineKeyboardMarkup`, *optional*):
                 An InlineKeyboardMarkup object.
 
         Returns:
-            :obj:`~pyrogram.types.Message`: On success, the edited message is returned.
+            :obj:`~hasnainkk.types.Message`: On success, the edited message is returned.
 
         Example:
             .. code-block:: python
 
-                from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+                from hasnainkk.types import InlineKeyboardMarkup, InlineKeyboardButton
 
                 # Bots only
                 await app.edit_message_reply_markup(

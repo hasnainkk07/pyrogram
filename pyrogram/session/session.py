@@ -23,16 +23,16 @@ import os
 from hashlib import sha1
 from io import BytesIO
 
-import pyrogram
-from pyrogram import raw
-from pyrogram.connection import Connection
-from pyrogram.crypto import mtproto
-from pyrogram.errors import (
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk.connection import Connection
+from hasnainkk.crypto import mtproto
+from hasnainkk.errors import (
     RPCError, InternalServerError, AuthKeyDuplicated, FloodWait, ServiceUnavailable, BadMsgNotification,
     SecurityCheckMismatch
 )
-from pyrogram.raw.all import layer
-from pyrogram.raw.core import TLObject, MsgContainer, Int, FutureSalts
+from hasnainkk.raw.all import layer
+from hasnainkk.raw.core import TLObject, MsgContainer, Int, FutureSalts
 from .internals import MsgId, MsgFactory
 
 log = logging.getLogger(__name__)
@@ -61,7 +61,7 @@ class Session:
 
     def __init__(
         self,
-        client: "pyrogram.Client",
+        client: "hasnainkk.Client",
         dc_id: int,
         auth_key: bytes,
         test_mode: bool,
@@ -185,7 +185,7 @@ class Session:
 
     async def handle_packet(self, packet):
         data = await self.loop.run_in_executor(
-            pyrogram.crypto_executor,
+            hasnainkk.crypto_executor,
             mtproto.unpack,
             BytesIO(packet),
             self.session_id,
@@ -324,7 +324,7 @@ class Session:
         log.debug("Sent: %s", message)
 
         payload = await self.loop.run_in_executor(
-            pyrogram.crypto_executor,
+            hasnainkk.crypto_executor,
             mtproto.pack,
             message,
             self.salt,

@@ -18,13 +18,13 @@
 
 from typing import List, Union
 
-import pyrogram
-from pyrogram import raw, types
+import hasnainkk
+from hasnainkk import raw, types
 
 
 class DeleteContacts:
     async def delete_contacts(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         user_ids: Union[int, str, List[Union[int, str]]]
     ) -> Union["types.User", List["types.User"], None]:
         """Delete contacts from your Telegram address book.
@@ -36,7 +36,7 @@ class DeleteContacts:
                 A single user id/username or a list of user identifiers (id or username).
 
         Returns:
-            :obj:`~pyrogram.types.User` | List of :obj:`~pyrogram.types.User` | ``None``: In case *user_ids* was an
+            :obj:`~hasnainkk.types.User` | List of :obj:`~hasnainkk.types.User` | ``None``: In case *user_ids* was an
             integer or a string, a single User object is returned. In case *user_ids* was a list, a list of User objects
             is returned. In case nothing changed after calling the method (for example, when deleting a non-existent
             contact), None is returned.

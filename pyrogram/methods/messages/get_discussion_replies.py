@@ -18,13 +18,13 @@
 
 from typing import Union, Optional, AsyncGenerator
 
-import pyrogram
-from pyrogram import types, raw
+import hasnainkk
+from hasnainkk import types, raw
 
 
 class GetDiscussionReplies:
     async def get_discussion_replies(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         message_id: int,
         limit: int = 0,

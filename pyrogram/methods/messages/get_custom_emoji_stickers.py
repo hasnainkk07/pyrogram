@@ -18,14 +18,14 @@
 
 from typing import List
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 
 
 class GetCustomEmojiStickers:
     async def get_custom_emoji_stickers(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         custom_emoji_ids: List[int],
     ) -> List["types.Sticker"]:
         """Get information about custom emoji stickers by their identifiers.
@@ -38,7 +38,7 @@ class GetCustomEmojiStickers:
                 At most 200 custom emoji identifiers can be specified.
 
         Returns:
-            List of :obj:`~pyrogram.types.Sticker`: On success, a list of sticker objects is returned.
+            List of :obj:`~hasnainkk.types.Sticker`: On success, a list of sticker objects is returned.
         """
         result = await self.invoke(
             raw.functions.messages.GetCustomEmojiDocuments(
@@ -52,4 +52,4 @@ class GetCustomEmojiStickers:
             sticker = await types.Sticker._parse(self, item, attributes)
             stickers.append(sticker)
 
-        return pyrogram.types.List(stickers)
+        return hasnainkk.types.List(stickers)

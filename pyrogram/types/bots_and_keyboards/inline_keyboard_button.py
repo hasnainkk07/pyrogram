@@ -18,9 +18,9 @@
 
 from typing import Union
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 from ..object import Object
 
 
@@ -39,13 +39,13 @@ class InlineKeyboardButton(Object):
         url (``str``, *optional*):
             HTTP url to be opened when button is pressed.
 
-        web_app (:obj:`~pyrogram.types.WebAppInfo`, *optional*):
+        web_app (:obj:`~hasnainkk.types.WebAppInfo`, *optional*):
             Description of the `Web App <https://core.telegram.org/bots/webapps>`_ that will be launched when the user
             presses the button. The Web App will be able to send an arbitrary message on behalf of the user using the
-            method :meth:`~pyrogram.Client.answer_web_app_query`. Available only in private chats between a user and the
+            method :meth:`~hasnainkk.Client.answer_web_app_query`. Available only in private chats between a user and the
             bot.
 
-        login_url (:obj:`~pyrogram.types.LoginUrl`, *optional*):
+        login_url (:obj:`~hasnainkk.types.LoginUrl`, *optional*):
              An HTTP URL used to automatically authorize the user. Can be used as a replacement for
              the `Telegram Login Widget <https://core.telegram.org/widgets/login>`_.
 
@@ -66,7 +66,7 @@ class InlineKeyboardButton(Object):
             quick way for the user to open your bot in inline mode in the same chat – good for selecting something
             from multiple options.
 
-        callback_game (:obj:`~pyrogram.types.CallbackGame`, *optional*):
+        callback_game (:obj:`~hasnainkk.types.CallbackGame`, *optional*):
             Description of the game that will be launched when the user presses the button.
             **NOTE**: This type of button **must** always be the first button in the first row.
     """
@@ -155,7 +155,7 @@ class InlineKeyboardButton(Object):
                 )
             )
 
-    async def write(self, client: "pyrogram.Client"):
+    async def write(self, client: "hasnainkk.Client"):
         if self.callback_data is not None:
             # Telegram only wants bytes, but we are allowed to pass strings too, for convenience.
             data = bytes(self.callback_data, "utf-8") if isinstance(self.callback_data, str) else self.callback_data

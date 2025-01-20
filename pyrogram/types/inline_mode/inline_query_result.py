@@ -18,31 +18,31 @@
 
 from uuid import uuid4
 
-import pyrogram
-from pyrogram import types
+import hasnainkk
+from hasnainkk import types
 from ..object import Object
 
 
 class InlineQueryResult(Object):
     """One result of an inline query.
 
-    - :obj:`~pyrogram.types.InlineQueryResultCachedAudio`
-    - :obj:`~pyrogram.types.InlineQueryResultCachedDocument`
-    - :obj:`~pyrogram.types.InlineQueryResultCachedAnimation`
-    - :obj:`~pyrogram.types.InlineQueryResultCachedPhoto`
-    - :obj:`~pyrogram.types.InlineQueryResultCachedSticker`
-    - :obj:`~pyrogram.types.InlineQueryResultCachedVideo`
-    - :obj:`~pyrogram.types.InlineQueryResultCachedVoice`
-    - :obj:`~pyrogram.types.InlineQueryResultArticle`
-    - :obj:`~pyrogram.types.InlineQueryResultAudio`
-    - :obj:`~pyrogram.types.InlineQueryResultContact`
-    - :obj:`~pyrogram.types.InlineQueryResultDocument`
-    - :obj:`~pyrogram.types.InlineQueryResultAnimation`
-    - :obj:`~pyrogram.types.InlineQueryResultLocation`
-    - :obj:`~pyrogram.types.InlineQueryResultPhoto`
-    - :obj:`~pyrogram.types.InlineQueryResultVenue`
-    - :obj:`~pyrogram.types.InlineQueryResultVideo`
-    - :obj:`~pyrogram.types.InlineQueryResultVoice`
+    - :obj:`~hasnainkk.types.InlineQueryResultCachedAudio`
+    - :obj:`~hasnainkk.types.InlineQueryResultCachedDocument`
+    - :obj:`~hasnainkk.types.InlineQueryResultCachedAnimation`
+    - :obj:`~hasnainkk.types.InlineQueryResultCachedPhoto`
+    - :obj:`~hasnainkk.types.InlineQueryResultCachedSticker`
+    - :obj:`~hasnainkk.types.InlineQueryResultCachedVideo`
+    - :obj:`~hasnainkk.types.InlineQueryResultCachedVoice`
+    - :obj:`~hasnainkk.types.InlineQueryResultArticle`
+    - :obj:`~hasnainkk.types.InlineQueryResultAudio`
+    - :obj:`~hasnainkk.types.InlineQueryResultContact`
+    - :obj:`~hasnainkk.types.InlineQueryResultDocument`
+    - :obj:`~hasnainkk.types.InlineQueryResultAnimation`
+    - :obj:`~hasnainkk.types.InlineQueryResultLocation`
+    - :obj:`~hasnainkk.types.InlineQueryResultPhoto`
+    - :obj:`~hasnainkk.types.InlineQueryResultVenue`
+    - :obj:`~hasnainkk.types.InlineQueryResultVideo`
+    - :obj:`~hasnainkk.types.InlineQueryResultVoice`
     """
 
     def __init__(
@@ -59,5 +59,5 @@ class InlineQueryResult(Object):
         self.input_message_content = input_message_content
         self.reply_markup = reply_markup
 
-    async def write(self, client: "pyrogram.Client"):
+    async def write(self, client: "hasnainkk.Client"):
         pass

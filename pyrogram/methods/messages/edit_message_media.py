@@ -21,16 +21,16 @@ import os
 import re
 from typing import Union
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
-from pyrogram import utils
-from pyrogram.file_id import FileType
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
+from hasnainkk import utils
+from hasnainkk.file_id import FileType
 
 
 class EditMessageMedia:
     async def edit_message_media(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         message_id: int,
         media: "types.InputMedia",
@@ -53,10 +53,10 @@ class EditMessageMedia:
             message_id (``int``):
                 Message identifier in the chat specified in chat_id.
 
-            media (:obj:`~pyrogram.types.InputMedia`):
+            media (:obj:`~hasnainkk.types.InputMedia`):
                 One of the InputMedia objects describing an animation, audio, document, photo or video.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup`, *optional*):
+            reply_markup (:obj:`~hasnainkk.types.InlineKeyboardMarkup`, *optional*):
                 An InlineKeyboardMarkup object.
 
             file_name (``str``, *optional*):
@@ -64,12 +64,12 @@ class EditMessageMedia:
                 Defaults to file's path basename.
 
         Returns:
-            :obj:`~pyrogram.types.Message`: On success, the edited message is returned.
+            :obj:`~hasnainkk.types.Message`: On success, the edited message is returned.
 
         Example:
             .. code-block:: python
 
-                from pyrogram.types import InputMediaPhoto, InputMediaVideo, InputMediaAudio
+                from hasnainkk.types import InputMediaPhoto, InputMediaVideo, InputMediaAudio
 
                 # Replace the current media with a local photo
                 await app.edit_message_media(chat_id, message_id,

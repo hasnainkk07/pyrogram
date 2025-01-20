@@ -19,10 +19,10 @@
 from datetime import datetime
 from typing import List
 
-import pyrogram
-from pyrogram import raw, utils
-from pyrogram import types
-from pyrogram.file_id import FileId, FileType, FileUniqueId, FileUniqueType
+import hasnainkk
+from hasnainkk import raw, utils
+from hasnainkk import types
+from hasnainkk.file_id import FileId, FileType, FileUniqueId, FileUniqueType
 from ..object import Object
 
 
@@ -49,14 +49,14 @@ class Document(Object):
         date (:py:obj:`~datetime.datetime`, *optional*):
             Date the document was sent.
 
-        thumbs (List of :obj:`~pyrogram.types.Thumbnail`, *optional*):
+        thumbs (List of :obj:`~hasnainkk.types.Thumbnail`, *optional*):
             Document thumbnails as defined by sender.
     """
 
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: "hasnainkk.Client" = None,
         file_id: str,
         file_unique_id: str,
         file_name: str = None,

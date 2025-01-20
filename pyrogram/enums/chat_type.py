@@ -22,7 +22,7 @@ from .auto_name import AutoName
 
 
 class ChatType(AutoName):
-    """Chat type enumeration used in :obj:`~pyrogram.types.Chat`."""
+    """Chat type enumeration used in :obj:`~hasnainkk.types.Chat`."""
 
     PRIVATE = auto()
     "Chat is a private chat with a user"

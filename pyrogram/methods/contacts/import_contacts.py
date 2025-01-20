@@ -18,14 +18,14 @@
 
 from typing import List
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 
 
 class ImportContacts:
     async def import_contacts(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         contacts: List["types.InputPhoneContact"]
     ):
         """Import contacts to your Telegram address book.
@@ -33,7 +33,7 @@ class ImportContacts:
         .. include:: /_includes/usable-by/users.rst
 
         Parameters:
-            contacts (List of :obj:`~pyrogram.types.InputPhoneContact`):
+            contacts (List of :obj:`~hasnainkk.types.InputPhoneContact`):
                 The contact list to be added
 
         Returns:
@@ -42,7 +42,7 @@ class ImportContacts:
         Example:
             .. code-block:: python
 
-                from pyrogram.types import InputPhoneContact
+                from hasnainkk.types import InputPhoneContact
 
                 await app.import_contacts([
                     InputPhoneContact("+1-123-456-7890", "Foo"),

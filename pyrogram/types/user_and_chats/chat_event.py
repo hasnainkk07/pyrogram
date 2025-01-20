@@ -19,9 +19,9 @@
 from datetime import datetime
 from typing import List, Optional
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types, utils, enums
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types, utils, enums
 from ..object import Object
 
 
@@ -37,99 +37,99 @@ class ChatEvent(Object):
         date (:py:obj:`~datetime.datetime`):
             Date of the event.
 
-        action (:obj:`~pyrogram.enums.ChatEventAction`):
+        action (:obj:`~hasnainkk.enums.ChatEventAction`):
             Event action.
 
-        user (:obj:`~pyrogram.types.User`):
+        user (:obj:`~hasnainkk.types.User`):
             User that triggered the event.
 
         old_description, new_description (``str``, *optional*):
             Previous and new chat description.
-            For :obj:`~pyrogram.enums.ChatEventAction.DESCRIPTION_CHANGED` action only.
+            For :obj:`~hasnainkk.enums.ChatEventAction.DESCRIPTION_CHANGED` action only.
 
         old_history_ttl, new_history_ttl (``int``, *optional*):
             Previous and new chat history TTL.
-            For :obj:`~pyrogram.enums.ChatEventAction.HISTORY_TTL_CHANGED` action only.
+            For :obj:`~hasnainkk.enums.ChatEventAction.HISTORY_TTL_CHANGED` action only.
 
-        old_linked_chat, new_linked_chat (:obj:`~pyrogram.types.Chat`, *optional*):
+        old_linked_chat, new_linked_chat (:obj:`~hasnainkk.types.Chat`, *optional*):
             Previous and new linked chat.
-            For :obj:`~pyrogram.enums.ChatEventAction.LINKED_CHAT_CHANGED` action only.
+            For :obj:`~hasnainkk.enums.ChatEventAction.LINKED_CHAT_CHANGED` action only.
 
-        old_photo, new_photo (:obj:`~pyrogram.types.Photo`, *optional*):
+        old_photo, new_photo (:obj:`~hasnainkk.types.Photo`, *optional*):
             Previous and new chat photo.
-            For :obj:`~pyrogram.enums.ChatEventAction.PHOTO_CHANGED` action only.
+            For :obj:`~hasnainkk.enums.ChatEventAction.PHOTO_CHANGED` action only.
 
         old_title, new_title (``str``, *optional*):
             Previous and new chat title.
-            For :obj:`~pyrogram.enums.ChatEventAction.TITLE_CHANGED` action only.
+            For :obj:`~hasnainkk.enums.ChatEventAction.TITLE_CHANGED` action only.
 
         old_username, new_username (``str``, *optional*):
             Previous and new chat username.
-            For :obj:`~pyrogram.enums.ChatEventAction.USERNAME_CHANGED` action only.
+            For :obj:`~hasnainkk.enums.ChatEventAction.USERNAME_CHANGED` action only.
 
-        old_chat_permissions, new_chat_permissions (:obj:`~pyrogram.types.ChatPermissions`, *optional*):
+        old_chat_permissions, new_chat_permissions (:obj:`~hasnainkk.types.ChatPermissions`, *optional*):
             Previous and new default chat permissions.
-            For :obj:`~pyrogram.enums.ChatEventAction.CHAT_PERMISSIONS_CHANGED` action only.
+            For :obj:`~hasnainkk.enums.ChatEventAction.CHAT_PERMISSIONS_CHANGED` action only.
 
-        deleted_message (:obj:`~pyrogram.types.Message`, *optional*):
+        deleted_message (:obj:`~hasnainkk.types.Message`, *optional*):
             Deleted message.
-            For :obj:`~pyrogram.enums.ChatEventAction.MESSAGE_DELETED` action only.
+            For :obj:`~hasnainkk.enums.ChatEventAction.MESSAGE_DELETED` action only.
 
-        old_message, new_message (:obj:`~pyrogram.types.Message`, *optional*):
+        old_message, new_message (:obj:`~hasnainkk.types.Message`, *optional*):
             Previous and new message before it has been edited.
-            For :obj:`~pyrogram.enums.ChatEventAction.MESSAGE_EDITED` action only.
+            For :obj:`~hasnainkk.enums.ChatEventAction.MESSAGE_EDITED` action only.
 
-        invited_member (:obj:`~pyrogram.types.ChatMember`, *optional*):
+        invited_member (:obj:`~hasnainkk.types.ChatMember`, *optional*):
             New invited chat member.
-            For :obj:`~pyrogram.enums.ChatEventAction.MEMBER_INVITED` action only.
+            For :obj:`~hasnainkk.enums.ChatEventAction.MEMBER_INVITED` action only.
 
-        old_administrator_privileges, new_administrator_privileges (:obj:`~pyrogram.types.ChatMember`, *optional*):
+        old_administrator_privileges, new_administrator_privileges (:obj:`~hasnainkk.types.ChatMember`, *optional*):
             Previous and new administrator privileges.
-            For :obj:`~pyrogram.enums.ChatEventAction.ADMINISTRATOR_PRIVILEGES_CHANGED` action only.
+            For :obj:`~hasnainkk.enums.ChatEventAction.ADMINISTRATOR_PRIVILEGES_CHANGED` action only.
 
-        old_member_permissions, new_member_permissions (:obj:`~pyrogram.types.ChatMember`, *optional*):
+        old_member_permissions, new_member_permissions (:obj:`~hasnainkk.types.ChatMember`, *optional*):
             Previous and new member permissions.
-            For :obj:`~pyrogram.enums.ChatEventAction.MEMBER_PERMISSIONS_CHANGED` action only.
+            For :obj:`~hasnainkk.enums.ChatEventAction.MEMBER_PERMISSIONS_CHANGED` action only.
 
-        stopped_poll (:obj:`~pyrogram.types.Message`, *optional*):
+        stopped_poll (:obj:`~hasnainkk.types.Message`, *optional*):
             Message containing the stopped poll.
-            For :obj:`~pyrogram.enums.ChatEventAction.POLL_STOPPED` action only.
+            For :obj:`~hasnainkk.enums.ChatEventAction.POLL_STOPPED` action only.
 
         invites_enabled (``bool``, *optional*):
             If chat invites were enabled (True) or disabled (False).
-            For :obj:`~pyrogram.enums.ChatEventAction.INVITES_ENABLED` action only.
+            For :obj:`~hasnainkk.enums.ChatEventAction.INVITES_ENABLED` action only.
 
         history_hidden (``bool``, *optional*):
             If chat history has been hidden (True) or unhidden (False).
-            For :obj:`~pyrogram.enums.ChatEventAction.HISTORY_HIDDEN` action only.
+            For :obj:`~hasnainkk.enums.ChatEventAction.HISTORY_HIDDEN` action only.
 
         signatures_enabled (``bool``, *optional*):
             If message signatures were enabled (True) or disabled (False).
-            For :obj:`~pyrogram.enums.ChatEventAction.SIGNATURES_ENABLED` action only.
+            For :obj:`~hasnainkk.enums.ChatEventAction.SIGNATURES_ENABLED` action only.
 
         old_slow_mode, new_slow_mode (``int``, *optional*):
             Previous and new slow mode value in seconds.
-            For :obj:`~pyrogram.enums.ChatEventAction.SLOW_MODE_CHANGED` action only.
+            For :obj:`~hasnainkk.enums.ChatEventAction.SLOW_MODE_CHANGED` action only.
 
-        pinned_message (:obj:`~pyrogram.types.Message`, *optional*):
+        pinned_message (:obj:`~hasnainkk.types.Message`, *optional*):
             Pinned message.
-            For :obj:`~pyrogram.enums.ChatEventAction.MESSAGE_PINNED` action only.
+            For :obj:`~hasnainkk.enums.ChatEventAction.MESSAGE_PINNED` action only.
 
-        unpinned_message (:obj:`~pyrogram.types.Message`, *optional*):
+        unpinned_message (:obj:`~hasnainkk.types.Message`, *optional*):
             Unpinned message.
-            For :obj:`~pyrogram.enums.ChatEventAction.MESSAGE_UNPINNED` action only.
+            For :obj:`~hasnainkk.enums.ChatEventAction.MESSAGE_UNPINNED` action only.
 
-        old_invite_link, new_invite_link (:obj:`~pyrogram.types.ChatInviteLink`, *optional*):
+        old_invite_link, new_invite_link (:obj:`~hasnainkk.types.ChatInviteLink`, *optional*):
             Previous and new edited invite link.
-            For :obj:`~pyrogram.enums.ChatEventAction.INVITE_LINK_EDITED` action only.
+            For :obj:`~hasnainkk.enums.ChatEventAction.INVITE_LINK_EDITED` action only.
 
-        revoked_invite_link (:obj:`~pyrogram.types.ChatInviteLink`, *optional*):
+        revoked_invite_link (:obj:`~hasnainkk.types.ChatInviteLink`, *optional*):
             Revoked invite link.
-            For :obj:`~pyrogram.enums.ChatEventAction.INVITE_LINK_REVOKED` action only.
+            For :obj:`~hasnainkk.enums.ChatEventAction.INVITE_LINK_REVOKED` action only.
 
-        deleted_invite_link (:obj:`~pyrogram.types.ChatInviteLink`, *optional*):
+        deleted_invite_link (:obj:`~hasnainkk.types.ChatInviteLink`, *optional*):
             Deleted invite link.
-            For :obj:`~pyrogram.enums.ChatEventAction.INVITE_LINK_DELETED` action only.
+            For :obj:`~hasnainkk.enums.ChatEventAction.INVITE_LINK_DELETED` action only.
     """
 
     def __init__(
@@ -254,7 +254,7 @@ class ChatEvent(Object):
 
     @staticmethod
     async def _parse(
-        client: "pyrogram.Client",
+        client: "hasnainkk.Client",
         event: "raw.base.ChannelAdminLogEvent",
         users: List["raw.base.User"],
         chats: List["raw.base.Chat"]

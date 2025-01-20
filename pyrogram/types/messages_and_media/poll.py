@@ -19,9 +19,9 @@
 from datetime import datetime
 from typing import List, Union, Optional
 
-import pyrogram
-from pyrogram import raw, enums, utils
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw, enums, utils
+from hasnainkk import types
 from ..object import Object
 from ..update import Update
 
@@ -36,7 +36,7 @@ class Poll(Object, Update):
         question (``str``):
             Poll question, 1-255 characters.
 
-        options (List of :obj:`~pyrogram.types.PollOption`):
+        options (List of :obj:`~hasnainkk.types.PollOption`):
             List of poll options.
 
         total_voter_count (``int``):
@@ -48,7 +48,7 @@ class Poll(Object, Update):
         is_anonymous (``bool``, *optional*):
             True, if the poll is anonymous
 
-        type (:obj:`~pyrogram.enums.PollType`, *optional*):
+        type (:obj:`~hasnainkk.enums.PollType`, *optional*):
             Poll type.
 
         allows_multiple_answers (``bool``, *optional*):
@@ -66,7 +66,7 @@ class Poll(Object, Update):
             Text that is shown when a user chooses an incorrect answer or taps on the lamp icon in a quiz-style poll,
             0-200 characters.
 
-        explanation_entities (List of :obj:`~pyrogram.types.MessageEntity`, *optional*):
+        explanation_entities (List of :obj:`~hasnainkk.types.MessageEntity`, *optional*):
             Special entities like usernames, URLs, bot commands, etc. that appear in the explanation.
 
         open_period (``int``, *optional*):
@@ -79,7 +79,7 @@ class Poll(Object, Update):
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: "hasnainkk.Client" = None,
         id: str,
         question: str,
         options: List["types.PollOption"],

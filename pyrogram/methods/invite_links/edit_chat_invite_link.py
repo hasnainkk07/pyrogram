@@ -19,14 +19,14 @@
 from datetime import datetime
 from typing import Union
 
-import pyrogram
-from pyrogram import raw, utils
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw, utils
+from hasnainkk import types
 
 
 class EditChatInviteLink:
     async def edit_chat_invite_link(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         invite_link: str,
         name: str = None,
@@ -65,7 +65,7 @@ class EditChatInviteLink:
                 If True, member_limit can't be specified.
 
         Returns:
-            :obj:`~pyrogram.types.ChatInviteLink`: On success, the new invite link is returned
+            :obj:`~hasnainkk.types.ChatInviteLink`: On success, the new invite link is returned
 
         Example:
             .. code-block:: python

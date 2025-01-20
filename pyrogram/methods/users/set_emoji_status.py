@@ -18,13 +18,13 @@
 
 from typing import Optional
 
-import pyrogram
-from pyrogram import raw, types
+import hasnainkk
+from hasnainkk import raw, types
 
 
 class SetEmojiStatus:
     async def set_emoji_status(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         emoji_status: Optional["types.EmojiStatus"] = None
     ) -> bool:
         """Set the emoji status.
@@ -32,7 +32,7 @@ class SetEmojiStatus:
         .. include:: /_includes/usable-by/users.rst
 
         Parameters:
-            emoji_status (:obj:`~pyrogram.types.EmojiStatus`, *optional*):
+            emoji_status (:obj:`~hasnainkk.types.EmojiStatus`, *optional*):
                 The emoji status to set. None to remove.
 
         Returns:
@@ -41,7 +41,7 @@ class SetEmojiStatus:
         Example:
             .. code-block:: python
 
-                from pyrogram import types
+                from hasnainkk import types
 
                 await app.set_emoji_status(types.EmojiStatus(custom_emoji_id=1234567890987654321))
         """

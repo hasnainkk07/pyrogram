@@ -19,14 +19,14 @@
 import asyncio
 from typing import Union, List, Iterable
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 
 
 class GetUsers:
     async def get_users(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         user_ids: Union[int, str, Iterable[Union[int, str]]]
     ) -> Union["types.User", List["types.User"]]:
         """Get information about a user.
@@ -40,7 +40,7 @@ class GetUsers:
                 For a contact that exists in your Telegram address book you can use his phone number (str).
 
         Returns:
-            :obj:`~pyrogram.types.User` | List of :obj:`~pyrogram.types.User`: In case *user_ids* was not a list,
+            :obj:`~hasnainkk.types.User` | List of :obj:`~hasnainkk.types.User`: In case *user_ids* was not a list,
             a single user is returned, otherwise a list of users is returned.
 
         Example:

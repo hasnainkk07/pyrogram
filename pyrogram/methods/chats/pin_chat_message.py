@@ -18,13 +18,13 @@
 
 from typing import Union
 
-import pyrogram
-from pyrogram import raw, types
+import hasnainkk
+from hasnainkk import raw, types
 
 
 class PinChatMessage:
     async def pin_chat_message(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         message_id: int,
         disable_notification: bool = False,
@@ -52,7 +52,7 @@ class PinChatMessage:
                 Applicable to private chats only. Defaults to False.
 
         Returns:
-            :obj:`~pyrogram.types.Message`: On success, the service message is returned.
+            :obj:`~hasnainkk.types.Message`: On success, the service message is returned.
 
         Example:
             .. code-block:: python

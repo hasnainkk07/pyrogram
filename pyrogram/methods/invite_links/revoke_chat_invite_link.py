@@ -18,14 +18,14 @@
 
 from typing import Union
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 
 
 class RevokeChatInviteLink:
     async def revoke_chat_invite_link(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         invite_link: str,
     ) -> "types.ChatInviteLink":
@@ -46,7 +46,7 @@ class RevokeChatInviteLink:
                The invite link to revoke.
 
         Returns:
-            :obj:`~pyrogram.types.ChatInviteLink`: On success, the invite link object is returned.
+            :obj:`~hasnainkk.types.ChatInviteLink`: On success, the invite link object is returned.
         """
 
         r = await self.invoke(

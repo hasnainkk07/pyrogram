@@ -18,9 +18,9 @@
 
 from typing import List
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 from ..object import Object
 
 
@@ -37,17 +37,17 @@ class ChatPreview(Object):
         members_count (``int``):
             Chat members count.
 
-        photo (:obj:`~pyrogram.types.Photo`, *optional*):
+        photo (:obj:`~hasnainkk.types.Photo`, *optional*):
             Chat photo.
 
-        members (List of :obj:`~pyrogram.types.User`, *optional*):
+        members (List of :obj:`~hasnainkk.types.User`, *optional*):
             Preview of some of the chat members.
     """
 
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: "hasnainkk.Client" = None,
         title: str,
         type: str,
         members_count: int,

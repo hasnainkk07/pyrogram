@@ -21,12 +21,12 @@ import io
 import os
 import re
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
-from pyrogram import utils
-from pyrogram.errors import RPCError, MediaEmpty
-from pyrogram.file_id import FileType
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
+from hasnainkk import utils
+from hasnainkk.errors import RPCError, MediaEmpty
+from hasnainkk.file_id import FileType
 from .inline_session import get_session
 
 
@@ -34,7 +34,7 @@ class EditInlineMedia:
     MAX_RETRIES = 3
 
     async def edit_inline_media(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         inline_message_id: str,
         media: "types.InputMedia",
         reply_markup: "types.InlineKeyboardMarkup" = None
@@ -51,10 +51,10 @@ class EditInlineMedia:
                 Required if *chat_id* and *message_id* are not specified.
                 Identifier of the inline message.
 
-            media (:obj:`~pyrogram.types.InputMedia`):
+            media (:obj:`~hasnainkk.types.InputMedia`):
                 One of the InputMedia objects describing an animation, audio, document, photo or video.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup`, *optional*):
+            reply_markup (:obj:`~hasnainkk.types.InlineKeyboardMarkup`, *optional*):
                 An InlineKeyboardMarkup object.
 
         Returns:
@@ -63,7 +63,7 @@ class EditInlineMedia:
         Example:
             .. code-block:: python
 
-                from pyrogram.types import InputMediaPhoto, InputMediaVideo, InputMediaAudio
+                from hasnainkk.types import InputMediaPhoto, InputMediaVideo, InputMediaAudio
 
                 # Bots only
 

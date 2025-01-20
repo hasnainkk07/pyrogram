@@ -18,9 +18,9 @@
 
 from typing import Optional
 
-import pyrogram
-from pyrogram import raw, enums
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw, enums
+from hasnainkk import types
 from ..object import Object
 
 
@@ -30,7 +30,7 @@ class MessageEntity(Object):
     For example, hashtags, usernames, URLs, etc.
 
     Parameters:
-        type (:obj:`~pyrogram.enums.MessageEntityType`):
+        type (:obj:`~hasnainkk.enums.MessageEntityType`):
             Type of the entity.
 
         offset (``int``):
@@ -40,23 +40,23 @@ class MessageEntity(Object):
             Length of the entity in UTF-16 code units.
 
         url (``str``, *optional*):
-            For :obj:`~pyrogram.enums.MessageEntityType.TEXT_LINK` only, url that will be opened after user taps on the text.
+            For :obj:`~hasnainkk.enums.MessageEntityType.TEXT_LINK` only, url that will be opened after user taps on the text.
 
-        user (:obj:`~pyrogram.types.User`, *optional*):
-            For :obj:`~pyrogram.enums.MessageEntityType.TEXT_MENTION` only, the mentioned user.
+        user (:obj:`~hasnainkk.types.User`, *optional*):
+            For :obj:`~hasnainkk.enums.MessageEntityType.TEXT_MENTION` only, the mentioned user.
 
         language (``str``, *optional*):
             For "pre" only, the programming language of the entity text.
 
         custom_emoji_id (``int``, *optional*):
-            For :obj:`~pyrogram.enums.MessageEntityType.CUSTOM_EMOJI` only, unique identifier of the custom emoji.
-            Use :meth:`~pyrogram.Client.get_custom_emoji_stickers` to get full information about the sticker.
+            For :obj:`~hasnainkk.enums.MessageEntityType.CUSTOM_EMOJI` only, unique identifier of the custom emoji.
+            Use :meth:`~hasnainkk.Client.get_custom_emoji_stickers` to get full information about the sticker.
     """
 
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: "hasnainkk.Client" = None,
         type: "enums.MessageEntityType",
         offset: int,
         length: int,

@@ -18,8 +18,8 @@
 
 from typing import Callable
 
-import pyrogram
-from pyrogram.filters import Filter
+import hasnainkk
+from hasnainkk.filters import Filter
 
 
 class OnChatJoinRequest:
@@ -30,11 +30,11 @@ class OnChatJoinRequest:
     ) -> Callable:
         """Decorator for handling chat join requests.
 
-        This does the same thing as :meth:`~pyrogram.Client.add_handler` using the
-        :obj:`~pyrogram.handlers.ChatJoinRequestHandler`.
+        This does the same thing as :meth:`~hasnainkk.Client.add_handler` using the
+        :obj:`~hasnainkk.handlers.ChatJoinRequestHandler`.
 
         Parameters:
-            filters (:obj:`~pyrogram.filters`, *optional*):
+            filters (:obj:`~hasnainkk.filters`, *optional*):
                 Pass one or more filters to allow only a subset of updates to be passed in your function.
 
             group (``int``, *optional*):
@@ -42,15 +42,15 @@ class OnChatJoinRequest:
         """
 
         def decorator(func: Callable) -> Callable:
-            if isinstance(self, pyrogram.Client):
-                self.add_handler(pyrogram.handlers.ChatJoinRequestHandler(func, filters), group)
+            if isinstance(self, hasnainkk.Client):
+                self.add_handler(hasnainkk.handlers.ChatJoinRequestHandler(func, filters), group)
             elif isinstance(self, Filter) or self is None:
                 if not hasattr(func, "handlers"):
                     func.handlers = []
 
                 func.handlers.append(
                     (
-                        pyrogram.handlers.ChatJoinRequestHandler(func, self),
+                        hasnainkk.handlers.ChatJoinRequestHandler(func, self),
                         group if filters is None else filters
                     )
                 )

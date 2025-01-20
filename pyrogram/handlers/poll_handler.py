@@ -24,10 +24,10 @@ from .handler import Handler
 class PollHandler(Handler):
     """The Poll handler class. Used to handle polls updates.
 
-    It is intended to be used with :meth:`~pyrogram.Client.add_handler`
+    It is intended to be used with :meth:`~hasnainkk.Client.add_handler`
 
     For a nicer way to register this handler, have a look at the
-    :meth:`~pyrogram.Client.on_poll` decorator.
+    :meth:`~hasnainkk.Client.on_poll` decorator.
 
     Parameters:
         callback (``Callable``):
@@ -39,10 +39,10 @@ class PollHandler(Handler):
             in your callback function.
 
     Other parameters:
-        client (:obj:`~pyrogram.Client`):
+        client (:obj:`~hasnainkk.Client`):
             The Client itself, useful when you want to call other API methods inside the poll handler.
 
-        poll (:obj:`~pyrogram.types.Poll`):
+        poll (:obj:`~hasnainkk.types.Poll`):
             The received poll.
     """
 

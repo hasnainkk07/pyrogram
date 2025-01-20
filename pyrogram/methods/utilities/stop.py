@@ -16,12 +16,12 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-import pyrogram
+import hasnainkk
 
 
 class Stop:
     async def stop(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         block: bool = True
     ):
         """Stop the Client.
@@ -35,7 +35,7 @@ class Stop:
                 Defaults to True.
 
         Returns:
-            :obj:`~pyrogram.Client`: The stopped client itself.
+            :obj:`~hasnainkk.Client`: The stopped client itself.
 
         Raises:
             ConnectionError: In case you try to stop an already stopped client.
@@ -43,7 +43,7 @@ class Stop:
         Example:
             .. code-block:: python
 
-                from pyrogram import Client
+                from hasnainkk import Client
 
                 app = Client("my_account")
 

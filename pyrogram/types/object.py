@@ -21,18 +21,18 @@ from datetime import datetime
 from enum import Enum
 from json import dumps
 
-import pyrogram
+import hasnainkk
 
 
 class Object:
-    def __init__(self, client: "pyrogram.Client" = None):
+    def __init__(self, client: "hasnainkk.Client" = None):
         self._client = client
 
-    def bind(self, client: "pyrogram.Client"):
+    def bind(self, client: "hasnainkk.Client"):
         """Bind a Client instance to this and to all nested Pyrogram objects.
 
         Parameters:
-            client (:obj:`~pyrogram.types.Client`):
+            client (:obj:`~hasnainkk.types.Client`):
                 The Client instance to bind this object with. Useful to re-enable bound methods after serializing and
                 deserializing Pyrogram objects with ``repr`` and ``eval``.
         """
@@ -49,7 +49,7 @@ class Object:
         if isinstance(obj, bytes):
             return repr(obj)
 
-        # https://t.me/pyrogramchat/167281
+        # https://t.me/hasnainkkchat/167281
         # Instead of re.Match, which breaks for python <=3.6
         if isinstance(obj, typing.Match):
             return repr(obj)
@@ -76,7 +76,7 @@ class Object:
         return dumps(self, indent=4, default=Object.default, ensure_ascii=False)
 
     def __repr__(self) -> str:
-        return "pyrogram.types.{}({})".format(
+        return "hasnainkk.types.{}({})".format(
             self.__class__.__name__,
             ", ".join(
                 f"{attr}={repr(getattr(self, attr))}"

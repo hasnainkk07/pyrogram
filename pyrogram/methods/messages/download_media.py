@@ -21,16 +21,16 @@ import os
 from datetime import datetime
 from typing import Union, Optional, Callable, BinaryIO
 
-import pyrogram
-from pyrogram import types
-from pyrogram.file_id import FileId, FileType, PHOTO_TYPES
+import hasnainkk
+from hasnainkk import types
+from hasnainkk.file_id import FileId, FileType, PHOTO_TYPES
 
 DEFAULT_DOWNLOAD_DIR = "downloads/"
 
 
 class DownloadMedia:
     async def download_media(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         message: Union["types.Message", str],
         file_name: str = DEFAULT_DOWNLOAD_DIR,
         in_memory: bool = False,
@@ -43,7 +43,7 @@ class DownloadMedia:
         .. include:: /_includes/usable-by/users-bots.rst
 
         Parameters:
-            message (:obj:`~pyrogram.types.Message` | ``str``):
+            message (:obj:`~hasnainkk.types.Message` | ``str``):
                 Pass a Message containing the media, the media itself (message.audio, message.video, ...) or a file id
                 as string.
 
@@ -87,7 +87,7 @@ class DownloadMedia:
         Returns:
             ``str`` | ``None`` | ``BinaryIO``: On success, the absolute path of the downloaded file is returned,
             otherwise, in case the download failed or was deliberately stopped with
-            :meth:`~pyrogram.Client.stop_transmission`, None is returned.
+            :meth:`~hasnainkk.Client.stop_transmission`, None is returned.
             Otherwise, in case ``in_memory=True``, a binary file-like object with its attribute ".name" set is returned.
 
         Raises:

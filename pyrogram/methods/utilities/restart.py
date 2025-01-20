@@ -16,17 +16,17 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-import pyrogram
+import hasnainkk
 
 
 class Restart:
     async def restart(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         block: bool = True
     ):
         """Restart the Client.
 
-        This method will first call :meth:`~pyrogram.Client.stop` and then :meth:`~pyrogram.Client.start` in a row in
+        This method will first call :meth:`~hasnainkk.Client.stop` and then :meth:`~hasnainkk.Client.start` in a row in
         order to restart a client using a single method.
 
         Parameters:
@@ -36,7 +36,7 @@ class Restart:
                 Defaults to True.
 
         Returns:
-            :obj:`~pyrogram.Client`: The restarted client itself.
+            :obj:`~hasnainkk.Client`: The restarted client itself.
 
         Raises:
             ConnectionError: In case you try to restart a stopped Client.
@@ -44,7 +44,7 @@ class Restart:
         Example:
             .. code-block:: python
 
-                from pyrogram import Client
+                from hasnainkk import Client
 
                 app = Client("my_account")
 

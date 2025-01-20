@@ -19,10 +19,10 @@
 from datetime import datetime
 from typing import List
 
-import pyrogram
-from pyrogram import raw, utils
-from pyrogram import types
-from pyrogram.file_id import FileId, FileType, FileUniqueId, FileUniqueType, ThumbnailSource
+import hasnainkk
+from hasnainkk import raw, utils
+from hasnainkk import types
+from hasnainkk.file_id import FileId, FileType, FileUniqueId, FileUniqueType, ThumbnailSource
 from ..object import Object
 
 
@@ -52,14 +52,14 @@ class Photo(Object):
         ttl_seconds (``int``, *optional*):
             Time-to-live seconds, for secret photos.
 
-        thumbs (List of :obj:`~pyrogram.types.Thumbnail`, *optional*):
+        thumbs (List of :obj:`~hasnainkk.types.Thumbnail`, *optional*):
             Available thumbnails of this photo.
     """
 
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: "hasnainkk.Client" = None,
         file_id: str,
         file_unique_id: str,
         width: int,

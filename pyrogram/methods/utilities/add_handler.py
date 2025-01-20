@@ -16,14 +16,14 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-import pyrogram
-from pyrogram.handlers import DisconnectHandler
-from pyrogram.handlers.handler import Handler
+import hasnainkk
+from hasnainkk.handlers import DisconnectHandler
+from hasnainkk.handlers.handler import Handler
 
 
 class AddHandler:
     def add_handler(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         handler: "Handler",
         group: int = 0
     ):
@@ -47,8 +47,8 @@ class AddHandler:
         Example:
             .. code-block:: python
 
-                from pyrogram import Client
-                from pyrogram.handlers import MessageHandler
+                from hasnainkk import Client
+                from hasnainkk.handlers import MessageHandler
 
                 async def hello(client, message):
                     print(message)

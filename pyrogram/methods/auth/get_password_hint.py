@@ -18,15 +18,15 @@
 
 import logging
 
-import pyrogram
-from pyrogram import raw
+import hasnainkk
+from hasnainkk import raw
 
 log = logging.getLogger(__name__)
 
 
 class GetPasswordHint:
     async def get_password_hint(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
     ) -> str:
         """Get your Two-Step Verification password hint.
 

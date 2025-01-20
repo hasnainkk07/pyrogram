@@ -24,4 +24,4 @@ class AutoName(Enum):
         return self.lower()
 
     def __repr__(self):
-        return f"pyrogram.enums.{self}"
+        return f"hasnainkk.enums.{self}"

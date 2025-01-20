@@ -18,15 +18,15 @@
 
 from typing import Union, List, Optional
 
-import pyrogram
-from pyrogram import raw, enums
-from pyrogram import types
-from pyrogram import utils
+import hasnainkk
+from hasnainkk import raw, enums
+from hasnainkk import types
+from hasnainkk import utils
 
 
 class EditMessageText:
     async def edit_message_text(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         message_id: int,
         text: str,
@@ -51,21 +51,21 @@ class EditMessageText:
             text (``str``):
                 New text of the message.
 
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            parse_mode (:obj:`~hasnainkk.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
-            entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            entities (List of :obj:`~hasnainkk.types.MessageEntity`):
                 List of special entities that appear in message text, which can be specified instead of *parse_mode*.
 
             disable_web_page_preview (``bool``, *optional*):
                 Disables link previews for links in this message.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup`, *optional*):
+            reply_markup (:obj:`~hasnainkk.types.InlineKeyboardMarkup`, *optional*):
                 An InlineKeyboardMarkup object.
 
         Returns:
-            :obj:`~pyrogram.types.Message`: On success, the edited message is returned.
+            :obj:`~hasnainkk.types.Message`: On success, the edited message is returned.
 
         Example:
             .. code-block:: python

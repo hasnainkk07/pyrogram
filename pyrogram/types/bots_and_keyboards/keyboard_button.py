@@ -16,7 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-from pyrogram import raw, types
+from hasnainkk import raw, types
 from ..object import Object
 
 
@@ -38,7 +38,7 @@ class KeyboardButton(Object):
             If True, the user's current location will be sent when the button is pressed.
             Available in private chats only.
 
-        web_app (:obj:`~pyrogram.types.WebAppInfo`, *optional*):
+        web_app (:obj:`~hasnainkk.types.WebAppInfo`, *optional*):
             If specified, the described `Web App <https://core.telegram.org/bots/webapps>`_ will be launched when the
             button is pressed. The Web App will be able to send a “web_app_data” service message. Available in private
             chats only.

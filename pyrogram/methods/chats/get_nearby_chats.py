@@ -18,15 +18,15 @@
 
 from typing import List
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
-from pyrogram import utils
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
+from hasnainkk import utils
 
 
 class GetNearbyChats:
     async def get_nearby_chats(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         latitude: float,
         longitude: float
     ) -> List["types.Chat"]:
@@ -42,7 +42,7 @@ class GetNearbyChats:
                 Longitude of the location.
 
         Returns:
-            List of :obj:`~pyrogram.types.Chat`: On success, a list of nearby chats is returned.
+            List of :obj:`~hasnainkk.types.Chat`: On success, a list of nearby chats is returned.
 
         Example:
             .. code-block:: python

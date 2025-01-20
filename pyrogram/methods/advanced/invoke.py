@@ -18,17 +18,17 @@
 
 import logging
 
-import pyrogram
-from pyrogram import raw
-from pyrogram.raw.core import TLObject
-from pyrogram.session import Session
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk.raw.core import TLObject
+from hasnainkk.session import Session
 
 log = logging.getLogger(__name__)
 
 
 class Invoke:
     async def invoke(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         query: TLObject,
         retries: int = Session.MAX_RETRIES,
         timeout: float = Session.WAIT_TIMEOUT,
@@ -37,13 +37,13 @@ class Invoke:
         """Invoke raw Telegram functions.
 
         This method makes it possible to manually call every single Telegram API method in a low-level manner.
-        Available functions are listed in the :obj:`functions <pyrogram.api.functions>` package and may accept compound
-        data types from :obj:`types <pyrogram.api.types>` as well as bare types such as ``int``, ``str``, etc...
+        Available functions are listed in the :obj:`functions <hasnainkk.api.functions>` package and may accept compound
+        data types from :obj:`types <hasnainkk.api.types>` as well as bare types such as ``int``, ``str``, etc...
 
         .. note::
 
             This is a utility method intended to be used **only** when working with raw
-            :obj:`functions <pyrogram.api.functions>` (i.e: a Telegram API method you wish to use which is not
+            :obj:`functions <hasnainkk.api.functions>` (i.e: a Telegram API method you wish to use which is not
             available yet in the Client class as an easy-to-use method).
 
         .. include:: /_includes/usable-by/users-bots.rst

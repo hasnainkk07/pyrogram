@@ -18,14 +18,14 @@
 
 from typing import Union, List
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 
 
 class GetGameHighScores:
     async def get_game_high_scores(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         user_id: Union[int, str],
         chat_id: Union[int, str],
         message_id: int = None
@@ -51,7 +51,7 @@ class GetGameHighScores:
                 Required if inline_message_id is not specified.
 
         Returns:
-            List of :obj:`~pyrogram.types.GameHighScore`: On success.
+            List of :obj:`~hasnainkk.types.GameHighScore`: On success.
 
         Example:
             .. code-block:: python

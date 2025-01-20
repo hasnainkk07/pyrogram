@@ -18,9 +18,9 @@
 
 from typing import List, Match
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types, enums
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types, enums
 from ..object import Object
 from ..update import Update
 
@@ -34,7 +34,7 @@ class InlineQuery(Object, Update):
         id (``str``):
             Unique identifier for this query.
 
-        from_user (:obj:`~pyrogram.types.User`):
+        from_user (:obj:`~hasnainkk.types.User`):
             Sender.
 
         query (``str``):
@@ -43,21 +43,21 @@ class InlineQuery(Object, Update):
         offset (``str``):
             Offset of the results to be returned, can be controlled by the bot.
 
-        chat_type (:obj:`~pyrogram.enums.ChatType`, *optional*):
+        chat_type (:obj:`~hasnainkk.enums.ChatType`, *optional*):
             Type of the chat, from which the inline query was sent.
 
-        location (:obj:`~pyrogram.types.Location`. *optional*):
+        location (:obj:`~hasnainkk.types.Location`. *optional*):
             Sender location, only for bots that request user location.
 
         matches (List of regex Matches, *optional*):
             A list containing all `Match Objects <https://docs.python.org/3/library/re.html#match-objects>`_ that match
-            the query of this inline query. Only applicable when using :obj:`Filters.regex <pyrogram.Filters.regex>`.
+            the query of this inline query. Only applicable when using :obj:`Filters.regex <hasnainkk.Filters.regex>`.
     """
 
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: "hasnainkk.Client" = None,
         id: str,
         from_user: "types.User",
         query: str,
@@ -116,7 +116,7 @@ class InlineQuery(Object, Update):
         switch_pm_text: str = "",
         switch_pm_parameter: str = ""
     ):
-        """Bound method *answer* of :obj:`~pyrogram.types.InlineQuery`.
+        """Bound method *answer* of :obj:`~hasnainkk.types.InlineQuery`.
 
         Use this method as a shortcut for:
 
@@ -133,7 +133,7 @@ class InlineQuery(Object, Update):
                 await inline_query.answer([...])
 
         Parameters:
-            results (List of :obj:`~pyrogram.types.InlineQueryResult`):
+            results (List of :obj:`~hasnainkk.types.InlineQueryResult`):
                 A list of results for the inline query.
 
             cache_time (``int``, *optional*):

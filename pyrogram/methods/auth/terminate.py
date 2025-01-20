@@ -18,19 +18,19 @@
 
 import logging
 
-import pyrogram
-from pyrogram import raw
+import hasnainkk
+from hasnainkk import raw
 
 log = logging.getLogger(__name__)
 
 
 class Terminate:
     async def terminate(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
     ):
         """Terminate the client by shutting down workers.
 
-        This method does the opposite of :meth:`~pyrogram.Client.initialize`.
+        This method does the opposite of :meth:`~hasnainkk.Client.initialize`.
         It will stop the dispatcher and shut down updates and download workers.
 
         Raises:

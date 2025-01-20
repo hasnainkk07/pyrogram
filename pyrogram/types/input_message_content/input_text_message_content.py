@@ -18,8 +18,8 @@
 
 from typing import Optional, List
 
-import pyrogram
-from pyrogram import raw, types, utils, enums
+import hasnainkk
+from hasnainkk import raw, types, utils, enums
 from .input_message_content import InputMessageContent
 
 
@@ -30,11 +30,11 @@ class InputTextMessageContent(InputMessageContent):
         message_text (``str``):
             Text of the message to be sent, 1-4096 characters.
 
-        parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+        parse_mode (:obj:`~hasnainkk.enums.ParseMode`, *optional*):
             By default, texts are parsed using both Markdown and HTML styles.
             You can combine both syntaxes together.
 
-        entities (List of :obj:`~pyrogram.types.MessageEntity`):
+        entities (List of :obj:`~hasnainkk.types.MessageEntity`):
             List of special entities that appear in message text, which can be specified instead of *parse_mode*.
 
         disable_web_page_preview (``bool``, *optional*):
@@ -55,7 +55,7 @@ class InputTextMessageContent(InputMessageContent):
         self.entities = entities
         self.disable_web_page_preview = disable_web_page_preview
 
-    async def write(self, client: "pyrogram.Client", reply_markup):
+    async def write(self, client: "hasnainkk.Client", reply_markup):
         message, entities = (await utils.parse_text_entities(
             client, self.message_text, self.parse_mode, self.entities
         )).values()

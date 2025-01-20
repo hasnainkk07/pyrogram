@@ -18,20 +18,20 @@
 
 from typing import Optional
 
-import pyrogram
-from pyrogram import raw
+import hasnainkk
+from hasnainkk import raw
 
 
 class SetUsername:
     async def set_username(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         username: Optional[str]
     ) -> bool:
         """Set your own username.
 
         This method only works for users, not bots. Bot usernames must be changed via Bot Support or by recreating
         them from scratch using BotFather. To set a channel or supergroup username you can use
-        :meth:`~pyrogram.Client.set_chat_username`.
+        :meth:`~hasnainkk.Client.set_chat_username`.
 
         .. include:: /_includes/usable-by/users.rst
 

@@ -16,21 +16,21 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 
 
 class GetMe:
     async def get_me(
-        self: "pyrogram.Client"
+        self: "hasnainkk.Client"
     ) -> "types.User":
         """Get your own user identity.
 
         .. include:: /_includes/usable-by/users-bots.rst
 
         Returns:
-            :obj:`~pyrogram.types.User`: Information about the own logged in user/bot.
+            :obj:`~hasnainkk.types.User`: Information about the own logged in user/bot.
 
         Example:
             .. code-block:: python

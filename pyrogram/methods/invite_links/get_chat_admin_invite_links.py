@@ -18,14 +18,14 @@
 
 from typing import Union, Optional, AsyncGenerator
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 
 
 class GetChatAdminInviteLinks:
     async def get_chat_admin_invite_links(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         admin_id: Union[int, str],
         revoked: bool = False,
@@ -59,10 +59,10 @@ class GetChatAdminInviteLinks:
                 By default, no limit is applied and all invite links are returned.
 
         Returns:
-            ``Generator``: A generator yielding :obj:`~pyrogram.types.ChatInviteLink` objects.
+            ``Generator``: A generator yielding :obj:`~hasnainkk.types.ChatInviteLink` objects.
 
         Yields:
-            :obj:`~pyrogram.types.ChatInviteLink` objects.
+            :obj:`~hasnainkk.types.ChatInviteLink` objects.
         """
         current = 0
         total = abs(limit) or (1 << 31) - 1

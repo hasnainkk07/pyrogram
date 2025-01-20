@@ -16,12 +16,12 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-from pyrogram import raw
+from hasnainkk import raw
 from .auto_name import AutoName
 
 
 class SentCodeType(AutoName):
-    """Sent code type enumeration used in :obj:`~pyrogram.types.SentCode`."""
+    """Sent code type enumeration used in :obj:`~hasnainkk.types.SentCode`."""
 
     APP = raw.types.auth.SentCodeTypeApp
     "The code was sent through the telegram app."

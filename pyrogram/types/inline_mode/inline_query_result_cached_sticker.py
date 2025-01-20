@@ -16,8 +16,8 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-import pyrogram
-from pyrogram import raw, types
+import hasnainkk
+from hasnainkk import raw, types
 from .inline_query_result import InlineQueryResult
 from ...file_id import FileId
 
@@ -36,10 +36,10 @@ class InlineQueryResultCachedSticker(InlineQueryResult):
             Unique identifier for this result, 1-64 bytes.
             Defaults to a randomly generated UUID4.
 
-        reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup`, *optional*):
+        reply_markup (:obj:`~hasnainkk.types.InlineKeyboardMarkup`, *optional*):
             An InlineKeyboardMarkup object.
 
-        input_message_content (:obj:`~pyrogram.types.InputMessageContent`):
+        input_message_content (:obj:`~hasnainkk.types.InputMessageContent`):
             Content of the message to be sent instead of the photo.
     """
 
@@ -56,7 +56,7 @@ class InlineQueryResultCachedSticker(InlineQueryResult):
         self.reply_markup = reply_markup
         self.input_message_content = input_message_content
 
-    async def write(self, client: "pyrogram.Client"):
+    async def write(self, client: "hasnainkk.Client"):
         file_id = FileId.decode(self.sticker_file_id)
 
         return raw.types.InputBotInlineResultDocument(

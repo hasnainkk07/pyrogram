@@ -18,15 +18,15 @@
 
 import logging
 
-import pyrogram
-from pyrogram import raw
+import hasnainkk
+from hasnainkk import raw
 
 log = logging.getLogger(__name__)
 
 
 class SendRecoveryCode:
     async def send_recovery_code(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
     ) -> str:
         """Send a code to your email to recover your password.
 

@@ -18,14 +18,14 @@
 
 from typing import Union, List, AsyncGenerator, Optional
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 
 
 class GetChatEventLog:
     async def get_chat_event_log(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         query: str = "",
         offset_id: int = 0,
@@ -56,7 +56,7 @@ class GetChatEventLog:
                 Maximum amount of events to be returned.
                 By default, all events will be returned.
 
-            filters (:obj:`~pyrogram.types.ChatEventFilter`, *optional*):
+            filters (:obj:`~hasnainkk.types.ChatEventFilter`, *optional*):
                 The types of events to return.
                 By default, all types will be returned.
 
@@ -65,7 +65,7 @@ class GetChatEventLog:
                 By default, events relating to all users will be returned.
 
         Yields:
-            :obj:`~pyrogram.types.ChatEvent` objects.
+            :obj:`~hasnainkk.types.ChatEvent` objects.
 
         Example:
             .. code-block:: python

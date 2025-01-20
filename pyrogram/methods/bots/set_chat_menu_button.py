@@ -18,14 +18,14 @@
 
 from typing import Union
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 
 
 class SetChatMenuButton:
     async def set_chat_menu_button(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str] = None,
         menu_button: "types.MenuButton" = None
     ) -> bool:
@@ -38,9 +38,9 @@ class SetChatMenuButton:
                 Unique identifier (int) or username (str) of the target chat.
                 If not specified, default bot's menu button will be changed.
 
-            menu_button (:obj:`~pyrogram.types.MenuButton`, *optional*):
+            menu_button (:obj:`~hasnainkk.types.MenuButton`, *optional*):
                 The new bot's menu button.
-                Defaults to :obj:`~pyrogram.types.MenuButtonDefault`.
+                Defaults to :obj:`~hasnainkk.types.MenuButtonDefault`.
         """
 
         await self.invoke(

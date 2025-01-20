@@ -18,13 +18,13 @@
 
 from typing import AsyncGenerator, Optional
 
-import pyrogram
-from pyrogram import types, raw, utils
+import hasnainkk
+from hasnainkk import types, raw, utils
 
 
 class GetDialogs:
     async def get_dialogs(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         limit: int = 0
     ) -> Optional[AsyncGenerator["types.Dialog", None]]:
         """Get a user's dialogs sequentially.
@@ -37,7 +37,7 @@ class GetDialogs:
                 By default, no limit is applied and all dialogs are returned.
 
         Returns:
-            ``Generator``: A generator yielding :obj:`~pyrogram.types.Dialog` objects.
+            ``Generator``: A generator yielding :obj:`~hasnainkk.types.Dialog` objects.
 
         Example:
             .. code-block:: python

@@ -34,24 +34,24 @@ from mimetypes import MimeTypes
 from pathlib import Path
 from typing import Union, List, Optional, Callable, AsyncGenerator
 
-import pyrogram
-from pyrogram import __version__, __license__
-from pyrogram import enums
-from pyrogram import raw
-from pyrogram import utils
-from pyrogram.crypto import aes
-from pyrogram.errors import CDNFileHashMismatch
-from pyrogram.errors import (
+import hasnainkk
+from hasnainkk import __version__, __license__
+from hasnainkk import enums
+from hasnainkk import raw
+from hasnainkk import utils
+from hasnainkk.crypto import aes
+from hasnainkk.errors import CDNFileHashMismatch
+from hasnainkk.errors import (
     SessionPasswordNeeded,
     VolumeLocNotFound, ChannelPrivate,
     BadRequest
 )
-from pyrogram.handlers.handler import Handler
-from pyrogram.methods import Methods
-from pyrogram.session import Auth, Session
-from pyrogram.storage import FileStorage, MemoryStorage
-from pyrogram.types import User, TermsOfService
-from pyrogram.utils import ainput
+from hasnainkk.handlers.handler import Handler
+from hasnainkk.methods import Methods
+from hasnainkk.session import Auth, Session
+from hasnainkk.storage import FileStorage, MemoryStorage
+from hasnainkk.types import User, TermsOfService
+from hasnainkk.utils import ainput
 from .dispatcher import Dispatcher
 from .file_id import FileId, FileType, ThumbnailSource
 from .mime_types import mime_types
@@ -117,7 +117,7 @@ class Client(Methods):
         in_memory (``bool``, *optional*):
             Pass True to start an in-memory session that will be discarded as soon as the client stops.
             In order to reconnect again using an in-memory session without having to login again, you can use
-            :meth:`~pyrogram.Client.export_session_string` before stopping the client to get a session string you can
+            :meth:`~hasnainkk.Client.export_session_string` before stopping the client to get a session string you can
             pass to the ``session_string`` parameter.
             Defaults to False.
 
@@ -145,7 +145,7 @@ class Client(Methods):
         plugins (``dict``, *optional*):
             Smart Plugins settings as dict, e.g.: *dict(root="plugins")*.
 
-        parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+        parse_mode (:obj:`~hasnainkk.enums.ParseMode`, *optional*):
             Set the global parse mode of the client. By default, texts are parsed using both Markdown and HTML styles.
             You can combine both syntaxes together.
 
@@ -453,14 +453,14 @@ class Client(Methods):
         global value by default.
 
         Parameters:
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`):
+            parse_mode (:obj:`~hasnainkk.enums.ParseMode`):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
         Example:
             .. code-block:: python
 
-                from pyrogram import enums
+                from hasnainkk import enums
 
                 # Default combined mode: Markdown + HTML
                 await app.send_message("me", "1. **markdown** and <i>html</i>")
@@ -625,7 +625,7 @@ class Client(Methods):
         if session_empty:
             if not self.api_id or not self.api_hash:
                 raise AttributeError("The API key is required for new authorizations. "
-                                     "More info: https://docs.pyrogram.org/start/auth")
+                                     "More info: https://docs.hasnainkk.org/start/auth")
 
             await self.storage.api_id(self.api_id)
 
@@ -1015,7 +1015,7 @@ class Client(Methods):
                         raise e
                     finally:
                         await cdn_session.stop()
-            except pyrogram.StopTransmission:
+            except hasnainkk.StopTransmission:
                 raise
             except Exception as e:
                 log.exception(e)

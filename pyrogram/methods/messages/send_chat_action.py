@@ -18,13 +18,13 @@
 
 from typing import Union
 
-import pyrogram
-from pyrogram import raw, enums
+import hasnainkk
+from hasnainkk import raw, enums
 
 
 class SendChatAction:
     async def send_chat_action(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         action: "enums.ChatAction"
     ) -> bool:
@@ -38,7 +38,7 @@ class SendChatAction:
                 For your personal cloud (Saved Messages) you can simply use "me" or "self".
                 For a contact that exists in your Telegram address book you can use his phone number (str).
 
-            action (:obj:`~pyrogram.enums.ChatAction`):
+            action (:obj:`~hasnainkk.enums.ChatAction`):
                 Type of action to broadcast.
 
         Returns:
@@ -50,7 +50,7 @@ class SendChatAction:
         Example:
             .. code-block:: python
 
-                from pyrogram import enums
+                from hasnainkk import enums
 
                 # Send "typing" chat action
                 await app.send_chat_action(chat_id, enums.ChatAction.TYPING)

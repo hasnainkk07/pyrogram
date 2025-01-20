@@ -19,14 +19,14 @@
 import asyncio
 import logging
 
-import pyrogram
+import hasnainkk
 
 log = logging.getLogger(__name__)
 
 
 class Initialize:
     async def initialize(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
     ):
         """Initialize the client by starting up workers.
 

@@ -18,14 +18,14 @@
 
 from typing import Union
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 
 
 class SetChatPermissions:
     async def set_chat_permissions(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         permissions: "types.ChatPermissions",
     ) -> "types.Chat":
@@ -40,16 +40,16 @@ class SetChatPermissions:
             chat_id (``int`` | ``str``):
                 Unique identifier (int) or username (str) of the target chat.
 
-            permissions (:obj:`~pyrogram.types.ChatPermissions`):
+            permissions (:obj:`~hasnainkk.types.ChatPermissions`):
                 New default chat permissions.
 
         Returns:
-            :obj:`~pyrogram.types.Chat`: On success, a chat object is returned.
+            :obj:`~hasnainkk.types.Chat`: On success, a chat object is returned.
 
         Example:
             .. code-block:: python
 
-                from pyrogram.types import ChatPermissions
+                from hasnainkk.types import ChatPermissions
 
                 # Completely restrict chat
                 await app.set_chat_permissions(chat_id, ChatPermissions())

@@ -16,12 +16,12 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-from pyrogram import raw
+from hasnainkk import raw
 from .auto_name import AutoName
 
 
 class NextCodeType(AutoName):
-    """Next code type enumeration used in :obj:`~pyrogram.types.SentCode`."""
+    """Next code type enumeration used in :obj:`~hasnainkk.types.SentCode`."""
 
     CALL = raw.types.auth.CodeTypeCall
     "The code will be sent via a phone call. A synthesized voice will tell the user which verification code to input."

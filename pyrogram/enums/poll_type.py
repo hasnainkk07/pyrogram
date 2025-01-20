@@ -22,7 +22,7 @@ from .auto_name import AutoName
 
 
 class PollType(AutoName):
-    """Poll type enumeration used in :obj:`~pyrogram.types.Poll`."""
+    """Poll type enumeration used in :obj:`~hasnainkk.types.Poll`."""
 
     QUIZ = auto()
     "Quiz poll"

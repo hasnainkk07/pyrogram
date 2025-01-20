@@ -19,14 +19,14 @@
 from datetime import datetime
 from typing import Union
 
-import pyrogram
-from pyrogram import raw, utils
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw, utils
+from hasnainkk import types
 
 
 class SendContact:
     async def send_contact(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         phone_number: str,
         first_name: str,
@@ -78,12 +78,12 @@ class SendContact:
             protect_content (``bool``, *optional*):
                 Protects the contents of the sent message from forwarding and saving.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardRemove` | :obj:`~pyrogram.types.ForceReply`, *optional*):
+            reply_markup (:obj:`~hasnainkk.types.InlineKeyboardMarkup` | :obj:`~hasnainkk.types.ReplyKeyboardMarkup` | :obj:`~hasnainkk.types.ReplyKeyboardRemove` | :obj:`~hasnainkk.types.ForceReply`, *optional*):
                 Additional interface options. An object for an inline keyboard, custom reply keyboard,
                 instructions to remove reply keyboard or to force a reply from the user.
 
         Returns:
-            :obj:`~pyrogram.types.Message`: On success, the sent contact message is returned.
+            :obj:`~hasnainkk.types.Message`: On success, the sent contact message is returned.
 
         Example:
             .. code-block:: python

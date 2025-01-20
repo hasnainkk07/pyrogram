@@ -21,8 +21,8 @@ from datetime import datetime
 from importlib import import_module
 from typing import Type, Union
 
-from pyrogram import raw
-from pyrogram.raw.core import TLObject
+from hasnainkk import raw
+from hasnainkk.raw.core import TLObject
 from .exceptions.all import exceptions
 
 
@@ -78,7 +78,7 @@ class RPCError(Exception):
 
         if error_id not in exceptions[error_code]:
             raise getattr(
-                import_module("pyrogram.errors"),
+                import_module("hasnainkk.errors"),
                 exceptions[error_code]["_"]
             )(value=f"[{error_code} {error_message}]",
               rpc_name=rpc_name,
@@ -89,7 +89,7 @@ class RPCError(Exception):
         value = value.group(1) if value is not None else value
 
         raise getattr(
-            import_module("pyrogram.errors"),
+            import_module("hasnainkk.errors"),
             exceptions[error_code][error_id]
         )(value=value,
           rpc_name=rpc_name,

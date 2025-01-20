@@ -19,9 +19,9 @@
 from datetime import datetime
 from typing import Dict, Union
 
-import pyrogram
-from pyrogram import raw, utils
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw, utils
+from hasnainkk import types
 from ..object import Object
 from ..update import Update
 
@@ -30,29 +30,29 @@ class ChatMemberUpdated(Object, Update):
     """Represents changes in the status of a chat member.
 
     Parameters:
-        chat (:obj:`~pyrogram.types.Chat`):
+        chat (:obj:`~hasnainkk.types.Chat`):
             Chat the user belongs to.
 
-        from_user (:obj:`~pyrogram.types.User`):
+        from_user (:obj:`~hasnainkk.types.User`):
             Performer of the action, which resulted in the change.
 
         date (:py:obj:`~datetime.datetime`):
             Date the change was done.
 
-        old_chat_member (:obj:`~pyrogram.types.ChatMember`, *optional*):
+        old_chat_member (:obj:`~hasnainkk.types.ChatMember`, *optional*):
             Previous information about the chat member.
 
-        new_chat_member (:obj:`~pyrogram.types.ChatMember`, *optional*):
+        new_chat_member (:obj:`~hasnainkk.types.ChatMember`, *optional*):
             New information about the chat member.
 
-        invite_link (:obj:`~pyrogram.types.ChatInviteLink`, *optional*):
+        invite_link (:obj:`~hasnainkk.types.ChatInviteLink`, *optional*):
             Chat invite link, which was used by the user to join the chat; for joining by invite link events only.
     """
 
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: "hasnainkk.Client" = None,
         chat: "types.Chat",
         from_user: "types.User",
         date: datetime,
@@ -71,7 +71,7 @@ class ChatMemberUpdated(Object, Update):
 
     @staticmethod
     def _parse(
-        client: "pyrogram.Client",
+        client: "hasnainkk.Client",
         update: Union["raw.types.UpdateChatParticipant", "raw.types.UpdateChannelParticipant"],
         users: Dict[int, "raw.types.User"],
         chats: Dict[int, "raw.types.Chat"]

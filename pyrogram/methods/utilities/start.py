@@ -18,15 +18,15 @@
 
 import logging
 
-import pyrogram
-from pyrogram import raw
+import hasnainkk
+from hasnainkk import raw
 
 log = logging.getLogger(__name__)
 
 
 class Start:
     async def start(
-        self: "pyrogram.Client"
+        self: "hasnainkk.Client"
     ):
         """Start the client.
 
@@ -34,7 +34,7 @@ class Start:
         authorization process using an interactive prompt.
 
         Returns:
-            :obj:`~pyrogram.Client`: The started client itself.
+            :obj:`~hasnainkk.Client`: The started client itself.
 
         Raises:
             ConnectionError: In case you try to start an already started client.
@@ -42,7 +42,7 @@ class Start:
         Example:
             .. code-block:: python
 
-                from pyrogram import Client
+                from hasnainkk import Client
 
                 app = Client("my_account")
 

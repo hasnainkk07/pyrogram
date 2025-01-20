@@ -18,8 +18,8 @@
 
 from typing import Union, List, AsyncGenerator, Optional
 
-import pyrogram
-from pyrogram import raw, types, utils, enums
+import hasnainkk
+from hasnainkk import raw, types, utils, enums
 
 
 # noinspection PyShadowingBuiltins
@@ -60,7 +60,7 @@ async def get_chunk(
 class SearchMessages:
     # noinspection PyShadowingBuiltins
     async def search_messages(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         query: str = "",
         offset: int = 0,
@@ -70,7 +70,7 @@ class SearchMessages:
     ) -> Optional[AsyncGenerator["types.Message", None]]:
         """Search for text and media messages inside a specific chat.
 
-        If you want to get the messages count only, see :meth:`~pyrogram.Client.search_messages_count`.
+        If you want to get the messages count only, see :meth:`~hasnainkk.Client.search_messages_count`.
 
         .. include:: /_includes/usable-by/users.rst
 
@@ -90,7 +90,7 @@ class SearchMessages:
                 Sequential number of the first message to be returned.
                 Defaults to 0.
 
-            filter (:obj:`~pyrogram.enums.MessagesFilter`, *optional*):
+            filter (:obj:`~hasnainkk.enums.MessagesFilter`, *optional*):
                 Pass a filter in order to search for specific kind of messages only.
                 Defaults to any message (no filter).
 
@@ -102,12 +102,12 @@ class SearchMessages:
                 Unique identifier (int) or username (str) of the target user you want to search for messages from.
 
         Returns:
-            ``Generator``: A generator yielding :obj:`~pyrogram.types.Message` objects.
+            ``Generator``: A generator yielding :obj:`~hasnainkk.types.Message` objects.
 
         Example:
             .. code-block:: python
 
-                from pyrogram import enums
+                from hasnainkk import enums
 
                 # Search for text messages in chat. Get the last 120 results
                 async for message in app.search_messages(chat_id, query="hello", limit=120):

@@ -16,8 +16,8 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-import pyrogram
-from pyrogram import raw
+import hasnainkk
+from hasnainkk import raw
 
 from ..object import Object
 
@@ -58,7 +58,7 @@ class ForceReply(Object):
             placeholder=b.placeholder
         )
 
-    async def write(self, _: "pyrogram.Client"):
+    async def write(self, _: "hasnainkk.Client"):
         return raw.types.ReplyKeyboardForceReply(
             single_use=True,
             selective=self.selective or None,

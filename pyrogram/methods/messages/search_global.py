@@ -18,22 +18,22 @@
 
 from typing import AsyncGenerator, Optional
 
-import pyrogram
-from pyrogram import raw, enums
-from pyrogram import types
-from pyrogram import utils
+import hasnainkk
+from hasnainkk import raw, enums
+from hasnainkk import types
+from hasnainkk import utils
 
 
 class SearchGlobal:
     async def search_global(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         query: str = "",
         filter: "enums.MessagesFilter" = enums.MessagesFilter.EMPTY,
         limit: int = 0,
     ) -> Optional[AsyncGenerator["types.Message", None]]:
         """Search messages globally from all of your chats.
 
-        If you want to get the messages count only, see :meth:`~pyrogram.Client.search_global_count`.
+        If you want to get the messages count only, see :meth:`~hasnainkk.Client.search_global_count`.
 
         .. note::
 
@@ -47,7 +47,7 @@ class SearchGlobal:
                 Text query string.
                 Use "@" to search for mentions.
             
-            filter (:obj:`~pyrogram.enums.MessagesFilter`, *optional*):
+            filter (:obj:`~hasnainkk.enums.MessagesFilter`, *optional*):
                 Pass a filter in order to search for specific kind of messages only.
                 Defaults to any message (no filter).
 
@@ -56,15 +56,15 @@ class SearchGlobal:
                 By default, no limit is applied and all messages are returned.
 
         Returns:
-            ``Generator``: A generator yielding :obj:`~pyrogram.types.Message` objects.
+            ``Generator``: A generator yielding :obj:`~hasnainkk.types.Message` objects.
 
         Example:
             .. code-block:: python
 
-                from pyrogram import enums
+                from hasnainkk import enums
 
-                # Search for "pyrogram". Get the first 50 results
-                async for message in app.search_global("pyrogram", limit=50):
+                # Search for "hasnainkk". Get the first 50 results
+                async for message in app.search_global("hasnainkk", limit=50):
                     print(message.text)
 
                 # Search for recent photos from Global. Get the first 20 results

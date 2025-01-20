@@ -22,7 +22,7 @@ from .auto_name import AutoName
 
 
 class MessageServiceType(AutoName):
-    """Message service type enumeration used in :obj:`~pyrogram.types.Message`."""
+    """Message service type enumeration used in :obj:`~hasnainkk.types.Message`."""
 
     NEW_CHAT_MEMBERS = auto()
     "New members join"

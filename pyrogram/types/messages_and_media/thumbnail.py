@@ -18,9 +18,9 @@
 
 from typing import List, Optional, Union
 
-import pyrogram
-from pyrogram import raw
-from pyrogram.file_id import FileId, FileType, FileUniqueId, FileUniqueType, ThumbnailSource
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk.file_id import FileId, FileType, FileUniqueId, FileUniqueType, ThumbnailSource
 from ..object import Object
 
 
@@ -48,7 +48,7 @@ class Thumbnail(Object):
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: "hasnainkk.Client" = None,
         file_id: str,
         file_unique_id: str,
         width: int,

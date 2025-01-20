@@ -16,14 +16,14 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 
 
 class SetBotDefaultPrivileges:
     async def set_bot_default_privileges(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         privileges: "types.ChatPrivileges" = None,
         for_channels: bool = None
     ) -> bool:
@@ -34,7 +34,7 @@ class SetBotDefaultPrivileges:
         .. include:: /_includes/usable-by/bots.rst
 
         Parameters:
-            privileges (:obj:`~pyrogram.types.ChatPrivileges`):
+            privileges (:obj:`~hasnainkk.types.ChatPrivileges`):
                 New default privileges. None to clear.
                 Defaults to None.
 
@@ -48,7 +48,7 @@ class SetBotDefaultPrivileges:
         Example:
             .. code-block:: python
 
-                from pyrogram.types import ChatPrivileges
+                from hasnainkk.types import ChatPrivileges
 
                 await app.set_bot_default_privileges(
                     ChatPrivileges(

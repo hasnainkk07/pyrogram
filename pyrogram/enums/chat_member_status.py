@@ -22,7 +22,7 @@ from .auto_name import AutoName
 
 
 class ChatMemberStatus(AutoName):
-    """Chat member status enumeration used in :obj:`~pyrogram.types.ChatMember`."""
+    """Chat member status enumeration used in :obj:`~hasnainkk.types.ChatMember`."""
 
     OWNER = auto()
     "Chat owner"

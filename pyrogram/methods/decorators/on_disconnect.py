@@ -18,25 +18,25 @@
 
 from typing import Callable
 
-import pyrogram
+import hasnainkk
 
 
 class OnDisconnect:
     def on_disconnect(self=None) -> Callable:
         """Decorator for handling disconnections.
 
-        This does the same thing as :meth:`~pyrogram.Client.add_handler` using the
-        :obj:`~pyrogram.handlers.DisconnectHandler`.
+        This does the same thing as :meth:`~hasnainkk.Client.add_handler` using the
+        :obj:`~hasnainkk.handlers.DisconnectHandler`.
         """
 
         def decorator(func: Callable) -> Callable:
-            if isinstance(self, pyrogram.Client):
-                self.add_handler(pyrogram.handlers.DisconnectHandler(func))
+            if isinstance(self, hasnainkk.Client):
+                self.add_handler(hasnainkk.handlers.DisconnectHandler(func))
             else:
                 if not hasattr(func, "handlers"):
                     func.handlers = []
 
-                func.handlers.append((pyrogram.handlers.DisconnectHandler(func), 0))
+                func.handlers.append((hasnainkk.handlers.DisconnectHandler(func), 0))
 
             return func
 

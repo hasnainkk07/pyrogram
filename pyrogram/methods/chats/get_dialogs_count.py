@@ -16,13 +16,13 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-import pyrogram
-from pyrogram import raw
+import hasnainkk
+from hasnainkk import raw
 
 
 class GetDialogsCount:
     async def get_dialogs_count(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         pinned_only: bool = False
     ) -> int:
         """Get the total count of your dialogs.

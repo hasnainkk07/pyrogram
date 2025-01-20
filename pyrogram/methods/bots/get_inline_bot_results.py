@@ -18,14 +18,14 @@
 
 from typing import Union
 
-import pyrogram
-from pyrogram import raw
-from pyrogram.errors import UnknownError
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk.errors import UnknownError
 
 
 class GetInlineBotResults:
     async def get_inline_bot_results(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         bot: Union[int, str],
         query: str = "",
         offset: str = "",
@@ -33,7 +33,7 @@ class GetInlineBotResults:
         longitude: float = None
     ):
         """Get bot results via inline queries.
-        You can then send a result using :meth:`~pyrogram.Client.send_inline_bot_result`
+        You can then send a result using :meth:`~hasnainkk.Client.send_inline_bot_result`
 
         .. include:: /_includes/usable-by/users.rst
 
@@ -58,7 +58,7 @@ class GetInlineBotResults:
                 Useful for location-based results only.
 
         Returns:
-            :obj:`BotResults <pyrogram.api.types.messages.BotResults>`: On Success.
+            :obj:`BotResults <hasnainkk.api.types.messages.BotResults>`: On Success.
 
         Raises:
             TimeoutError: In case the bot fails to answer within 10 seconds.
@@ -66,7 +66,7 @@ class GetInlineBotResults:
         Example:
             .. code-block:: python
 
-                results = await app.get_inline_bot_results("pyrogrambot")
+                results = await app.get_inline_bot_results("hasnainkkbot")
                 print(results)
         """
         # TODO: Don't return the raw type

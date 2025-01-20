@@ -18,14 +18,14 @@
 
 from typing import Union
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 
 
 class AddContact:
     async def add_contact(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         user_id: Union[int, str],
         first_name: str,
         last_name: str = "",
@@ -54,7 +54,7 @@ class AddContact:
                 Defaults to False.
 
         Returns:
-            :obj:`~pyrogram.types.User`: On success the user is returned.
+            :obj:`~hasnainkk.types.User`: On success the user is returned.
 
         Example:
             .. code-block:: python

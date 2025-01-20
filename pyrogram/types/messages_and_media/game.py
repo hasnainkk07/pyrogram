@@ -16,9 +16,9 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 from ..object import Object
 
 
@@ -39,10 +39,10 @@ class Game(Object):
         description (``str``):
             Description of the game.
 
-        photo (:obj:`~pyrogram.types.Photo`):
+        photo (:obj:`~hasnainkk.types.Photo`):
             Photo that will be displayed in the game message in chats.
 
-        animation (:obj:`~pyrogram.types.Animation`, *optional*):
+        animation (:obj:`~hasnainkk.types.Animation`, *optional*):
             Animation that will be displayed in the game message in chats.
             Upload via BotFather.
     """
@@ -50,7 +50,7 @@ class Game(Object):
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: "hasnainkk.Client" = None,
         id: int,
         title: str,
         short_name: str,

@@ -16,12 +16,12 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-import pyrogram
+import hasnainkk
 
 
 class ExportSessionString:
     async def export_session_string(
-        self: "pyrogram.Client"
+        self: "hasnainkk.Client"
     ):
         """Export the current authorized session as a serialized string.
 

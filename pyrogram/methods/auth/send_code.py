@@ -18,18 +18,18 @@
 
 import logging
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
-from pyrogram.errors import PhoneMigrate, NetworkMigrate
-from pyrogram.session import Session, Auth
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
+from hasnainkk.errors import PhoneMigrate, NetworkMigrate
+from hasnainkk.session import Session, Auth
 
 log = logging.getLogger(__name__)
 
 
 class SendCode:
     async def send_code(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         phone_number: str
     ) -> "types.SentCode":
         """Send the confirmation code to the given phone number.
@@ -41,7 +41,7 @@ class SendCode:
                 Phone number in international format (includes the country prefix).
 
         Returns:
-            :obj:`~pyrogram.types.SentCode`: On success, an object containing information on the sent confirmation code
+            :obj:`~hasnainkk.types.SentCode`: On success, an object containing information on the sent confirmation code
             is returned.
 
         Raises:

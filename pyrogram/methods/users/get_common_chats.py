@@ -18,14 +18,14 @@
 
 from typing import Union, List
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 
 
 class GetCommonChats:
     async def get_common_chats(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         user_id: Union[int, str]
     ) -> List["types.Chat"]:
         """Get the common chats you have with a user.
@@ -39,7 +39,7 @@ class GetCommonChats:
                 For a contact that exists in your Telegram address book you can use his phone number (str).
 
         Returns:
-            List of :obj:`~pyrogram.types.Chat`: On success, a list of the common chats is returned.
+            List of :obj:`~hasnainkk.types.Chat`: On success, a list of the common chats is returned.
 
         Raises:
             ValueError: If the user_id doesn't belong to a user.

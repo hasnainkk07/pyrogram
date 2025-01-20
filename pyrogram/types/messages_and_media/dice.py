@@ -16,8 +16,8 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-import pyrogram
-from pyrogram import raw
+import hasnainkk
+from hasnainkk import raw
 from ..object import Object
 
 
@@ -32,7 +32,7 @@ class Dice(Object):
             Value of the dice, 1-6 for currently supported base emoji.
     """
 
-    def __init__(self, *, client: "pyrogram.Client" = None, emoji: str, value: int):
+    def __init__(self, *, client: "hasnainkk.Client" = None, emoji: str, value: int):
         super().__init__(client)
 
         self.emoji = emoji

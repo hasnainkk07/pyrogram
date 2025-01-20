@@ -16,9 +16,9 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-import pyrogram
+import hasnainkk
 
-from pyrogram import raw
+from hasnainkk import raw
 from ..object import Object
 
 
@@ -36,7 +36,7 @@ class Location(Object):
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: "hasnainkk.Client" = None,
         longitude: float,
         latitude: float
     ):

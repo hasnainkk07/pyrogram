@@ -16,7 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-from pyrogram import raw, enums
+from hasnainkk import raw, enums
 from ..object import Object
 
 
@@ -24,18 +24,18 @@ class SentCode(Object):
     """Contains info on a sent confirmation code.
 
     Parameters:
-        type (:obj:`~pyrogram.enums.SentCodeType`):
+        type (:obj:`~hasnainkk.enums.SentCodeType`):
             Type of the current sent code.
 
         phone_code_hash (``str``):
             Confirmation code identifier useful for the next authorization steps (either
-            :meth:`~pyrogram.Client.sign_in` or :meth:`~pyrogram.Client.sign_up`).
+            :meth:`~hasnainkk.Client.sign_in` or :meth:`~hasnainkk.Client.sign_up`).
 
-        next_type (:obj:`~pyrogram.enums.NextCodeType`, *optional*):
-            Type of the next code to be sent with :meth:`~pyrogram.Client.resend_code`.
+        next_type (:obj:`~hasnainkk.enums.NextCodeType`, *optional*):
+            Type of the next code to be sent with :meth:`~hasnainkk.Client.resend_code`.
 
         timeout (``int``, *optional*):
-            Delay in seconds before calling :meth:`~pyrogram.Client.resend_code`.
+            Delay in seconds before calling :meth:`~hasnainkk.Client.resend_code`.
     """
 
     def __init__(

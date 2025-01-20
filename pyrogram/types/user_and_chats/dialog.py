@@ -16,9 +16,9 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 from ..object import Object
 from ... import utils
 
@@ -27,10 +27,10 @@ class Dialog(Object):
     """A user's dialog.
 
     Parameters:
-        chat (:obj:`~pyrogram.types.Chat`):
+        chat (:obj:`~hasnainkk.types.Chat`):
             Conversation the dialog belongs to.
 
-        top_message (:obj:`~pyrogram.types.Message`):
+        top_message (:obj:`~hasnainkk.types.Message`):
             The last message sent in the dialog at this time.
 
         unread_messages_count (``int``):
@@ -49,7 +49,7 @@ class Dialog(Object):
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: "hasnainkk.Client" = None,
         chat: "types.Chat",
         top_message: "types.Message",
         unread_messages_count: int,

@@ -18,19 +18,19 @@
 
 from typing import Union
 
-import pyrogram
-from pyrogram import raw
+import hasnainkk
+from hasnainkk import raw
 
 
 class SetSendAsChat:
     async def set_send_as_chat(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         send_as_chat_id: Union[int, str]
     ) -> bool:
         """Set the default "send_as" chat for a chat.
 
-        Use :meth:`~pyrogram.Client.get_send_as_chats` to get all the "send_as" chats available for use.
+        Use :meth:`~hasnainkk.Client.get_send_as_chats` to get all the "send_as" chats available for use.
 
         .. include:: /_includes/usable-by/users.rst
 

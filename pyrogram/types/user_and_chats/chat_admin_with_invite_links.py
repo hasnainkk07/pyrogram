@@ -18,9 +18,9 @@
 
 from typing import Dict
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 from ..object import Object
 
 
@@ -28,7 +28,7 @@ class ChatAdminWithInviteLinks(Object):
     """Represents a chat administrator that has created invite links in a chat.
 
     Parameters:
-        admin (:obj:`~pyrogram.types.User`):
+        admin (:obj:`~hasnainkk.types.User`):
             The administrator.
 
         chat_invite_links_count (``int``):
@@ -52,7 +52,7 @@ class ChatAdminWithInviteLinks(Object):
 
     @staticmethod
     def _parse(
-        client: "pyrogram.Client",
+        client: "hasnainkk.Client",
         admin: "raw.types.ChatAdminWithInvites",
         users: Dict[int, "raw.types.User"] = None
     ) -> "ChatAdminWithInviteLinks":

@@ -16,9 +16,9 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-import pyrogram
-from pyrogram import raw, utils
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw, utils
+from hasnainkk import types
 from ..object import Object
 
 
@@ -26,7 +26,7 @@ class GameHighScore(Object):
     """One row of the high scores table for a game.
 
     Parameters:
-        user (:obj:`~pyrogram.types.User`):
+        user (:obj:`~hasnainkk.types.User`):
             User.
 
         score (``int``):
@@ -39,7 +39,7 @@ class GameHighScore(Object):
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: "hasnainkk.Client" = None,
         user: "types.User",
         score: int,
         position: int = None

@@ -21,7 +21,7 @@ import os
 from struct import pack, unpack
 from typing import Optional
 
-from pyrogram.crypto import aes
+from hasnainkk.crypto import aes
 from .tcp import TCP
 
 log = logging.getLogger(__name__)

@@ -16,8 +16,8 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-import pyrogram
-from pyrogram import raw, types
+import hasnainkk
+from hasnainkk import raw, types
 from .inline_query_result import InlineQueryResult
 
 
@@ -55,10 +55,10 @@ class InlineQueryResultLocation(InlineQueryResult):
             For live locations, a maximum distance for proximity alerts about approaching another chat member,
             in meters. Must be between 1 and 100000 if specified.
 
-        reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup`, *optional*):
+        reply_markup (:obj:`~hasnainkk.types.InlineKeyboardMarkup`, *optional*):
             Inline keyboard attached to the message.
 
-        input_message_content (:obj:`~pyrogram.types.InputMessageContent`):
+        input_message_content (:obj:`~hasnainkk.types.InputMessageContent`):
             Content of the message to be sent instead of the file.
 
         thumb_url (``str``, *optional*):
@@ -100,7 +100,7 @@ class InlineQueryResultLocation(InlineQueryResult):
         self.thumb_width = thumb_width
         self.thumb_height = thumb_height
 
-    async def write(self, client: "pyrogram.Client"):
+    async def write(self, client: "hasnainkk.Client"):
         return raw.types.InputBotInlineResult(
             id=self.id,
             type=self.type,

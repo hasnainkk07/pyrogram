@@ -16,13 +16,13 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-import pyrogram
-from pyrogram import raw
+import hasnainkk
+from hasnainkk import raw
 
 
 class AnswerCallbackQuery:
     async def answer_callback_query(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         callback_query_id: str,
         text: str = None,
         show_alert: bool = None,

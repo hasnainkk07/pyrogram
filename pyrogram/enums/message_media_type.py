@@ -22,7 +22,7 @@ from .auto_name import AutoName
 
 
 class MessageMediaType(AutoName):
-    """Message media type enumeration used in :obj:`~pyrogram.types.Message`."""
+    """Message media type enumeration used in :obj:`~hasnainkk.types.Message`."""
 
     AUDIO = auto()
     "Audio media"

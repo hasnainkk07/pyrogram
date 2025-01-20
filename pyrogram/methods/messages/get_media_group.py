@@ -19,15 +19,15 @@
 import logging
 from typing import Union, List
 
-import pyrogram
-from pyrogram import types
+import hasnainkk
+from hasnainkk import types
 
 log = logging.getLogger(__name__)
 
 
 class GetMediaGroup:
     async def get_media_group(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         message_id: int
     ) -> List["types.Message"]:
@@ -45,7 +45,7 @@ class GetMediaGroup:
                 The id of one of the messages that belong to the media group.
                 
         Returns:
-            List of :obj:`~pyrogram.types.Message`: On success, a list of messages of the media group is returned.
+            List of :obj:`~hasnainkk.types.Message`: On success, a list of messages of the media group is returned.
             
         Raises:
             ValueError: 

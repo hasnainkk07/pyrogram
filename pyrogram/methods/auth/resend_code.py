@@ -18,23 +18,23 @@
 
 import logging
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 
 log = logging.getLogger(__name__)
 
 
 class ResendCode:
     async def resend_code(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         phone_number: str,
         phone_code_hash: str
     ) -> "types.SentCode":
         """Re-send the confirmation code using a different type.
 
         The type of the code to be re-sent is specified in the *next_type* attribute of the
-        :obj:`~pyrogram.types.SentCode` object returned by :meth:`send_code`.
+        :obj:`~hasnainkk.types.SentCode` object returned by :meth:`send_code`.
 
         .. include:: /_includes/usable-by/users.rst
 
@@ -46,7 +46,7 @@ class ResendCode:
                 Confirmation code identifier.
 
         Returns:
-            :obj:`~pyrogram.types.SentCode`: On success, an object containing information on the re-sent confirmation
+            :obj:`~hasnainkk.types.SentCode`: On success, an object containing information on the re-sent confirmation
             code is returned.
 
         Raises:

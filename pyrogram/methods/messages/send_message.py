@@ -19,14 +19,14 @@
 from datetime import datetime
 from typing import Union, List, Optional
 
-import pyrogram
-from pyrogram import raw, utils, enums
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw, utils, enums
+from hasnainkk import types
 
 
 class SendMessage:
     async def send_message(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         text: str,
         parse_mode: Optional["enums.ParseMode"] = None,
@@ -56,11 +56,11 @@ class SendMessage:
             text (``str``):
                 Text of the message to be sent.
 
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            parse_mode (:obj:`~hasnainkk.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
-            entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            entities (List of :obj:`~hasnainkk.types.MessageEntity`):
                 List of special entities that appear in message text, which can be specified instead of *parse_mode*.
 
             disable_web_page_preview (``bool``, *optional*):
@@ -79,12 +79,12 @@ class SendMessage:
             protect_content (``bool``, *optional*):
                 Protects the contents of the sent message from forwarding and saving.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardRemove` | :obj:`~pyrogram.types.ForceReply`, *optional*):
+            reply_markup (:obj:`~hasnainkk.types.InlineKeyboardMarkup` | :obj:`~hasnainkk.types.ReplyKeyboardMarkup` | :obj:`~hasnainkk.types.ReplyKeyboardRemove` | :obj:`~hasnainkk.types.ForceReply`, *optional*):
                 Additional interface options. An object for an inline keyboard, custom reply keyboard,
                 instructions to remove reply keyboard or to force a reply from the user.
 
         Returns:
-            :obj:`~pyrogram.types.Message`: On success, the sent text message is returned.
+            :obj:`~hasnainkk.types.Message`: On success, the sent text message is returned.
 
         Example:
             .. code-block:: python
@@ -93,7 +93,7 @@ class SendMessage:
                 await app.send_message("me", "Message sent with **Pyrogram**!")
 
                 # Disable web page previews
-                await app.send_message("me", "https://docs.pyrogram.org",
+                await app.send_message("me", "https://docs.hasnainkk.org",
                     disable_web_page_preview=True)
 
                 # Reply to a message using its id
@@ -103,7 +103,7 @@ class SendMessage:
 
                 # For bots only, send messages with keyboards attached
 
-                from pyrogram.types import (
+                from hasnainkk.types import (
                     ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyboardButton)
 
                 # Send a normal keyboard
@@ -117,7 +117,7 @@ class SendMessage:
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [InlineKeyboardButton("Data", callback_data="callback_data")],
-                            [InlineKeyboardButton("Docs", url="https://docs.pyrogram.org")]
+                            [InlineKeyboardButton("Docs", url="https://docs.hasnainkk.org")]
                         ]))
         """
 

@@ -18,8 +18,8 @@
 
 from typing import Callable
 
-import pyrogram
-from pyrogram.filters import Filter
+import hasnainkk
+from hasnainkk.filters import Filter
 
 
 class OnChosenInlineResult:
@@ -30,11 +30,11 @@ class OnChosenInlineResult:
     ) -> Callable:
         """Decorator for handling chosen inline results.
 
-        This does the same thing as :meth:`~pyrogram.Client.add_handler` using the
-        :obj:`~pyrogram.handlers.ChosenInlineResultHandler`.
+        This does the same thing as :meth:`~hasnainkk.Client.add_handler` using the
+        :obj:`~hasnainkk.handlers.ChosenInlineResultHandler`.
 
         Parameters:
-            filters (:obj:`~pyrogram.filters`, *optional*):
+            filters (:obj:`~hasnainkk.filters`, *optional*):
                 Pass one or more filters to allow only a subset of chosen inline results to be passed
                 in your function.
 
@@ -43,15 +43,15 @@ class OnChosenInlineResult:
         """
 
         def decorator(func: Callable) -> Callable:
-            if isinstance(self, pyrogram.Client):
-                self.add_handler(pyrogram.handlers.ChosenInlineResultHandler(func, filters), group)
+            if isinstance(self, hasnainkk.Client):
+                self.add_handler(hasnainkk.handlers.ChosenInlineResultHandler(func, filters), group)
             elif isinstance(self, Filter) or self is None:
                 if not hasattr(func, "handlers"):
                     func.handlers = []
 
                 func.handlers.append(
                     (
-                        pyrogram.handlers.ChosenInlineResultHandler(func, self),
+                        hasnainkk.handlers.ChosenInlineResultHandler(func, self),
                         group if filters is None else filters
                     )
                 )

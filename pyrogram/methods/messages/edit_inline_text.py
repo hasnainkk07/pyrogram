@@ -18,16 +18,16 @@
 
 from typing import Optional
 
-import pyrogram
-from pyrogram import raw, enums
-from pyrogram import types
-from pyrogram import utils
+import hasnainkk
+from hasnainkk import raw, enums
+from hasnainkk import types
+from hasnainkk import utils
 from .inline_session import get_session
 
 
 class EditInlineText:
     async def edit_inline_text(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         inline_message_id: str,
         text: str,
         parse_mode: Optional["enums.ParseMode"] = None,
@@ -45,14 +45,14 @@ class EditInlineText:
             text (``str``):
                 New text of the message.
 
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            parse_mode (:obj:`~hasnainkk.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
             disable_web_page_preview (``bool``, *optional*):
                 Disables link previews for links in this message.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup`, *optional*):
+            reply_markup (:obj:`~hasnainkk.types.InlineKeyboardMarkup`, *optional*):
                 An InlineKeyboardMarkup object.
 
         Returns:

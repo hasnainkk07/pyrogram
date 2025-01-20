@@ -18,8 +18,8 @@
 
 from typing import Optional
 
-import pyrogram
-from pyrogram import raw
+import hasnainkk
+from hasnainkk import raw
 from ..object import Object
 
 
@@ -44,7 +44,7 @@ class Reaction(Object):
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: "hasnainkk.Client" = None,
         emoji: Optional[str] = None,
         custom_emoji_id: Optional[int] = None,
         count: Optional[int] = None,
@@ -59,7 +59,7 @@ class Reaction(Object):
 
     @staticmethod
     def _parse(
-        client: "pyrogram.Client",
+        client: "hasnainkk.Client",
         reaction: "raw.base.Reaction"
     ) -> "Reaction":
         if isinstance(reaction, raw.types.ReactionEmoji):
@@ -76,7 +76,7 @@ class Reaction(Object):
 
     @staticmethod
     def _parse_count(
-        client: "pyrogram.Client",
+        client: "hasnainkk.Client",
         reaction_count: "raw.base.ReactionCount"
     ) -> "Reaction":
         reaction = Reaction._parse(client, reaction_count.reaction)

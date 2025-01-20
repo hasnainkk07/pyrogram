@@ -18,14 +18,14 @@
 
 import os
 
-import pyrogram
-from pyrogram import raw
-from pyrogram.utils import compute_password_hash, btoi, itob
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk.utils import compute_password_hash, btoi, itob
 
 
 class EnableCloudPassword:
     async def enable_cloud_password(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         password: str,
         hint: str = "",
         email: str = None

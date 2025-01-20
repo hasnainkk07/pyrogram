@@ -18,14 +18,14 @@
 
 from typing import List, Union
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 
 
 class GetSendAsChats:
     async def get_send_as_chats(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str]
     ) -> List["types.Chat"]:
         """Get the list of "send_as" chats available.
@@ -37,7 +37,7 @@ class GetSendAsChats:
                 Unique identifier (int) or username (str) of the target chat.
 
         Returns:
-            List[:obj:`~pyrogram.types.Chat`]: The list of chats.
+            List[:obj:`~hasnainkk.types.Chat`]: The list of chats.
 
         Example:
             .. code-block:: python

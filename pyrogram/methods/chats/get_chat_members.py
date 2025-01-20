@@ -19,14 +19,14 @@
 import logging
 from typing import Union, Optional, AsyncGenerator
 
-import pyrogram
-from pyrogram import raw, types, enums
+import hasnainkk
+from hasnainkk import raw, types, enums
 
 log = logging.getLogger(__name__)
 
 
 async def get_chunk(
-    client: "pyrogram.Client",
+    client: "hasnainkk.Client",
     chat_id: Union[int, str],
     offset: int,
     filter: "enums.ChatMembersFilter",
@@ -59,7 +59,7 @@ async def get_chunk(
 
 class GetChatMembers:
     async def get_chat_members(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         query: str = "",
         limit: int = 0,
@@ -79,24 +79,24 @@ class GetChatMembers:
             query (``str``, *optional*):
                 Query string to filter members based on their display names and usernames.
                 Only applicable to supergroups and channels. Defaults to "" (empty string).
-                A query string is applicable only for :obj:`~pyrogram.enums.ChatMembersFilter.SEARCH`,
-                :obj:`~pyrogram.enums.ChatMembersFilter.BANNED` and :obj:`~pyrogram.enums.ChatMembersFilter.RESTRICTED`
+                A query string is applicable only for :obj:`~hasnainkk.enums.ChatMembersFilter.SEARCH`,
+                :obj:`~hasnainkk.enums.ChatMembersFilter.BANNED` and :obj:`~hasnainkk.enums.ChatMembersFilter.RESTRICTED`
                 filters only.
 
             limit (``int``, *optional*):
                 Limits the number of members to be retrieved.
 
-            filter (:obj:`~pyrogram.enums.ChatMembersFilter`, *optional*):
+            filter (:obj:`~hasnainkk.enums.ChatMembersFilter`, *optional*):
                 Filter used to select the kind of members you want to retrieve. Only applicable for supergroups
                 and channels.
 
         Returns:
-            ``Generator``: On success, a generator yielding :obj:`~pyrogram.types.ChatMember` objects is returned.
+            ``Generator``: On success, a generator yielding :obj:`~hasnainkk.types.ChatMember` objects is returned.
 
         Example:
             .. code-block:: python
 
-                from pyrogram import enums
+                from hasnainkk import enums
 
                 # Get members
                 async for member in app.get_chat_members(chat_id):

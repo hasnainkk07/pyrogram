@@ -18,9 +18,9 @@
 
 from typing import Union, List, Match, Optional
 
-import pyrogram
-from pyrogram import raw, enums
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw, enums
+from hasnainkk import types
 from ..object import Object
 from ..update import Update
 from ... import utils
@@ -37,14 +37,14 @@ class CallbackQuery(Object, Update):
         id (``str``):
             Unique identifier for this query.
 
-        from_user (:obj:`~pyrogram.types.User`):
+        from_user (:obj:`~hasnainkk.types.User`):
             Sender.
 
         chat_instance (``str``, *optional*):
             Global identifier, uniquely corresponding to the chat to which the message with the callback button was
             sent. Useful for high scores in games.
 
-        message (:obj:`~pyrogram.types.Message`, *optional*):
+        message (:obj:`~hasnainkk.types.Message`, *optional*):
             Message with the callback button that originated the query. Note that message content and message date will
             not be available if the message is too old.
 
@@ -59,13 +59,13 @@ class CallbackQuery(Object, Update):
 
         matches (List of regex Matches, *optional*):
             A list containing all `Match Objects <https://docs.python.org/3/library/re.html#match-objects>`_ that match
-            the data of this callback query. Only applicable when using :obj:`Filters.regex <pyrogram.Filters.regex>`.
+            the data of this callback query. Only applicable when using :obj:`Filters.regex <hasnainkk.Filters.regex>`.
     """
 
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: "hasnainkk.Client" = None,
         id: str,
         from_user: "types.User",
         chat_instance: str,
@@ -87,7 +87,7 @@ class CallbackQuery(Object, Update):
         self.matches = matches
 
     @staticmethod
-    async def _parse(client: "pyrogram.Client", callback_query, users) -> "CallbackQuery":
+    async def _parse(client: "hasnainkk.Client", callback_query, users) -> "CallbackQuery":
         message = None
         inline_message_id = None
 
@@ -121,7 +121,7 @@ class CallbackQuery(Object, Update):
         )
 
     async def answer(self, text: str = None, show_alert: bool = None, url: str = None, cache_time: int = 0):
-        """Bound method *answer* of :obj:`~pyrogram.types.CallbackQuery`.
+        """Bound method *answer* of :obj:`~hasnainkk.types.CallbackQuery`.
 
         Use this method as a shortcut for:
 
@@ -173,24 +173,24 @@ class CallbackQuery(Object, Update):
     ) -> Union["types.Message", bool]:
         """Edit the text of messages attached to callback queries.
 
-        Bound method *edit_message_text* of :obj:`~pyrogram.types.CallbackQuery`.
+        Bound method *edit_message_text* of :obj:`~hasnainkk.types.CallbackQuery`.
 
         Parameters:
             text (``str``):
                 New text of the message.
 
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            parse_mode (:obj:`~hasnainkk.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
             disable_web_page_preview (``bool``, *optional*):
                 Disables link previews for links in this message.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup`, *optional*):
+            reply_markup (:obj:`~hasnainkk.types.InlineKeyboardMarkup`, *optional*):
                 An InlineKeyboardMarkup object.
 
         Returns:
-            :obj:`~pyrogram.types.Message` | ``bool``: On success, if the edited message was sent by the bot, the edited
+            :obj:`~hasnainkk.types.Message` | ``bool``: On success, if the edited message was sent by the bot, the edited
             message is returned, otherwise True is returned (message sent via the bot, as inline query result).
 
         Raises:
@@ -222,21 +222,21 @@ class CallbackQuery(Object, Update):
     ) -> Union["types.Message", bool]:
         """Edit the caption of media messages attached to callback queries.
 
-        Bound method *edit_message_caption* of :obj:`~pyrogram.types.CallbackQuery`.
+        Bound method *edit_message_caption* of :obj:`~hasnainkk.types.CallbackQuery`.
 
         Parameters:
             caption (``str``):
                 New caption of the message.
 
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            parse_mode (:obj:`~hasnainkk.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup`, *optional*):
+            reply_markup (:obj:`~hasnainkk.types.InlineKeyboardMarkup`, *optional*):
                 An InlineKeyboardMarkup object.
 
         Returns:
-            :obj:`~pyrogram.types.Message` | ``bool``: On success, if the edited message was sent by the bot, the edited
+            :obj:`~hasnainkk.types.Message` | ``bool``: On success, if the edited message was sent by the bot, the edited
             message is returned, otherwise True is returned (message sent via the bot, as inline query result).
 
         Raises:
@@ -251,17 +251,17 @@ class CallbackQuery(Object, Update):
     ) -> Union["types.Message", bool]:
         """Edit animation, audio, document, photo or video messages attached to callback queries.
 
-        Bound method *edit_message_media* of :obj:`~pyrogram.types.CallbackQuery`.
+        Bound method *edit_message_media* of :obj:`~hasnainkk.types.CallbackQuery`.
 
         Parameters:
-            media (:obj:`~pyrogram.types.InputMedia`):
+            media (:obj:`~hasnainkk.types.InputMedia`):
                 One of the InputMedia objects describing an animation, audio, document, photo or video.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup`, *optional*):
+            reply_markup (:obj:`~hasnainkk.types.InlineKeyboardMarkup`, *optional*):
                 An InlineKeyboardMarkup object.
 
         Returns:
-            :obj:`~pyrogram.types.Message` | ``bool``: On success, if the edited message was sent by the bot, the edited
+            :obj:`~hasnainkk.types.Message` | ``bool``: On success, if the edited message was sent by the bot, the edited
             message is returned, otherwise True is returned (message sent via the bot, as inline query result).
 
         Raises:
@@ -287,14 +287,14 @@ class CallbackQuery(Object, Update):
     ) -> Union["types.Message", bool]:
         """Edit only the reply markup of messages attached to callback queries.
 
-        Bound method *edit_message_reply_markup* of :obj:`~pyrogram.types.CallbackQuery`.
+        Bound method *edit_message_reply_markup* of :obj:`~hasnainkk.types.CallbackQuery`.
 
         Parameters:
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup`):
+            reply_markup (:obj:`~hasnainkk.types.InlineKeyboardMarkup`):
                 An InlineKeyboardMarkup object.
 
         Returns:
-            :obj:`~pyrogram.types.Message` | ``bool``: On success, if the edited message was sent by the bot, the edited
+            :obj:`~hasnainkk.types.Message` | ``bool``: On success, if the edited message was sent by the bot, the edited
             message is returned, otherwise True is returned (message sent via the bot, as inline query result).
 
         Raises:

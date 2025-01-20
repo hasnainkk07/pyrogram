@@ -18,7 +18,7 @@
 
 from typing import List, Dict
 
-from pyrogram import raw, types
+from hasnainkk import raw, types
 from ..object import Object
 
 
@@ -27,7 +27,7 @@ class VideoChatMembersInvited(Object):
 
 
     Parameters:
-        users (List of :obj:`~pyrogram.types.User`):
+        users (List of :obj:`~hasnainkk.types.User`):
             New members that were invited to the voice chat.
     """
 

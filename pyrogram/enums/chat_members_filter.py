@@ -16,12 +16,12 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-from pyrogram import raw
+from hasnainkk import raw
 from .auto_name import AutoName
 
 
 class ChatMembersFilter(AutoName):
-    """Chat members filter enumeration used in :meth:`~pyrogram.Client.get_chat_members`"""
+    """Chat members filter enumeration used in :meth:`~hasnainkk.Client.get_chat_members`"""
 
     SEARCH = raw.types.ChannelParticipantsSearch
     "Search for members"

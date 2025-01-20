@@ -19,14 +19,14 @@
 from datetime import datetime
 from typing import Union
 
-import pyrogram
-from pyrogram import raw, utils
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw, utils
+from hasnainkk import types
 
 
 class RestrictChatMember:
     async def restrict_chat_member(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         user_id: Union[int, str],
         permissions: "types.ChatPermissions",
@@ -47,7 +47,7 @@ class RestrictChatMember:
                 Unique identifier (int) or username (str) of the target user.
                 For a contact that exists in your Telegram address book you can use his phone number (str).
 
-            permissions (:obj:`~pyrogram.types.ChatPermissions`):
+            permissions (:obj:`~hasnainkk.types.ChatPermissions`):
                 New user permissions.
 
             until_date (:py:obj:`~datetime.datetime`, *optional*):
@@ -56,13 +56,13 @@ class RestrictChatMember:
                 considered to be banned forever. Defaults to epoch (ban forever).
 
         Returns:
-            :obj:`~pyrogram.types.Chat`: On success, a chat object is returned.
+            :obj:`~hasnainkk.types.Chat`: On success, a chat object is returned.
 
         Example:
             .. code-block:: python
 
                 from datetime import datetime, timedelta
-                from pyrogram.types import ChatPermissions
+                from hasnainkk.types import ChatPermissions
 
                 # Completely restrict chat member (mute) forever
                 await app.restrict_chat_member(chat_id, user_id, ChatPermissions())

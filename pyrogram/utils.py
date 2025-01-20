@@ -27,10 +27,10 @@ from datetime import datetime, timezone
 from getpass import getpass
 from typing import Union, List, Dict, Optional
 
-import pyrogram
-from pyrogram import raw, enums
-from pyrogram import types
-from pyrogram.file_id import FileId, FileType, PHOTO_TYPES, DOCUMENT_TYPES
+import hasnainkk
+from hasnainkk import raw, enums
+from hasnainkk import types
+from hasnainkk.file_id import FileId, FileType, PHOTO_TYPES, DOCUMENT_TYPES
 
 
 async def ainput(prompt: str = "", *, hide: bool = False):
@@ -339,7 +339,7 @@ def compute_password_check(
 
 
 async def parse_text_entities(
-    client: "pyrogram.Client",
+    client: "hasnainkk.Client",
     text: str,
     parse_mode: enums.ParseMode,
     entities: List["types.MessageEntity"]

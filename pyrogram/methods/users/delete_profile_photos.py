@@ -18,15 +18,15 @@
 
 from typing import List, Union
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import utils
-from pyrogram.file_id import FileType
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import utils
+from hasnainkk.file_id import FileType
 
 
 class DeleteProfilePhotos:
     async def delete_profile_photos(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         photo_ids: Union[str, List[str]]
     ) -> bool:
         """Delete your own profile photos.
@@ -35,7 +35,7 @@ class DeleteProfilePhotos:
 
         Parameters:
             photo_ids (``str`` | List of ``str``):
-                A single :obj:`~pyrogram.types.Photo` id as string or multiple ids as list of strings for deleting
+                A single :obj:`~hasnainkk.types.Photo` id as string or multiple ids as list of strings for deleting
                 more than one photos at once.
 
         Returns:

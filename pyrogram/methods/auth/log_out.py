@@ -18,15 +18,15 @@
 
 import logging
 
-import pyrogram
-from pyrogram import raw
+import hasnainkk
+from hasnainkk import raw
 
 log = logging.getLogger(__name__)
 
 
 class LogOut:
     async def log_out(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
     ):
         """Log out from Telegram and delete the *\\*.session* file.
 

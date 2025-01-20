@@ -18,13 +18,13 @@
 
 from typing import List
 
-from pyrogram import raw
-from pyrogram import types
+from hasnainkk import raw
+from hasnainkk import types
 from ..object import Object
 
 
 class TermsOfService(Object):
-    """Telegram's Terms of Service returned by :meth:`~pyrogram.Client.sign_in`.
+    """Telegram's Terms of Service returned by :meth:`~hasnainkk.Client.sign_in`.
 
     Parameters:
         id (``str``):
@@ -33,7 +33,7 @@ class TermsOfService(Object):
         text (``str``):
             Terms of Service text.
 
-        entities (List of :obj:`~pyrogram.types.MessageEntity`):
+        entities (List of :obj:`~hasnainkk.types.MessageEntity`):
             Special entities like URLs that appear in the text.
     """
 

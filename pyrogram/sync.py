@@ -21,9 +21,9 @@ import functools
 import inspect
 import threading
 
-from pyrogram import types
-from pyrogram.methods import Methods
-from pyrogram.methods.utilities import idle as idle_module, compose as compose_module
+from hasnainkk import types
+from hasnainkk.methods import Methods
+from hasnainkk.methods.utilities import idle as idle_module, compose as compose_module
 
 
 def async_to_sync(obj, name):

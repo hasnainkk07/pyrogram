@@ -18,15 +18,15 @@
 
 from typing import Union
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
-from pyrogram import utils
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
+from hasnainkk import utils
 
 
 class GetChat:
     async def get_chat(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str]
     ) -> Union["types.Chat", "types.ChatPreview"]:
         """Get up to date information about a chat.
@@ -43,7 +43,7 @@ class GetChat:
                 of the target channel/supergroup (in the format @username).
 
         Returns:
-            :obj:`~pyrogram.types.Chat` | :obj:`~pyrogram.types.ChatPreview`: On success, if you've already joined the chat, a chat object is returned,
+            :obj:`~hasnainkk.types.Chat` | :obj:`~hasnainkk.types.ChatPreview`: On success, if you've already joined the chat, a chat object is returned,
             otherwise, a chat preview object is returned.
 
         Raises:
@@ -52,7 +52,7 @@ class GetChat:
         Example:
             .. code-block:: python
 
-                chat = await app.get_chat("pyrogram")
+                chat = await app.get_chat("hasnainkk")
                 print(chat)
         """
         match = self.INVITE_LINK_RE.match(str(chat_id))

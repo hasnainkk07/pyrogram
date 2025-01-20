@@ -16,19 +16,19 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-import pyrogram
-from pyrogram import raw, enums
+import hasnainkk
+from hasnainkk import raw, enums
 
 
 class SearchGlobalCount:
     async def search_global_count(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         query: str = "",
         filter: "enums.MessagesFilter" = enums.MessagesFilter.EMPTY,
     ) -> int:
         """Get the count of messages resulting from a global search.
 
-        If you want to get the actual messages, see :meth:`~pyrogram.Client.search_global`.
+        If you want to get the actual messages, see :meth:`~hasnainkk.Client.search_global`.
 
         .. include:: /_includes/usable-by/users.rst
 
@@ -37,7 +37,7 @@ class SearchGlobalCount:
                 Text query string.
                 Use "@" to search for mentions.
 
-            filter (:obj:`~pyrogram.enums.MessagesFilter`, *optional*):
+            filter (:obj:`~hasnainkk.enums.MessagesFilter`, *optional*):
                 Pass a filter in order to search for specific kind of messages only:
 
         Returns:

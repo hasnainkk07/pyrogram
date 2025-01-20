@@ -19,11 +19,11 @@
 from datetime import datetime
 from typing import List, Dict, Type
 
-import pyrogram
-from pyrogram import raw, utils
-from pyrogram import types
-from pyrogram.errors import StickersetInvalid
-from pyrogram.file_id import FileId, FileType, FileUniqueId, FileUniqueType
+import hasnainkk
+from hasnainkk import raw, utils
+from hasnainkk import types
+from hasnainkk.errors import StickersetInvalid
+from hasnainkk.file_id import FileId, FileType, FileUniqueId, FileUniqueType
 from ..object import Object
 
 
@@ -68,7 +68,7 @@ class Sticker(Object):
         set_name (``str``, *optional*):
             Name of the sticker set to which the sticker belongs.
 
-        thumbs (List of :obj:`~pyrogram.types.Thumbnail`, *optional*):
+        thumbs (List of :obj:`~hasnainkk.types.Thumbnail`, *optional*):
             Sticker thumbnails in the .webp or .jpg format.
     """
 
@@ -77,7 +77,7 @@ class Sticker(Object):
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: "hasnainkk.Client" = None,
         file_id: str,
         file_unique_id: str,
         width: int,

@@ -19,14 +19,14 @@
 from datetime import datetime
 from typing import Union
 
-import pyrogram
-from pyrogram import raw, utils
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw, utils
+from hasnainkk import types
 
 
 class BanChatMember:
     async def ban_chat_member(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         user_id: Union[int, str],
         until_date: datetime = utils.zero_datetime()
@@ -57,7 +57,7 @@ class BanChatMember:
                 considered to be banned forever. Defaults to epoch (ban forever).
 
         Returns:
-            :obj:`~pyrogram.types.Message` | ``bool``: On success, a service message will be returned (when applicable),
+            :obj:`~hasnainkk.types.Message` | ``bool``: On success, a service message will be returned (when applicable),
             otherwise, in case a message object couldn't be returned, True is returned.
 
         Example:

@@ -16,8 +16,8 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-import pyrogram
-from pyrogram import raw
+import hasnainkk
+from hasnainkk import raw
 from ..object import Object
 
 
@@ -44,7 +44,7 @@ class Contact(Object):
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: "hasnainkk.Client" = None,
         phone_number: str,
         first_name: str,
         last_name: str = None,
@@ -60,7 +60,7 @@ class Contact(Object):
         self.vcard = vcard
 
     @staticmethod
-    def _parse(client: "pyrogram.Client", contact: "raw.types.MessageMediaContact") -> "Contact":
+    def _parse(client: "hasnainkk.Client", contact: "raw.types.MessageMediaContact") -> "Contact":
         return Contact(
             phone_number=contact.phone_number,
             first_name=contact.first_name,

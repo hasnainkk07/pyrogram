@@ -20,8 +20,8 @@ import html
 import re
 from typing import Optional
 
-import pyrogram
-from pyrogram.enums import MessageEntityType
+import hasnainkk
+from hasnainkk.enums import MessageEntityType
 from . import utils
 from .html import HTML
 
@@ -56,7 +56,7 @@ FIXED_WIDTH_DELIMS = [CODE_DELIM, PRE_DELIM]
 
 
 class Markdown:
-    def __init__(self, client: Optional["pyrogram.Client"]):
+    def __init__(self, client: Optional["hasnainkk.Client"]):
         self.html = HTML(client)
 
     async def parse(self, text: str, strict: bool = False):

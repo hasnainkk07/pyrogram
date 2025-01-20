@@ -18,8 +18,8 @@
 
 from datetime import datetime
 
-from pyrogram import raw, utils
-from pyrogram import types
+from hasnainkk import raw, utils
+from hasnainkk import types
 from ..object import Object
 
 
@@ -30,7 +30,7 @@ class InviteLinkImporter(Object):
         date (:py:obj:`~datetime.datetime`):
             The time of when this user used the given link
 
-        user (:obj:`~pyrogram.types.User`):
+        user (:obj:`~hasnainkk.types.User`):
             The user that has used the given invite link
     """
 

@@ -18,14 +18,14 @@
 
 from typing import Union
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 
 
 class RetractVote:
     async def retract_vote(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         message_id: int
     ) -> "types.Poll":
@@ -43,7 +43,7 @@ class RetractVote:
                 Identifier of the original message with the poll.
 
         Returns:
-            :obj:`~pyrogram.types.Poll`: On success, the poll with the retracted vote is returned.
+            :obj:`~hasnainkk.types.Poll`: On success, the poll with the retracted vote is returned.
 
         Example:
             .. code-block:: python

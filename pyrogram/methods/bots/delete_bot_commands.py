@@ -16,13 +16,13 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-import pyrogram
-from pyrogram import raw, types
+import hasnainkk
+from hasnainkk import raw, types
 
 
 class DeleteBotCommands:
     async def delete_bot_commands(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         scope: "types.BotCommandScope" = types.BotCommandScopeDefault(),
         language_code: str = "",
     ) -> bool:
@@ -35,9 +35,9 @@ class DeleteBotCommands:
         .. include:: /_includes/usable-by/bots.rst
 
         Parameters:
-            scope (:obj:`~pyrogram.types.BotCommandScope`, *optional*):
+            scope (:obj:`~hasnainkk.types.BotCommandScope`, *optional*):
                 An object describing the scope of users for which the commands are relevant.
-                Defaults to :obj:`~pyrogram.types.BotCommandScopeDefault`.
+                Defaults to :obj:`~hasnainkk.types.BotCommandScopeDefault`.
 
             language_code (``str``, *optional*):
                 A two-letter ISO 639-1 language code.

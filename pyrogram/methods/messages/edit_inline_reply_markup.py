@@ -16,16 +16,16 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
-from pyrogram import utils
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
+from hasnainkk import utils
 from .inline_session import get_session
 
 
 class EditInlineReplyMarkup:
     async def edit_inline_reply_markup(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         inline_message_id: str,
         reply_markup: "types.InlineKeyboardMarkup" = None
     ) -> bool:
@@ -37,7 +37,7 @@ class EditInlineReplyMarkup:
             inline_message_id (``str``):
                 Identifier of the inline message.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup`, *optional*):
+            reply_markup (:obj:`~hasnainkk.types.InlineKeyboardMarkup`, *optional*):
                 An InlineKeyboardMarkup object.
 
         Returns:
@@ -46,7 +46,7 @@ class EditInlineReplyMarkup:
         Example:
             .. code-block:: python
 
-                from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+                from hasnainkk.types import InlineKeyboardMarkup, InlineKeyboardButton
 
                 # Bots only
                 await app.edit_inline_reply_markup(

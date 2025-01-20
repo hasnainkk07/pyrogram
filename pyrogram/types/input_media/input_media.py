@@ -27,11 +27,11 @@ class InputMedia(Object):
 
     It should be one of:
 
-    - :obj:`~pyrogram.types.InputMediaAnimation`
-    - :obj:`~pyrogram.types.InputMediaDocument`
-    - :obj:`~pyrogram.types.InputMediaAudio`
-    - :obj:`~pyrogram.types.InputMediaPhoto`
-    - :obj:`~pyrogram.types.InputMediaVideo`
+    - :obj:`~hasnainkk.types.InputMediaAnimation`
+    - :obj:`~hasnainkk.types.InputMediaDocument`
+    - :obj:`~hasnainkk.types.InputMediaAudio`
+    - :obj:`~hasnainkk.types.InputMediaPhoto`
+    - :obj:`~hasnainkk.types.InputMediaVideo`
     """
 
     def __init__(

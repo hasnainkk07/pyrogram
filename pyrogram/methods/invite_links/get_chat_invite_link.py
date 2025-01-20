@@ -18,14 +18,14 @@
 
 from typing import Union
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 
 
 class GetChatInviteLink:
     async def get_chat_invite_link(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         invite_link: str,
     ) -> "types.ChatInviteLink":
@@ -42,7 +42,7 @@ class GetChatInviteLink:
                 The invite link.
 
         Returns:
-            :obj:`~pyrogram.types.ChatInviteLink`: On success, the invite link is returned.
+            :obj:`~hasnainkk.types.ChatInviteLink`: On success, the invite link is returned.
         """
         r = await self.invoke(
             raw.functions.messages.GetExportedChatInvite(

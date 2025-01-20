@@ -18,14 +18,14 @@
 
 from typing import Union, List
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 
 
 class VotePoll:
     async def vote_poll(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         message_id: id,
         options: Union[int, List[int]]
@@ -47,7 +47,7 @@ class VotePoll:
                 Index or list of indexes (for multiple answers) of the poll option(s) you want to vote for (0 to 9).
 
         Returns:
-            :obj:`~pyrogram.types.Poll` - On success, the poll with the chosen option is returned.
+            :obj:`~hasnainkk.types.Poll` - On success, the poll with the chosen option is returned.
 
         Example:
             .. code-block:: python

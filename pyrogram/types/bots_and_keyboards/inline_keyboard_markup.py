@@ -18,9 +18,9 @@
 
 from typing import List
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 from ..object import Object
 
 
@@ -28,7 +28,7 @@ class InlineKeyboardMarkup(Object):
     """An inline keyboard that appears right next to the message it belongs to.
 
     Parameters:
-        inline_keyboard (List of List of :obj:`~pyrogram.types.InlineKeyboardButton`):
+        inline_keyboard (List of List of :obj:`~hasnainkk.types.InlineKeyboardButton`):
             List of button rows, each represented by a List of InlineKeyboardButton objects.
     """
 
@@ -53,7 +53,7 @@ class InlineKeyboardMarkup(Object):
             inline_keyboard=inline_keyboard
         )
 
-    async def write(self, client: "pyrogram.Client"):
+    async def write(self, client: "hasnainkk.Client"):
         rows = []
 
         for r in self.inline_keyboard:

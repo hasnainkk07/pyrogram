@@ -19,22 +19,22 @@
 import asyncio
 from typing import List
 
-import pyrogram
+import hasnainkk
 from .idle import idle
 
 
 async def compose(
-    clients: List["pyrogram.Client"],
+    clients: List["hasnainkk.Client"],
     sequential: bool = False
 ):
     """Run multiple clients at once.
 
-    This method can be used to run multiple clients at once and can be found directly in the ``pyrogram`` package.
+    This method can be used to run multiple clients at once and can be found directly in the ``hasnainkk`` package.
 
-    If you want to run a single client, you can use Client's bound method :meth:`~pyrogram.Client.run`.
+    If you want to run a single client, you can use Client's bound method :meth:`~hasnainkk.Client.run`.
 
     Parameters:
-        clients (List of :obj:`~pyrogram.Client`):
+        clients (List of :obj:`~hasnainkk.Client`):
             A list of client objects to run.
 
         sequential (``bool``, *optional*):
@@ -45,7 +45,7 @@ async def compose(
         .. code-block:: python
 
             import asyncio
-            from pyrogram import Client, compose
+            from hasnainkk import Client, compose
 
 
             async def main():

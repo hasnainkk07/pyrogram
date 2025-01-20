@@ -16,12 +16,12 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-from pyrogram import raw
+from hasnainkk import raw
 from .auto_name import AutoName
 
 
 class MessagesFilter(AutoName):
-    """Messages filter enumeration used in :meth:`~pyrogram.Client.search_messages` and :meth:`~pyrogram.Client.search_global`"""
+    """Messages filter enumeration used in :meth:`~hasnainkk.Client.search_messages` and :meth:`~hasnainkk.Client.search_global`"""
 
     EMPTY = raw.types.InputMessagesFilterEmpty
     "Empty filter (any kind of messages)"

@@ -18,15 +18,15 @@
 
 from typing import Union
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
-from pyrogram.errors import UserNotParticipant
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
+from hasnainkk.errors import UserNotParticipant
 
 
 class GetChatMember:
     async def get_chat_member(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         user_id: Union[int, str]
     ) -> "types.ChatMember":
@@ -44,7 +44,7 @@ class GetChatMember:
                 For a contact that exists in your Telegram address book you can use his phone number (str).
 
         Returns:
-            :obj:`~pyrogram.types.ChatMember`: On success, a chat member is returned.
+            :obj:`~hasnainkk.types.ChatMember`: On success, a chat member is returned.
 
         Example:
             .. code-block:: python

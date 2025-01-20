@@ -18,14 +18,14 @@
 
 from typing import Iterable
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 
 
 class AnswerInlineQuery:
     async def answer_inline_query(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         inline_query_id: str,
         results: Iterable["types.InlineQueryResult"],
         cache_time: int = 300,
@@ -45,7 +45,7 @@ class AnswerInlineQuery:
             inline_query_id (``str``):
                 Unique identifier for the answered query.
 
-            results (List of :obj:`~pyrogram.types.InlineQueryResult`):
+            results (List of :obj:`~hasnainkk.types.InlineQueryResult`):
                 A list of results for the inline query.
 
             cache_time (``int``, *optional*):
@@ -86,7 +86,7 @@ class AnswerInlineQuery:
         Example:
             .. code-block:: python
 
-                from pyrogram.types import InlineQueryResultArticle, InputTextMessageContent
+                from hasnainkk.types import InlineQueryResultArticle, InputTextMessageContent
 
                 await app.answer_inline_query(
                     inline_query_id,

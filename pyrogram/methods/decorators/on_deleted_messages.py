@@ -18,8 +18,8 @@
 
 from typing import Callable
 
-import pyrogram
-from pyrogram.filters import Filter
+import hasnainkk
+from hasnainkk.filters import Filter
 
 
 class OnDeletedMessages:
@@ -30,11 +30,11 @@ class OnDeletedMessages:
     ) -> Callable:
         """Decorator for handling deleted messages.
 
-        This does the same thing as :meth:`~pyrogram.Client.add_handler` using the
-        :obj:`~pyrogram.handlers.DeletedMessagesHandler`.
+        This does the same thing as :meth:`~hasnainkk.Client.add_handler` using the
+        :obj:`~hasnainkk.handlers.DeletedMessagesHandler`.
 
         Parameters:
-            filters (:obj:`~pyrogram.filters`, *optional*):
+            filters (:obj:`~hasnainkk.filters`, *optional*):
                 Pass one or more filters to allow only a subset of messages to be passed
                 in your function.
 
@@ -43,15 +43,15 @@ class OnDeletedMessages:
         """
 
         def decorator(func: Callable) -> Callable:
-            if isinstance(self, pyrogram.Client):
-                self.add_handler(pyrogram.handlers.DeletedMessagesHandler(func, filters), group)
+            if isinstance(self, hasnainkk.Client):
+                self.add_handler(hasnainkk.handlers.DeletedMessagesHandler(func, filters), group)
             elif isinstance(self, Filter) or self is None:
                 if not hasattr(func, "handlers"):
                     func.handlers = []
 
                 func.handlers.append(
                     (
-                        pyrogram.handlers.DeletedMessagesHandler(func, self),
+                        hasnainkk.handlers.DeletedMessagesHandler(func, self),
                         group if filters is None else filters
                     )
                 )

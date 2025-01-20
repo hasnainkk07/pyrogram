@@ -22,10 +22,10 @@ import re
 from html.parser import HTMLParser
 from typing import Optional
 
-import pyrogram
-from pyrogram import raw
-from pyrogram.enums import MessageEntityType
-from pyrogram.errors import PeerIdInvalid
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk.enums import MessageEntityType
+from hasnainkk.errors import PeerIdInvalid
 from . import utils
 
 log = logging.getLogger(__name__)
@@ -34,7 +34,7 @@ log = logging.getLogger(__name__)
 class Parser(HTMLParser):
     MENTION_RE = re.compile(r"tg://user\?id=(\d+)")
 
-    def __init__(self, client: "pyrogram.Client"):
+    def __init__(self, client: "hasnainkk.Client"):
         super().__init__()
 
         self.client = client
@@ -113,7 +113,7 @@ class Parser(HTMLParser):
 
 
 class HTML:
-    def __init__(self, client: Optional["pyrogram.Client"]):
+    def __init__(self, client: Optional["hasnainkk.Client"]):
         self.client = client
 
     async def parse(self, text: str):

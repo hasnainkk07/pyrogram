@@ -16,9 +16,9 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 from ..object import Object
 
 
@@ -26,7 +26,7 @@ class Venue(Object):
     """A venue.
 
     Parameters:
-        location (:obj:`~pyrogram.types.Location`):
+        location (:obj:`~hasnainkk.types.Location`):
             Venue location.
 
         title (``str``):
@@ -47,7 +47,7 @@ class Venue(Object):
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: "hasnainkk.Client" = None,
         location: "types.Location",
         title: str,
         address: str,

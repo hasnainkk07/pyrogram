@@ -19,14 +19,14 @@
 import math
 from typing import Union, Optional, BinaryIO
 
-import pyrogram
-from pyrogram import types
-from pyrogram.file_id import FileId
+import hasnainkk
+from hasnainkk import types
+from hasnainkk.file_id import FileId
 
 
 class StreamMedia:
     async def stream_media(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         message: Union["types.Message", str],
         limit: int = 0,
         offset: int = 0
@@ -39,7 +39,7 @@ class StreamMedia:
         .. include:: /_includes/usable-by/users-bots.rst
 
         Parameters:
-            message (:obj:`~pyrogram.types.Message` | ``str``):
+            message (:obj:`~hasnainkk.types.Message` | ``str``):
                 Pass a Message containing the media, the media itself (message.audio, message.video, ...) or a file id
                 as string.
 

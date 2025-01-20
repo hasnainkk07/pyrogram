@@ -18,18 +18,18 @@
 
 from typing import List, Callable
 
-import pyrogram
-from pyrogram.filters import Filter
-from pyrogram.types import Message
+import hasnainkk
+from hasnainkk.filters import Filter
+from hasnainkk.types import Message
 from .handler import Handler
 
 
 class DeletedMessagesHandler(Handler):
     """The deleted messages handler class. Used to handle deleted messages coming from any chat
-    (private, group, channel). It is intended to be used with :meth:`~pyrogram.Client.add_handler`
+    (private, group, channel). It is intended to be used with :meth:`~hasnainkk.Client.add_handler`
 
     For a nicer way to register this handler, have a look at the
-    :meth:`~pyrogram.Client.on_deleted_messages` decorator.
+    :meth:`~hasnainkk.Client.on_deleted_messages` decorator.
 
     Parameters:
         callback (``Callable``):
@@ -41,17 +41,17 @@ class DeletedMessagesHandler(Handler):
             in your callback function.
 
     Other parameters:
-        client (:obj:`~pyrogram.Client`):
+        client (:obj:`~hasnainkk.Client`):
             The Client itself, useful when you want to call other API methods inside the message handler.
 
-        messages (List of :obj:`~pyrogram.types.Message`):
+        messages (List of :obj:`~hasnainkk.types.Message`):
             The deleted messages, as list.
     """
 
     def __init__(self, callback: Callable, filters: Filter = None):
         super().__init__(callback, filters)
 
-    async def check(self, client: "pyrogram.Client", messages: List[Message]):
+    async def check(self, client: "hasnainkk.Client", messages: List[Message]):
         # Every message should be checked, if at least one matches the filter True is returned
         # otherwise, or if the list is empty, False is returned
         for message in messages:

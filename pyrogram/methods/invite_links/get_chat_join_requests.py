@@ -18,14 +18,14 @@
 
 from typing import Union, Optional, AsyncGenerator
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 
 
 class GetChatJoinRequests:
     async def get_chat_join_requests(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         limit: int = 0,
         query: str = ""
@@ -47,10 +47,10 @@ class GetChatJoinRequests:
                 Query to search for a user.
 
         Returns:
-            ``Generator``: A generator yielding :obj:`~pyrogram.types.ChatJoiner` objects.
+            ``Generator``: A generator yielding :obj:`~hasnainkk.types.ChatJoiner` objects.
 
         Yields:
-            :obj:`~pyrogram.types.ChatJoiner` objects.
+            :obj:`~hasnainkk.types.ChatJoiner` objects.
         """
         current = 0
         total = abs(limit) or (1 << 31) - 1

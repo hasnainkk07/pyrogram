@@ -18,14 +18,14 @@
 
 from typing import Optional
 
-import pyrogram
-from pyrogram import enums
+import hasnainkk
+from hasnainkk import enums
 from .html import HTML
 from .markdown import Markdown
 
 
 class Parser:
-    def __init__(self, client: Optional["pyrogram.Client"]):
+    def __init__(self, client: Optional["hasnainkk.Client"]):
         self.client = client
         self.html = HTML(client)
         self.markdown = Markdown(client)

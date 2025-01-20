@@ -18,8 +18,8 @@
 
 from typing import Optional, List
 
-import pyrogram
-from pyrogram import raw, types
+import hasnainkk
+from hasnainkk import raw, types
 from ..object import Object
 
 
@@ -32,14 +32,14 @@ class ChatReactions(Object):
         allow_custom_emoji (``bool``, *optional*):
             Whether custom emoji are allowed or not.
 
-        reactions (List of :obj:`~pyrogram.types.Reaction`, *optional*):
+        reactions (List of :obj:`~hasnainkk.types.Reaction`, *optional*):
             Reactions available.
     """
 
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: "hasnainkk.Client" = None,
         all_are_enabled: Optional[bool] = None,
         allow_custom_emoji: Optional[bool] = None,
         reactions: Optional[List["types.Reaction"]] = None,

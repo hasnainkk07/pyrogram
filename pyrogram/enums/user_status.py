@@ -22,7 +22,7 @@ from .auto_name import AutoName
 
 
 class UserStatus(AutoName):
-    """User status enumeration used in :obj:`~pyrogram.types.User`."""
+    """User status enumeration used in :obj:`~hasnainkk.types.User`."""
 
     ONLINE = auto()
     """User is online"""

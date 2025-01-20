@@ -21,18 +21,18 @@ import re
 from datetime import datetime
 from typing import Union, BinaryIO, List, Optional, Callable
 
-import pyrogram
-from pyrogram import StopTransmission, enums
-from pyrogram import raw
-from pyrogram import types
-from pyrogram import utils
-from pyrogram.errors import FilePartMissing
-from pyrogram.file_id import FileType
+import hasnainkk
+from hasnainkk import StopTransmission, enums
+from hasnainkk import raw
+from hasnainkk import types
+from hasnainkk import utils
+from hasnainkk.errors import FilePartMissing
+from hasnainkk.file_id import FileType
 
 
 class SendAudio:
     async def send_audio(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         audio: Union[str, BinaryIO],
         caption: str = "",
@@ -58,7 +58,7 @@ class SendAudio:
     ) -> Optional["types.Message"]:
         """Send audio files.
 
-        For sending voice messages, use the :meth:`~pyrogram.Client.send_voice` method instead.
+        For sending voice messages, use the :meth:`~hasnainkk.Client.send_voice` method instead.
 
         .. include:: /_includes/usable-by/users-bots.rst
 
@@ -78,11 +78,11 @@ class SendAudio:
             caption (``str``, *optional*):
                 Audio caption, 0-1024 characters.
 
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            parse_mode (:obj:`~hasnainkk.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
-            caption_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            caption_entities (List of :obj:`~hasnainkk.types.MessageEntity`):
                 List of special entities that appear in the caption, which can be specified instead of *parse_mode*.
 
             duration (``int``, *optional*):
@@ -117,7 +117,7 @@ class SendAudio:
             protect_content (``bool``, *optional*):
                 Protects the contents of the sent message from forwarding and saving.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardRemove` | :obj:`~pyrogram.types.ForceReply`, *optional*):
+            reply_markup (:obj:`~hasnainkk.types.InlineKeyboardMarkup` | :obj:`~hasnainkk.types.ReplyKeyboardMarkup` | :obj:`~hasnainkk.types.ReplyKeyboardRemove` | :obj:`~hasnainkk.types.ForceReply`, *optional*):
                 Additional interface options. An object for an inline keyboard, custom reply keyboard,
                 instructions to remove reply keyboard or to force a reply from the user.
 
@@ -144,8 +144,8 @@ class SendAudio:
                 You can either keep ``*args`` or add every single extra argument in your function signature.
 
         Returns:
-            :obj:`~pyrogram.types.Message` | ``None``: On success, the sent audio message is returned, otherwise, in
-            case the upload is deliberately stopped with :meth:`~pyrogram.Client.stop_transmission`, None is returned.
+            :obj:`~hasnainkk.types.Message` | ``None``: On success, the sent audio message is returned, otherwise, in
+            case the upload is deliberately stopped with :meth:`~hasnainkk.Client.stop_transmission`, None is returned.
 
         Example:
             .. code-block:: python

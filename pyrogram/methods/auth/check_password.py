@@ -18,17 +18,17 @@
 
 import logging
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
-from pyrogram.utils import compute_password_check
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
+from hasnainkk.utils import compute_password_check
 
 log = logging.getLogger(__name__)
 
 
 class CheckPassword:
     async def check_password(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         password: str
     ) -> "types.User":
         """Check your Two-Step Verification password and log in.
@@ -40,7 +40,7 @@ class CheckPassword:
                 Your Two-Step Verification password.
 
         Returns:
-            :obj:`~pyrogram.types.User`: On success, the authorized user is returned.
+            :obj:`~hasnainkk.types.User`: On success, the authorized user is returned.
 
         Raises:
             BadRequest: In case the password is invalid.

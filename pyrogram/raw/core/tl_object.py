@@ -56,7 +56,7 @@ class TLObject:
         if not hasattr(self, "QUALNAME"):
             return repr(self)
 
-        return "pyrogram.raw.{}({})".format(
+        return "hasnainkk.raw.{}({})".format(
             self.QUALNAME,
             ", ".join(
                 f"{attr}={repr(getattr(self, attr))}"

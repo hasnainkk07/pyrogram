@@ -18,14 +18,14 @@
 
 from typing import Union, List
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 
 
 class CreateGroup:
     async def create_group(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         title: str,
         users: Union[Union[int, str], List[Union[int, str]]]
     ) -> "types.Chat":
@@ -33,7 +33,7 @@ class CreateGroup:
 
         .. note::
 
-            If you want to create a new supergroup, use :meth:`~pyrogram.Client.create_supergroup` instead.
+            If you want to create a new supergroup, use :meth:`~hasnainkk.Client.create_supergroup` instead.
 
         .. include:: /_includes/usable-by/users.rst
 
@@ -47,7 +47,7 @@ class CreateGroup:
                 Multiple users can be invited by passing a list of IDs, usernames or phone numbers.
 
         Returns:
-            :obj:`~pyrogram.types.Chat`: On success, a chat object is returned.
+            :obj:`~hasnainkk.types.Chat`: On success, a chat object is returned.
 
         Example:
             .. code-block:: python

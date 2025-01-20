@@ -18,16 +18,16 @@
 
 import logging
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 
 log = logging.getLogger(__name__)
 
 
 class RecoverPassword:
     async def recover_password(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         recovery_code: str
     ) -> "types.User":
         """Recover your password with a recovery code and log in.
@@ -39,7 +39,7 @@ class RecoverPassword:
                 The recovery code sent via email.
 
         Returns:
-            :obj:`~pyrogram.types.User`: On success, the authorized user is returned and the Two-Step Verification
+            :obj:`~hasnainkk.types.User`: On success, the authorized user is returned and the Two-Step Verification
             password reset.
 
         Raises:

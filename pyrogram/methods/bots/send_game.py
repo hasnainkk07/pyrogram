@@ -18,14 +18,14 @@
 
 from typing import Union
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 
 
 class SendGame:
     async def send_game(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         game_short_name: str,
         disable_notification: bool = None,
@@ -61,12 +61,12 @@ class SendGame:
             protect_content (``bool``, *optional*):
                 Protects the contents of the sent message from forwarding and saving.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup`, *optional*):
+            reply_markup (:obj:`~hasnainkk.types.InlineKeyboardMarkup`, *optional*):
                 An object for an inline keyboard. If empty, one ‘Play game_title’ button will be shown automatically.
                 If not empty, the first button must launch the game.
 
         Returns:
-            :obj:`~pyrogram.types.Message`: On success, the sent game message is returned.
+            :obj:`~hasnainkk.types.Message`: On success, the sent game message is returned.
 
         Example:
             .. code-block:: python

@@ -16,8 +16,8 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-import pyrogram
-from pyrogram import raw
+import hasnainkk
+from hasnainkk import raw
 from .menu_button import MenuButton
 
 
@@ -28,5 +28,5 @@ class MenuButtonDefault(MenuButton):
     def __init__(self):
         super().__init__("default")
 
-    async def write(self, client: "pyrogram.Client") -> "raw.types.BotMenuButtonDefault":
+    async def write(self, client: "hasnainkk.Client") -> "raw.types.BotMenuButtonDefault":
         return raw.types.BotMenuButtonDefault()

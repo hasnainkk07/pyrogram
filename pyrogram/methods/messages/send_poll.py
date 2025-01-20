@@ -19,14 +19,14 @@
 from datetime import datetime
 from typing import Union, List
 
-import pyrogram
-from pyrogram import raw, utils
-from pyrogram import types, enums
+import hasnainkk
+from hasnainkk import raw, utils
+from hasnainkk import types, enums
 
 
 class SendPoll:
     async def send_poll(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         question: str,
         options: List[str],
@@ -71,9 +71,9 @@ class SendPoll:
                 True, if the poll needs to be anonymous.
                 Defaults to True.
 
-            type (:obj`~pyrogram.enums.PollType`, *optional*):
-                Poll type, :obj:`~pyrogram.enums.PollType.QUIZ` or :obj:`~pyrogram.enums.PollType.REGULAR`.
-                Defaults to :obj:`~pyrogram.enums.PollType.REGULAR`.
+            type (:obj`~hasnainkk.enums.PollType`, *optional*):
+                Poll type, :obj:`~hasnainkk.enums.PollType.QUIZ` or :obj:`~hasnainkk.enums.PollType.REGULAR`.
+                Defaults to :obj:`~hasnainkk.enums.PollType.REGULAR`.
 
             allows_multiple_answers (``bool``, *optional*):
                 True, if the poll allows multiple answers, ignored for polls in quiz mode.
@@ -86,11 +86,11 @@ class SendPoll:
                 Text that is shown when a user chooses an incorrect answer or taps on the lamp icon in a quiz-style
                 poll, 0-200 characters with at most 2 line feeds after entities parsing.
 
-            explanation_parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            explanation_parse_mode (:obj:`~hasnainkk.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
-            explanation_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            explanation_entities (List of :obj:`~hasnainkk.types.MessageEntity`):
                 List of special entities that appear in the poll explanation, which can be specified instead of
                 *parse_mode*.
 
@@ -120,12 +120,12 @@ class SendPoll:
             schedule_date (:py:obj:`~datetime.datetime`, *optional*):
                 Date when the message will be automatically sent.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardRemove` | :obj:`~pyrogram.types.ForceReply`, *optional*):
+            reply_markup (:obj:`~hasnainkk.types.InlineKeyboardMarkup` | :obj:`~hasnainkk.types.ReplyKeyboardMarkup` | :obj:`~hasnainkk.types.ReplyKeyboardRemove` | :obj:`~hasnainkk.types.ForceReply`, *optional*):
                 Additional interface options. An object for an inline keyboard, custom reply keyboard,
                 instructions to remove reply keyboard or to force a reply from the user.
 
         Returns:
-            :obj:`~pyrogram.types.Message`: On success, the sent poll message is returned.
+            :obj:`~hasnainkk.types.Message`: On success, the sent poll message is returned.
 
         Example:
             .. code-block:: python

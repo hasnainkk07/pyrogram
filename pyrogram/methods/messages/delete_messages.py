@@ -18,13 +18,13 @@
 
 from typing import Union, Iterable
 
-import pyrogram
-from pyrogram import raw
+import hasnainkk
+from hasnainkk import raw
 
 
 class DeleteMessages:
     async def delete_messages(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         message_ids: Union[int, Iterable[int]],
         revoke: bool = True

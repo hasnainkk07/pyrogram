@@ -23,10 +23,10 @@ from .handler import Handler
 
 class DisconnectHandler(Handler):
     """The Disconnect handler class. Used to handle disconnections. It is intended to be used with
-    :meth:`~pyrogram.Client.add_handler`
+    :meth:`~hasnainkk.Client.add_handler`
 
     For a nicer way to register this handler, have a look at the
-    :meth:`~pyrogram.Client.on_disconnect` decorator.
+    :meth:`~hasnainkk.Client.on_disconnect` decorator.
 
     Parameters:
         callback (``Callable``):
@@ -34,7 +34,7 @@ class DisconnectHandler(Handler):
             as positional argument (look at the section below for a detailed description).
 
     Other parameters:
-        client (:obj:`~pyrogram.Client`):
+        client (:obj:`~hasnainkk.Client`):
             The Client itself. Useful, for example, when you want to change the proxy before a new connection
             is established.
     """

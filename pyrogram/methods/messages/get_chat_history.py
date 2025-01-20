@@ -19,13 +19,13 @@
 from datetime import datetime
 from typing import Union, Optional, AsyncGenerator
 
-import pyrogram
-from pyrogram import types, raw, utils
+import hasnainkk
+from hasnainkk import types, raw, utils
 
 
 async def get_chunk(
     *,
-    client: "pyrogram.Client",
+    client: "hasnainkk.Client",
     chat_id: Union[int, str],
     limit: int = 0,
     offset: int = 0,
@@ -51,7 +51,7 @@ async def get_chunk(
 
 class GetChatHistory:
     async def get_chat_history(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         limit: int = 0,
         offset: int = 0,
@@ -85,7 +85,7 @@ class GetChatHistory:
                 Pass a date as offset to retrieve only older messages starting from that date.
 
         Returns:
-            ``Generator``: A generator yielding :obj:`~pyrogram.types.Message` objects.
+            ``Generator``: A generator yielding :obj:`~hasnainkk.types.Message` objects.
 
         Example:
             .. code-block:: python

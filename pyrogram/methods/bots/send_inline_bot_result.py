@@ -18,13 +18,13 @@
 
 from typing import Union
 
-import pyrogram
-from pyrogram import raw
+import hasnainkk
+from hasnainkk import raw
 
 
 class SendInlineBotResult:
     async def send_inline_bot_result(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         chat_id: Union[int, str],
         query_id: int,
         result_id: str,
@@ -32,7 +32,7 @@ class SendInlineBotResult:
         reply_to_message_id: int = None
     ) -> "raw.base.Updates":
         """Send an inline bot result.
-        Bot results can be retrieved using :meth:`~pyrogram.Client.get_inline_bot_results`
+        Bot results can be retrieved using :meth:`~hasnainkk.Client.get_inline_bot_results`
 
         .. include:: /_includes/usable-by/users.rst
 
@@ -56,7 +56,7 @@ class SendInlineBotResult:
                 If the message is a reply, ID of the original message.
 
         Returns:
-            :obj:`~pyrogram.raw.base.Updates`: Currently, on success, a raw result is returned.
+            :obj:`~hasnainkk.raw.base.Updates`: Currently, on success, a raw result is returned.
 
         Example:
             .. code-block:: python

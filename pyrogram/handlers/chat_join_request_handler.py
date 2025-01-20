@@ -23,10 +23,10 @@ from .handler import Handler
 
 class ChatJoinRequestHandler(Handler):
     """The ChatJoinRequest handler class. Used to handle join chat requests.
-    It is intended to be used with :meth:`~pyrogram.Client.add_handler`.
+    It is intended to be used with :meth:`~hasnainkk.Client.add_handler`.
 
     For a nicer way to register this handler, have a look at the
-    :meth:`~pyrogram.Client.on_chat_join_request` decorator.
+    :meth:`~hasnainkk.Client.on_chat_join_request` decorator.
 
     Parameters:
         callback (``Callable``):
@@ -38,10 +38,10 @@ class ChatJoinRequestHandler(Handler):
             Pass one or more filters to allow only a subset of updates to be passed in your callback function.
 
     Other parameters:
-        client (:obj:`~pyrogram.Client`):
+        client (:obj:`~hasnainkk.Client`):
             The Client itself, useful when you want to call other API methods inside the handler.
 
-        chat_join_request (:obj:`~pyrogram.types.ChatJoinRequest`):
+        chat_join_request (:obj:`~hasnainkk.types.ChatJoinRequest`):
             The received chat join request.
     """
 

@@ -18,13 +18,13 @@
 
 from typing import List
 
-import pyrogram
-from pyrogram import raw, types
+import hasnainkk
+from hasnainkk import raw, types
 
 
 class GetBotCommands:
     async def get_bot_commands(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         scope: "types.BotCommandScope" = types.BotCommandScopeDefault(),
         language_code: str = "",
     ) -> List["types.BotCommand"]:
@@ -37,9 +37,9 @@ class GetBotCommands:
         .. include:: /_includes/usable-by/bots.rst
 
         Parameters:
-            scope (:obj:`~pyrogram.types.BotCommandScope`, *optional*):
+            scope (:obj:`~hasnainkk.types.BotCommandScope`, *optional*):
                 An object describing the scope of users for which the commands are relevant.
-                Defaults to :obj:`~pyrogram.types.BotCommandScopeDefault`.
+                Defaults to :obj:`~hasnainkk.types.BotCommandScopeDefault`.
 
             language_code (``str``, *optional*):
                 A two-letter ISO 639-1 language code.
@@ -47,7 +47,7 @@ class GetBotCommands:
                 dedicated commands.
 
         Returns:
-            List of :obj:`~pyrogram.types.BotCommand`: On success, the list of bot commands is returned.
+            List of :obj:`~hasnainkk.types.BotCommand`: On success, the list of bot commands is returned.
 
         Example:
             .. code-block:: python

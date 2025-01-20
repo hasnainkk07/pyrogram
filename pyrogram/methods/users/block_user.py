@@ -18,13 +18,13 @@
 
 from typing import Union
 
-import pyrogram
-from pyrogram import raw
+import hasnainkk
+from hasnainkk import raw
 
 
 class BlockUser:
     async def block_user(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         user_id: Union[int, str]
     ) -> bool:
         """Block a user.

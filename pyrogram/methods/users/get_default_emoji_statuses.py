@@ -18,21 +18,21 @@
 
 from typing import List
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 
 
 class GetDefaultEmojiStatuses:
     async def get_default_emoji_statuses(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
     ) -> List["types.EmojiStatus"]:
         """Get the default emoji statuses.
 
         .. include:: /_includes/usable-by/users-bots.rst
 
         Returns:
-            List of :obj:`~pyrogram.types.EmojiStatus`: On success, a list of emoji statuses is returned.
+            List of :obj:`~hasnainkk.types.EmojiStatus`: On success, a list of emoji statuses is returned.
 
         Example:
             .. code-block:: python

@@ -19,8 +19,8 @@
 from datetime import datetime
 from typing import Dict
 
-import pyrogram
-from pyrogram import raw, types, utils
+import hasnainkk
+from hasnainkk import raw, types, utils
 from ..object import Object
 
 
@@ -28,7 +28,7 @@ class ChatJoiner(Object):
     """Contains information about a joiner member of a chat.
 
     Parameters:
-        user (:obj:`~pyrogram.types.User`):
+        user (:obj:`~hasnainkk.types.User`):
             Information about the user.
 
         date (:py:obj:`~datetime.datetime`):
@@ -40,14 +40,14 @@ class ChatJoiner(Object):
         pending (``bool``, *optional*):
             True in case the chat joiner has a pending request.
 
-        approved_by (:obj:`~pyrogram.types.User`, *optional*):
+        approved_by (:obj:`~hasnainkk.types.User`, *optional*):
             Administrator who approved this chat joiner.
     """
 
     def __init__(
         self,
         *,
-        client: "pyrogram.Client",
+        client: "hasnainkk.Client",
         user: "types.User",
         date: datetime = None,
         bio: str = None,
@@ -64,7 +64,7 @@ class ChatJoiner(Object):
 
     @staticmethod
     def _parse(
-        client: "pyrogram.Client",
+        client: "hasnainkk.Client",
         joiner: "raw.base.ChatInviteImporter",
         users: Dict[int, "raw.base.User"],
     ) -> "ChatJoiner":

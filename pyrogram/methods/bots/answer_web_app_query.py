@@ -16,14 +16,14 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 
 
 class AnswerWebAppQuery:
     async def answer_web_app_query(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         web_app_query_id: str,
         result: "types.InlineQueryResult"
     ) -> "types.SentWebAppMessage":
@@ -36,11 +36,11 @@ class AnswerWebAppQuery:
             web_app_query_id (``str``):
                 Unique identifier for the answered query.
 
-            result (:obj:`~pyrogram.types.InlineQueryResult`):
+            result (:obj:`~hasnainkk.types.InlineQueryResult`):
                 A list of results for the inline query.
 
         Returns:
-            :obj:`~pyrogram.types.SentWebAppMessage`: On success the sent web app message is returned.
+            :obj:`~hasnainkk.types.SentWebAppMessage`: On success the sent web app message is returned.
         """
 
         r = await self.invoke(

@@ -15,14 +15,14 @@
 #
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 
 
 class CreateSupergroup:
     async def create_supergroup(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         title: str,
         description: str = ""
     ) -> "types.Chat":
@@ -30,7 +30,7 @@ class CreateSupergroup:
 
         .. note::
 
-            If you want to create a new basic group, use :meth:`~pyrogram.Client.create_group` instead.
+            If you want to create a new basic group, use :meth:`~hasnainkk.Client.create_group` instead.
 
         .. include:: /_includes/usable-by/users.rst
 
@@ -42,7 +42,7 @@ class CreateSupergroup:
                 The supergroup description.
 
         Returns:
-            :obj:`~pyrogram.types.Chat`: On success, a chat object is returned.
+            :obj:`~hasnainkk.types.Chat`: On success, a chat object is returned.
 
         Example:
             .. code-block:: python

@@ -19,10 +19,10 @@
 from datetime import datetime
 from typing import Union, List, Optional, AsyncGenerator, BinaryIO
 
-import pyrogram
-from pyrogram import raw, enums
-from pyrogram import types
-from pyrogram import utils
+import hasnainkk
+from hasnainkk import raw, enums
+from hasnainkk import types
+from hasnainkk import utils
 from ..object import Object
 
 
@@ -33,7 +33,7 @@ class Chat(Object):
         id (``int``):
             Unique identifier for this chat.
 
-        type (:obj:`~pyrogram.enums.ChatType`):
+        type (:obj:`~hasnainkk.enums.ChatType`):
             Type of chat.
 
         is_verified (``bool``, *optional*):
@@ -67,16 +67,16 @@ class Chat(Object):
         last_name (``str``, *optional*):
             Last name of the other party in a private chat, for private chats.
 
-        photo (:obj:`~pyrogram.types.ChatPhoto`, *optional*):
+        photo (:obj:`~hasnainkk.types.ChatPhoto`, *optional*):
             Chat photo. Suitable for downloads only.
 
         bio (``str``, *optional*):
             Bio of the other party in a private chat.
-            Returned only in :meth:`~pyrogram.Client.get_chat`.
+            Returned only in :meth:`~hasnainkk.Client.get_chat`.
 
         description (``str``, *optional*):
             Description, for groups, supergroups and channel chats.
-            Returned only in :meth:`~pyrogram.Client.get_chat`.
+            Returned only in :meth:`~hasnainkk.Client.get_chat`.
 
         dc_id (``int``, *optional*):
             The chat assigned DC (data center). Available only in case the chat has a photo.
@@ -89,52 +89,52 @@ class Chat(Object):
 
         invite_link (``str``, *optional*):
             Chat invite link, for groups, supergroups and channels.
-            Returned only in :meth:`~pyrogram.Client.get_chat`.
+            Returned only in :meth:`~hasnainkk.Client.get_chat`.
 
-        pinned_message (:obj:`~pyrogram.types.Message`, *optional*):
+        pinned_message (:obj:`~hasnainkk.types.Message`, *optional*):
             Pinned message, for groups, supergroups channels and own chat.
-            Returned only in :meth:`~pyrogram.Client.get_chat`.
+            Returned only in :meth:`~hasnainkk.Client.get_chat`.
 
         sticker_set_name (``str``, *optional*):
             For supergroups, name of group sticker set.
-            Returned only in :meth:`~pyrogram.Client.get_chat`.
+            Returned only in :meth:`~hasnainkk.Client.get_chat`.
 
         can_set_sticker_set (``bool``, *optional*):
             True, if the group sticker set can be changed by you.
-            Returned only in :meth:`~pyrogram.Client.get_chat`.
+            Returned only in :meth:`~hasnainkk.Client.get_chat`.
 
         members_count (``int``, *optional*):
             Chat members count, for groups, supergroups and channels only.
-            Returned only in :meth:`~pyrogram.Client.get_chat`.
+            Returned only in :meth:`~hasnainkk.Client.get_chat`.
 
-        restrictions (List of :obj:`~pyrogram.types.Restriction`, *optional*):
+        restrictions (List of :obj:`~hasnainkk.types.Restriction`, *optional*):
             The list of reasons why this chat might be unavailable to some users.
             This field is available only in case *is_restricted* is True.
 
-        permissions (:obj:`~pyrogram.types.ChatPermissions` *optional*):
+        permissions (:obj:`~hasnainkk.types.ChatPermissions` *optional*):
             Default chat member permissions, for groups and supergroups.
 
         distance (``int``, *optional*):
             Distance in meters of this group chat from your location.
-            Returned only in :meth:`~pyrogram.Client.get_nearby_chats`.
+            Returned only in :meth:`~hasnainkk.Client.get_nearby_chats`.
 
-        linked_chat (:obj:`~pyrogram.types.Chat`, *optional*):
+        linked_chat (:obj:`~hasnainkk.types.Chat`, *optional*):
             The linked discussion group (in case of channels) or the linked channel (in case of supergroups).
-            Returned only in :meth:`~pyrogram.Client.get_chat`.
+            Returned only in :meth:`~hasnainkk.Client.get_chat`.
 
-        send_as_chat (:obj:`~pyrogram.types.Chat`, *optional*):
+        send_as_chat (:obj:`~hasnainkk.types.Chat`, *optional*):
             The default "send_as" chat.
-            Returned only in :meth:`~pyrogram.Client.get_chat`.
+            Returned only in :meth:`~hasnainkk.Client.get_chat`.
 
-        available_reactions (:obj:`~pyrogram.types.ChatReactions`, *optional*):
+        available_reactions (:obj:`~hasnainkk.types.ChatReactions`, *optional*):
             Available reactions in the chat.
-            Returned only in :meth:`~pyrogram.Client.get_chat`.
+            Returned only in :meth:`~hasnainkk.Client.get_chat`.
     """
 
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: "hasnainkk.Client" = None,
         id: int,
         type: "enums.ChatType",
         is_verified: bool = None,
@@ -359,7 +359,7 @@ class Chat(Object):
             return Chat._parse_channel_chat(client, chat)
 
     async def archive(self):
-        """Bound method *archive* of :obj:`~pyrogram.types.Chat`.
+        """Bound method *archive* of :obj:`~hasnainkk.types.Chat`.
 
         Use as a shortcut for:
 
@@ -382,7 +382,7 @@ class Chat(Object):
         return await self._client.archive_chats(self.id)
 
     async def unarchive(self):
-        """Bound method *unarchive* of :obj:`~pyrogram.types.Chat`.
+        """Bound method *unarchive* of :obj:`~hasnainkk.types.Chat`.
 
         Use as a shortcut for:
 
@@ -406,7 +406,7 @@ class Chat(Object):
 
     # TODO: Remove notes about "All Members Are Admins" for basic groups, the attribute doesn't exist anymore
     async def set_title(self, title: str) -> bool:
-        """Bound method *set_title* of :obj:`~pyrogram.types.Chat`.
+        """Bound method *set_title* of :obj:`~hasnainkk.types.Chat`.
 
         Use as a shortcut for:
 
@@ -444,7 +444,7 @@ class Chat(Object):
         )
 
     async def set_description(self, description: str) -> bool:
-        """Bound method *set_description* of :obj:`~pyrogram.types.Chat`.
+        """Bound method *set_description* of :obj:`~hasnainkk.types.Chat`.
 
         Use as a shortcut for:
 
@@ -484,7 +484,7 @@ class Chat(Object):
         video: Union[str, BinaryIO] = None,
         video_start_ts: float = None,
     ) -> bool:
-        """Bound method *set_photo* of :obj:`~pyrogram.types.Chat`.
+        """Bound method *set_photo* of :obj:`~hasnainkk.types.Chat`.
 
         Use as a shortcut for:
 
@@ -513,12 +513,12 @@ class Chat(Object):
 
         Parameters:
             photo (``str`` | ``BinaryIO``, *optional*):
-                New chat photo. You can pass a :obj:`~pyrogram.types.Photo` file_id, a file path to upload a new photo
+                New chat photo. You can pass a :obj:`~hasnainkk.types.Photo` file_id, a file path to upload a new photo
                 from your local machine or a binary file-like object with its attribute
                 ".name" set for in-memory uploads.
 
             video (``str`` | ``BinaryIO``, *optional*):
-                New chat video. You can pass a :obj:`~pyrogram.types.Video` file_id, a file path to upload a new video
+                New chat video. You can pass a :obj:`~hasnainkk.types.Video` file_id, a file path to upload a new video
                 from your local machine or a binary file-like object with its attribute
                 ".name" set for in-memory uploads.
 
@@ -545,7 +545,7 @@ class Chat(Object):
         user_id: Union[int, str],
         until_date: datetime = utils.zero_datetime()
     ) -> Union["types.Message", bool]:
-        """Bound method *ban_member* of :obj:`~pyrogram.types.Chat`.
+        """Bound method *ban_member* of :obj:`~hasnainkk.types.Chat`.
 
         Use as a shortcut for:
 
@@ -577,7 +577,7 @@ class Chat(Object):
                 considered to be banned forever. Defaults to epoch (ban forever).
 
         Returns:
-            :obj:`~pyrogram.types.Message` | ``bool``: On success, a service message will be returned (when applicable), otherwise, in
+            :obj:`~hasnainkk.types.Message` | ``bool``: On success, a service message will be returned (when applicable), otherwise, in
             case a message object couldn't be returned, True is returned.
 
         Raises:
@@ -594,7 +594,7 @@ class Chat(Object):
         self,
         user_id: Union[int, str]
     ) -> bool:
-        """Bound method *unban_member* of :obj:`~pyrogram.types.Chat`.
+        """Bound method *unban_member* of :obj:`~hasnainkk.types.Chat`.
 
         Use as a shortcut for:
 
@@ -633,7 +633,7 @@ class Chat(Object):
         permissions: "types.ChatPermissions",
         until_date: datetime = utils.zero_datetime(),
     ) -> "types.Chat":
-        """Bound method *unban_member* of :obj:`~pyrogram.types.Chat`.
+        """Bound method *unban_member* of :obj:`~hasnainkk.types.Chat`.
 
         Use as a shortcut for:
 
@@ -655,7 +655,7 @@ class Chat(Object):
                 Unique identifier (int) or username (str) of the target user.
                 For a contact that exists in your Telegram address book you can use his phone number (str).
 
-            permissions (:obj:`~pyrogram.types.ChatPermissions`):
+            permissions (:obj:`~hasnainkk.types.ChatPermissions`):
                 New user permissions.
 
             until_date (:py:obj:`~datetime.datetime`, *optional*):
@@ -664,7 +664,7 @@ class Chat(Object):
                 considered to be banned forever. Defaults to epoch (ban forever).
 
         Returns:
-            :obj:`~pyrogram.types.Chat`: On success, a chat object is returned.
+            :obj:`~hasnainkk.types.Chat`: On success, a chat object is returned.
 
         Raises:
             RPCError: In case of a Telegram RPC error.
@@ -684,7 +684,7 @@ class Chat(Object):
         user_id: Union[int, str],
         privileges: "types.ChatPrivileges" = None
     ) -> bool:
-        """Bound method *promote_member* of :obj:`~pyrogram.types.Chat`.
+        """Bound method *promote_member* of :obj:`~hasnainkk.types.Chat`.
 
         Use as a shortcut for:
 
@@ -706,7 +706,7 @@ class Chat(Object):
                 Unique identifier (int) or username (str) of the target user.
                 For a contact that exists in your Telegram address book you can use his phone number (str).
 
-            privileges (:obj:`~pyrogram.types.ChatPrivileges`, *optional*):
+            privileges (:obj:`~hasnainkk.types.ChatPrivileges`, *optional*):
                 New user privileges.
 
         Returns:
@@ -723,7 +723,7 @@ class Chat(Object):
         )
 
     async def join(self):
-        """Bound method *join* of :obj:`~pyrogram.types.Chat`.
+        """Bound method *join* of :obj:`~hasnainkk.types.Chat`.
 
         Use as a shortcut for:
 
@@ -740,7 +740,7 @@ class Chat(Object):
             This only works for public groups, channels that have set a username or linked chats.
 
         Returns:
-            :obj:`~pyrogram.types.Chat`: On success, a chat object is returned.
+            :obj:`~hasnainkk.types.Chat`: On success, a chat object is returned.
 
         Raises:
             RPCError: In case of a Telegram RPC error.
@@ -749,7 +749,7 @@ class Chat(Object):
         return await self._client.join_chat(self.username or self.id)
 
     async def leave(self):
-        """Bound method *leave* of :obj:`~pyrogram.types.Chat`.
+        """Bound method *leave* of :obj:`~hasnainkk.types.Chat`.
 
         Use as a shortcut for:
 
@@ -769,7 +769,7 @@ class Chat(Object):
         return await self._client.leave_chat(self.id)
 
     async def export_invite_link(self):
-        """Bound method *export_invite_link* of :obj:`~pyrogram.types.Chat`.
+        """Bound method *export_invite_link* of :obj:`~hasnainkk.types.Chat`.
 
         Use as a shortcut for:
 
@@ -795,7 +795,7 @@ class Chat(Object):
         self,
         user_id: Union[int, str],
     ) -> "types.ChatMember":
-        """Bound method *get_member* of :obj:`~pyrogram.types.Chat`.
+        """Bound method *get_member* of :obj:`~hasnainkk.types.Chat`.
 
         Use as a shortcut for:
 
@@ -812,7 +812,7 @@ class Chat(Object):
                 await chat.get_member(user_id)
 
         Returns:
-            :obj:`~pyrogram.types.ChatMember`: On success, a chat member is returned.
+            :obj:`~hasnainkk.types.ChatMember`: On success, a chat member is returned.
         """
 
         return await self._client.get_chat_member(
@@ -826,7 +826,7 @@ class Chat(Object):
         limit: int = 0,
         filter: "enums.ChatMembersFilter" = enums.ChatMembersFilter.SEARCH
     ) -> Optional[AsyncGenerator["types.ChatMember", None]]:
-        """Bound method *get_members* of :obj:`~pyrogram.types.Chat`.
+        """Bound method *get_members* of :obj:`~hasnainkk.types.Chat`.
 
         Use as a shortcut for:
 
@@ -845,19 +845,19 @@ class Chat(Object):
             query (``str``, *optional*):
                 Query string to filter members based on their display names and usernames.
                 Only applicable to supergroups and channels. Defaults to "" (empty string).
-                A query string is applicable only for :obj:`~pyrogram.enums.ChatMembersFilter.SEARCH`,
-                :obj:`~pyrogram.enums.ChatMembersFilter.BANNED` and :obj:`~pyrogram.enums.ChatMembersFilter.RESTRICTED`
+                A query string is applicable only for :obj:`~hasnainkk.enums.ChatMembersFilter.SEARCH`,
+                :obj:`~hasnainkk.enums.ChatMembersFilter.BANNED` and :obj:`~hasnainkk.enums.ChatMembersFilter.RESTRICTED`
                 filters only.
 
             limit (``int``, *optional*):
                 Limits the number of members to be retrieved.
 
-            filter (:obj:`~pyrogram.enums.ChatMembersFilter`, *optional*):
+            filter (:obj:`~hasnainkk.enums.ChatMembersFilter`, *optional*):
                 Filter used to select the kind of members you want to retrieve. Only applicable for supergroups
                 and channels.
 
         Returns:
-            ``Generator``: On success, a generator yielding :obj:`~pyrogram.types.ChatMember` objects is returned.
+            ``Generator``: On success, a generator yielding :obj:`~hasnainkk.types.ChatMember` objects is returned.
         """
 
         return self._client.get_chat_members(
@@ -872,7 +872,7 @@ class Chat(Object):
         user_ids: Union[Union[int, str], List[Union[int, str]]],
         forward_limit: int = 100
     ) -> bool:
-        """Bound method *add_members* of :obj:`~pyrogram.types.Chat`.
+        """Bound method *add_members* of :obj:`~hasnainkk.types.Chat`.
 
         Use as a shortcut for:
 
@@ -896,7 +896,7 @@ class Chat(Object):
         )
 
     async def mark_unread(self, ) -> bool:
-        """Bound method *mark_unread* of :obj:`~pyrogram.types.Chat`.
+        """Bound method *mark_unread* of :obj:`~hasnainkk.types.Chat`.
 
         Use as a shortcut for:
 
@@ -916,7 +916,7 @@ class Chat(Object):
         return await self._client.mark_chat_unread(self.id)
 
     async def set_protected_content(self, enabled: bool) -> bool:
-        """Bound method *set_protected_content* of :obj:`~pyrogram.types.Chat`.
+        """Bound method *set_protected_content* of :obj:`~hasnainkk.types.Chat`.
 
         Use as a shortcut for:
 
@@ -943,7 +943,7 @@ class Chat(Object):
         )
 
     async def unpin_all_messages(self) -> bool:
-        """Bound method *unpin_all_messages* of :obj:`~pyrogram.types.Chat`.
+        """Bound method *unpin_all_messages* of :obj:`~hasnainkk.types.Chat`.
 
         Use as a shortcut for:
 

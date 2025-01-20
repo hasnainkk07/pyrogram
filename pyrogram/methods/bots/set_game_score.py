@@ -18,14 +18,14 @@
 
 from typing import Union
 
-import pyrogram
-from pyrogram import raw
-from pyrogram import types
+import hasnainkk
+from hasnainkk import raw
+from hasnainkk import types
 
 
 class SetGameScore:
     async def set_game_score(
-        self: "pyrogram.Client",
+        self: "hasnainkk.Client",
         user_id: Union[int, str],
         score: int,
         force: bool = None,
@@ -65,7 +65,7 @@ class SetGameScore:
                 Required if inline_message_id is not specified.
 
         Returns:
-            :obj:`~pyrogram.types.Message` | ``bool``: On success, if the message was sent by the bot, the edited
+            :obj:`~hasnainkk.types.Message` | ``bool``: On success, if the message was sent by the bot, the edited
             message is returned, True otherwise.
 
         Example:
